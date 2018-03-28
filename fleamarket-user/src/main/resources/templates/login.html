@@ -1,0 +1,254 @@
+﻿<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>	
+	<title>My Account</title>
+	<meta charset="utf-8" />
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<!--&lt;!&ndash; GOOGLE WEB FONTS &ndash;&gt;-->
+	<!--&lt;!&ndash; GOOGLE WEB FONTS &ndash;&gt;-->
+	<!--<link rel="stylesheet" href="../static/css/font-awesome.min.css">-->
+
+	<!--&lt;!&ndash; BOOTSTRAP 3.3.7 CSS &ndash;&gt;-->
+	<!--<link rel="stylesheet" href="../static/css/bootstrap.min.css" />-->
+
+	<!--&lt;!&ndash; SLICK v1.6.0 CSS &ndash;&gt;-->
+	<!--<link rel="stylesheet" href="../static/css/slick-1.6.0/slick.css" />-->
+
+	<!--<link rel="stylesheet" href="../static/css/jquery.fancybox.css" />-->
+	<!--<link rel="stylesheet" href="../static/css/yith-woocommerce-compare/colorbox.css" />-->
+	<!--<link rel="stylesheet" href="../static/css/owl-carousel/owl.carousel.min.css" />-->
+	<!--<link rel="stylesheet" href="../static/css/owl-carousel/owl.theme.default.min.css" />-->
+	<!--<link rel="stylesheet" href="../static/css/js_composer/js_composer.min.css" />-->
+	<!--<link rel="stylesheet" href="../static/css/woocommerce/woocommerce.css" />-->
+	<!--<link rel="stylesheet" href="../static/css/yith-woocommerce-wishlist/style.css" />-->
+
+
+	<!--<link rel="stylesheet" href="../static/css/custom.css" />-->
+	<!--<link rel="stylesheet" href="../static/css/app-orange.css" id="theme_color" />-->
+	<!--<link rel="stylesheet" href="" id="rtl" />-->
+	<!--<link rel="stylesheet" href="../static/css/app-responsive.css" />-->
+	<th:block th:include="common/common_resource :: resources"/>
+</head>
+
+<body class="page woocommerce-account woocommerce-page">
+	<div class="body-wrapper theme-clearfix">
+		<header id="header" class="header header-style1">
+			<div class="header-top clearfix">
+				<div class="container">
+					<div class="rows">
+						<!-- SIDEBAR TOP MENU -->
+						<div class="pull-left top1">
+							<div class="widget text-2 widget_text pull-left">
+								<div class="widget-inner">
+									<div class="textwidget">
+										<div class="call-us"><span>Call Us Now: </span>0123-444-666654123</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="widget text-3 widget_text pull-left">
+								<div class="widget-inner">
+									<div class="textwidget">
+										<div id="lang_sel">
+											<ul class="nav">
+												<li>
+													<a class="lang_sel_sel icl-en">
+														<img class="iclflag" title="English" alt="en" src="images/icons/en.png" width="18" height="12" /> English
+													</a>
+													<ul>
+														<li class="icl-en">
+															<a href="#">
+																<img class="iclflag" title="English" alt="en" src="images/icons/en.png" width="18" height="12" /> English
+															</a>
+														</li>
+
+														<li class="icl-ar">
+															<a href="#">
+																<img class="iclflag" title="Arabic" alt="ar" src="images/icons/ar.png" width="18" height="12" /> Arabic
+															</a>
+														</li>
+													</ul>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="widget woocommerce_currency_converter-2 widget_currency_converter pull-left">
+								<div class="widget-inner">
+									<form method="post" class="currency_converter" action="">
+										<ul class="currency_w">
+											<li>
+												<a href="#" class="">USD</a>
+												<ul class="currency_switcher">
+													<li><a href="#" class="reset default active" data-currencycode="USD">USD</a></li>
+													<li><a href="#" class="" data-currencycode="EUR">EUR</a></li>
+												</ul>
+											</li>
+										</ul>
+									</form>
+								</div>
+							</div>
+						</div>
+
+						<div class="wrap-myacc pull-right">
+							<div class="sidebar-account pull-left">
+								<div class="account-title">My account</div>
+
+								<div id="my-account" class="my-account">
+									<div class="widget-1 widget-first widget nav_menu-4 widget_nav_menu">
+										<div class="widget-inner">
+											<ul id="menu-my-account" class="menu">
+												<li class="menu-my-account">
+													<a class="item-link" href="my_account.html">
+														<span class="menu-title">My Account</span>
+													</a>
+												</li>
+
+												<li class="menu-cart">
+													<a class="item-link" href="cart.html">
+														<span class="menu-title">Cart</span>
+													</a>
+												</li>
+
+												<li class="menu-checkout">
+													<a class="item-link" href="checkout.html">
+														<span class="menu-title">Checkout</span>
+													</a>
+												</li>
+
+												<li class="menu-wishlist">
+													<a class="item-link" href="#">
+														<span class="menu-title">Wishlist</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+
+									<div class="widget-2 widget-last widget sw_top-4 sw_top">
+										<div class="widget-inner">
+											<div class="top-login">
+												<div class="div-logined">
+													<ul>
+														<li>
+															<a href="javascript:void(0);" data-toggle="modal" data-target="#login_form">
+																<span>Login</span>
+															</a>
+															<span class="wg">Welcome Guest</span>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="pull-left top2">
+								<div class="widget-1 widget-first widget nav_menu-2 widget_nav_menu">
+									<div class="widget-inner">
+										<ul id="menu-checkout" class="menu">
+											<li class="menu-checkout">
+												<a class="item-link" href="checkout.html">
+													<span class="menu-title">Checkout</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="header-mid clearfix">
+				<div class="container">
+					<div class="rows">
+						<!-- LOGO -->
+						<div class="etrostore-logo pull-left">
+							<a href="#">
+								<img th:src="@{/images/icons/logo-orange.png}" alt="Shoopy">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!--<div class="listings-title">-->
+			<!--<div class="container">-->
+				<!--<div class="wrap-title">-->
+					<!--<h1>My Account</h1>-->
+					<!--<div class="bread">-->
+						<!--<div class="breadcrumbs theme-clearfix">-->
+							<!--<div class="container">-->
+								<!--<ul class="breadcrumb">-->
+									<!--<li>-->
+										<!--<a href="#">Home</a>-->
+										<!--<span class="go-page"></span>-->
+									<!--</li>-->
+									<!---->
+									<!--<li class="active">-->
+										<!--<span>My account</span>-->
+									<!--</li>-->
+								<!--</ul>-->
+							<!--</div>-->
+						<!--</div>-->
+					<!--</div>-->
+				<!--</div>-->
+			<!--</div>			-->
+		<!--</div>-->
+		<!--Content-->
+			<div class="main">
+				<h1>二手市场登录</h1>
+				<div class="wthree_top_forms">
+					<div class="agile-info_w3ls agile-info_w3ls_sub hvr-buzz-out">
+						<h3 style="margin-bottom: 0">Login</h3>
+						<div class="agile-info_w3ls_grid second">
+							<form action="#" method="post">
+								<input type="text" name="Name" placeholder="User Name" required=" ">
+								<input type="password" name="Password" placeholder="Password" required=" ">
+							</form>
+							<div class="agile_remember">
+								<div class="agile_remember_left">
+									<div class="check">
+										<label class="checkbox" style="margin-top: 0;"><input type="checkbox" name="checkbox"><i> </i>remember me</label>
+									</div>
+								</div>
+								<div class="agile_remember_right">
+									<a href="#">Forgot Password?</a>
+								</div>
+								<div class="clear"> </div>
+							</div>
+							<form action="#" method="post">
+								<input type="submit" value="Sign In">
+							</form>
+							<h4>Continue With</h4>
+							<div class="social_icons agileinfo">
+								<section class="social">
+									<a href="" class="icon fb"><img th:src="@{/images/f.png}" alt=""/></a>
+									<a href="" class="icon tw"><img th:src="@{/images/t.png}" alt=""/></a>
+									<a href="" class="icon gp"><img th:src="@{/images/g.png}" alt=""/></a>
+								</section>
+							</div>
+							<h5>Don't have an account? <a href="#">Sign Up</a></h5>
+						</div>
+					</div>
+					<div class="clear"> </div>
+				</div>
+				<div class="agileits_copyright">
+					<p>© 2016 Collective Forms Widget. All rights reserved | Design by <a href="http://www.xmoban.cn">xmoban.cn</a></p>
+				</div>
+			</div>
+		</div>
+		<!--End Content-->
+	</div>
+   
+
+
+   </body>
+</html>
+

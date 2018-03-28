@@ -8,14 +8,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="fleamarket-admin" />
         <module name="fleamarket-core" />
-        <module name="fleamarket-parent" />
+        <module name="fleamarket-user" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="fleamarket" target="1.8" />
       <module name="fleamarket-admin" target="1.8" />
       <module name="fleamarket-core" target="1.8" />
       <module name="fleamarket-parent" target="1.8" />
+      <module name="fleamarket-user" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

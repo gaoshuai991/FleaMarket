@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/fleamarket-admin/fleamarket-admin.iml" filepath="$PROJECT_DIR$/fleamarket-admin/fleamarket-admin.iml" />
       <module fileurl="file://$PROJECT_DIR$/fleamarket-core/fleamarket-core.iml" filepath="$PROJECT_DIR$/fleamarket-core/fleamarket-core.iml" />
       <module fileurl="file://$PROJECT_DIR$//fleamarket-parent.iml" filepath="$PROJECT_DIR$//fleamarket-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fleamarket-user/fleamarket-user.iml" filepath="$PROJECT_DIR$/fleamarket-user/fleamarket-user.iml" />
     </modules>
   </component>
 </project>

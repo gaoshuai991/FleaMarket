@@ -15,10 +15,10 @@
             <property name="mappers" value="com.fleamarket.core.mapper.IMapper"/>
         </plugin>
 
-        <jdbcConnection driverClass="${spring.datasource.driver-class-name}"
-                        connectionURL="${spring.datasource.url}"
-                        userId="${spring.datasource.username}"
-                        password="${spring.datasource.password}"/>
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/fleamarket?useSSL=false"
+                        userId="root"
+                        password="gss991"/>
 
         <javaModelGenerator targetPackage="com.fleamarket.core.model" targetProject="src/main/java"/>
 

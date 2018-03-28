@@ -1,6 +1,6 @@
 package com.fleamarket.core.service.impl;
 
-import com.fleamarket.core.mapper.IMapper;
+import com.fleamarket.core.IMapper;
 import com.fleamarket.core.service.IService;
 import org.springframework.util.CollectionUtils;
 

@@ -1,16 +1,395 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3ec31878-967b-43b1-a41b-1506a83fe366" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-parent.iml" afterPath="$PROJECT_DIR$/fleamarket-parent.iml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sai/fleamarket/FleaMarketApplication.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/sai/fleamarket/FleaMarketApplicationTests.java" afterPath="" />
+    <list default="true" id="3ec31878-967b-43b1-a41b-1506a83fe366" name="Default" comment="框架基本完成，界面模板静态资源文件已导入，准备写Login">
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/config/ShiroConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/mapper/AdminMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/mapper/AdminRoleMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/mapper/AnnouncementMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/mapper/CategoryMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/mapper/CommentMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/mapper/DeliveryAddrMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/mapper/LetterMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/mapper/LikeMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/mapper/OrderMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/mapper/PermissionMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/mapper/RoleMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/mapper/RolePermissionMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/mapper/TreasureMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/mapper/TreasurePictureMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/mapper/TreasureStarMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/mapper/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/model/Admin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/model/AdminRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/model/Announcement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/model/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/model/Comment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/model/DeliveryAddr.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/model/Letter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/model/Like.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/model/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/model/Permission.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/model/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/model/RolePermission.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/model/Treasure.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/model/TreasurePicture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/model/TreasureStar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/shiro/Identity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/shiro/authenticator/CustomModularRealmAuthenticator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/shiro/filter/IdentityFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/shiro/realm/UserRealm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/shiro/token/CustomToken.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/util/Constant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/resources/log4j2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/resources/mapper/AdminMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/resources/mapper/AdminRoleMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/resources/mapper/AnnouncementMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/resources/mapper/CategoryMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/resources/mapper/CommentMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/resources/mapper/DeliveryAddrMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/resources/mapper/LetterMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/resources/mapper/LikeMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/resources/mapper/OrderMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/resources/mapper/PermissionMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/resources/mapper/RoleMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/resources/mapper/RolePermissionMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/resources/mapper/TreasureMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/resources/mapper/TreasurePictureMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/resources/mapper/TreasureStarMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-core/src/test/java/com/fleamarket/core/MD5Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/java/com/fleamarket/user/UserApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/app-orange.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/app-responsive.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/custom.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/fancy/close-popup.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/fancy/fancybox_loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/fancy/fancybox_loading@2x.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/fancy/fancybox_overlay.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/fancy/fancybox_sprite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/fancy/fancybox_sprite@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/jquery.fancybox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/js_composer/js_composer.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/owl-carousel/owl.carousel.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/owl-carousel/owl.theme.default.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/select2/select2.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/slick-1.6.0/slick.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/woocommerce/prettyPhoto.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/woocommerce/woocommerce-layout.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/woocommerce/woocommerce-smallscreen.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/woocommerce/woocommerce.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/yith-woocommerce-compare/colorbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/yith-woocommerce-wishlist/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsBold.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsBold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsBold.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsBold.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsLight.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsLight.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsLight.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsLight.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsMedium.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsMedium.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsMedium.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsMedium.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsRegular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsRegular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsRegular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsRegular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsSemiBold.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsSemiBold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsSemiBold.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsSemiBold.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/RobotoBold.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/RobotoBold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/RobotoBold.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/RobotoBold.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/RobotoMedium.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/RobotoMedium.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/RobotoMedium.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/RobotoMedium.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/RobotoRegular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/RobotoRegular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/RobotoRegular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/RobotoRegular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/01_index_v1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/11-180x180.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/11-300x300.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/14-300x300.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/22-150x150.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/22-180x180.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/22-300x300.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/26-180x180.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/26-300x300.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/3-300x300.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/36-300x300.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/39-180x180.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/39-300x300.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/43-180x180.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/43.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/44-300x300.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/45-150x150.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/45-180x180.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/45-300x300.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/46-180x180.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/46.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/47-180x180.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/47-300x300.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/47.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/48-180x180.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/48.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/49-180x180.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/49-300x300.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/49.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/50-180x180.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/50-300x300.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/51-180x180.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/51-300x300.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/52-180x180.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/52-300x300.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/53-300x300.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/56-180x180.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/56-300x300.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/58-300x300.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/6-180x180.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/6-300x300.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/60-300x300.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/61-180x180.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/61-300x300.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/62-180x180.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/62-300x300.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/63-300x300.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/65-180x180.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/65-300x300.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/66-180x180.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/66-300x300.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/Brand_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/Brand_10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/ab1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/ab2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/ab3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/aboutus.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/app-store.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/banner-detail.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/banner1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/banner2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/banner3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/banner4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/banner6-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/banner7-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/banner8-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/banner9-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/br1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/br2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/br3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/br4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/br5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/c1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/c10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/c2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/c3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/c4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/c5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/c6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/c7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/c8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/c9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/google-store.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/icon-ab1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/icon-ab2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/icon-ab3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/icon-hot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/icon-new-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/image-cd.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/map.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/map1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/map2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/map3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/map4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/menu-bn1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/menu-bn2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/menu-bn3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/menu-bn4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/menu-bn5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/menu-bn6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/menu-bn7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/menu-bn8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/menu-bn9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/ot1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/ot2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/ot3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/ot4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/paypal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/slider-shop.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/slider2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/slider3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/tm1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/tm2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1903/tm3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/2003/AM_mc_vs_dc_ae.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/colorbox/border.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/colorbox/controls.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/colorbox/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/colorbox/loading_background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/f.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/g.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/icons/added.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/icons/ar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/icons/bg-404.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/icons/bg-header.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/icons/bg-map.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/icons/bg_newsletter.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/icons/btn-close-login.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/icons/en.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/icons/grid-btn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/icons/icon-bc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/icons/icon-foot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/icons/icon-hot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/icons/icon-login-popup.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/icons/icon-pass.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/icons/icon-username.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/icons/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/icons/listing-btn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/icons/loadingp.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/icons/logo-footer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/icons/logo-orange.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/icons/minus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/icons/plus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/icons/star-active.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/icons/star.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/jquery.selectBox-arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/t.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/wpspin_light.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/js/jquery/jquery-migrate.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/js/jquery/jquery.blockUI.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/js/jquery/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/js/jquery/js.cookie.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/js/js_composer/js_composer_front.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/js/main.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/js/megamenu.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/js/mouse.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/js/owl-carousel/owl.carousel.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/js/plugins.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/js/select2/select2.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/js/slick-1.6.0/slick.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/js/slider.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/js/sw_core/isotope.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/js/sw_core/jquery.fancybox.pack.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/js/sw_woocommerce/category-ajax.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/js/sw_woocommerce/jquery.countdown.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/js/wc-quantity-increment.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/js/widget.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/js/woocommerce/address-i18n.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/js/woocommerce/cart.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/js/woocommerce/checkout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/js/woocommerce/country-select.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/js/woocommerce/prettyPhoto/jquery.prettyPhoto.init.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/js/woocommerce/prettyPhoto/jquery.prettyPhoto.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/js/woocommerce/price-slider.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/js/woocommerce/single-product.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/js/yith-woocommerce-compare/jquery.colorbox-min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/common/common_resource.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/common/footer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/common/header.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/temp.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fleamarket-user/src/test/java/com/fleamarket/user/UserApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_1_1_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_3_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_2_7_8.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_persistence_persistence_api_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_transaction_javax_transaction_api_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_45.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_10_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_10_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_attoparser_attoparser_2_0_4_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_0_1_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_2_14_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_0_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_22_0_GA.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_0_3_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_2_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_4_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_3_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_autoconfigure_1_3_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_starter_1_3_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_16_20.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_25.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_configuration_processor_2_0_0_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_2_0_0_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_2_0_0_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_0_0_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_0_0_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_thymeleaf_2_0_0_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_0_5_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_2_0_5_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_5_0_4_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_0_4_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_5_0_4_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_0_4_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_extras_thymeleaf_extras_java8time_3_0_1_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_3_0_9_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_spring5_3_0_9_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_unbescape_unbescape_1_1_5_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__tk_mybatis_mapper_base_1_0_0_beta3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__tk_mybatis_mapper_core_1_0_0_beta3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__tk_mybatis_mapper_spring_1_0_0_beta3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__tk_mybatis_mapper_spring_boot_autoconfigure_2_0_0_beta3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__tk_mybatis_mapper_spring_boot_starter_2_0_0_beta3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__tk_mybatis_mapper_weekend_1_1_3_beta3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fleamarket-admin/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fleamarket-admin/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fleamarket-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fleamarket-core/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/CoreApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/config/DAOConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/config/DAOConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/mapper/IMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/IMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/service/impl/BaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/service/impl/BaseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fleamarket-core/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fleamarket-core/src/main/resources/mybatis-generator/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/fleamarket-core/src/main/resources/mybatis-generator/generatorConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fleamarket-parent.iml" beforeDir="false" afterPath="$PROJECT_DIR$/fleamarket-parent.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/fleamarket-admin/target/" />
     <ignored path="$PROJECT_DIR$/fleamarket-core/target/" />
+    <ignored path="$PROJECT_DIR$/fleamarket-user/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,27 +397,238 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="FleaMarket-Cloud" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="fleamarket" />
+  </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/fleamarket-core/pom.xml">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="UserApplicationTests.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fleamarket-user/src/test/java/com/fleamarket/user/UserApplicationTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="62">
-              <caret line="16" column="41" lean-forward="true" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
-              <folding />
+            <state relative-caret-position="266">
+              <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+              <folding>
+                <element signature="e#532#533#0" expanded="true" />
+                <element signature="e#561#562#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/controller/UserController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="227">
+              <caret line="13" column="29" lean-forward="true" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#521#522#0" expanded="true" />
+                <element signature="e#551#552#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/common/header.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="510" column="13" selection-start-line="4" selection-start-column="4" selection-end-line="510" selection-end-column="13" />
+              <folding>
+                <element signature="n#header#0;n#th:block#0;n#html#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="common_resource.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/common/common_resource.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1140">
+              <caret line="60" column="33" selection-start-line="60" selection-start-column="33" selection-end-line="60" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1271">
+              <caret line="236" column="63" lean-forward="true" selection-start-line="236" selection-start-column="63" selection-end-line="236" selection-end-column="63" />
+              <folding>
+                <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/login.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3078">
+              <caret line="162" column="20" selection-start-line="162" selection-start-column="20" selection-end-line="162" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="temp.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/temp.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="footer.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/common/footer.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="38">
+              <caret line="2" column="38" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app-orange.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/app-orange.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="29165">
+              <caret line="1535" column="26" selection-start-line="1535" selection-start-column="26" selection-end-line="1535" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="AnnotationType" />
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>&quot;../images</find>
+      <find>Securi</find>
+      <find>lombo</find>
+      <find>logger</find>
+      <find>logs</find>
+      <find>&quot;css</find>
+      <find>&quot;../../</find>
+      <find>js&quot;</find>
+      <find>src=&quot;@{/js</find>
+      <find>href=&quot;../../static/css</find>
+      <find>css&quot;</find>
+      <find>footer</find>
+      <find>img src=&quot;images</find>
+      <find>png&quot;</find>
+      <find>.agile-info_w3ls</find>
+      <find>32.</find>
+      <find>Login</find>
+      <find>check</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>&quot;../static/images</replace>
+      <replace>log</replace>
+      <replace>fleamarket-logs</replace>
+      <replace>&quot;../../static/css</replace>
+      <replace>&quot;../</replace>
+      <replace>js/}&quot;</replace>
+      <replace>th:src=&quot;@{/js</replace>
+      <replace>th:href=&quot;@{/css</replace>
+      <replace>css}&quot;</replace>
+      <replace>img th:src=&quot;@{/images</replace>
+    </replaceStrings>
+  </component>
   <component name="Git.Settings">
     <option name="UPDATE_TYPE" value="REBASE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GradleLocalSettings">
-    <option name="externalProjectsViewState">
-      <projects_view />
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/Service.java" />
+        <option value="$PROJECT_DIR$/fleamarket-core/src/main/resources/mapper/UserMapper.xml" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/f56070b1-5698-47a4-9410-e9fa5764aa34/console.sql" />
+        <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/service/UserService.java" />
+        <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/token/CustomToken.java" />
+        <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/authenticator/CustomModularRealmAuthenticator.java" />
+        <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/shiro/Identity.java" />
+        <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/shiro/CustomModularRealmAuthenticator.java" />
+        <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/shiro/CustomToken.java" />
+        <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/shiro/token/CustomToken.java" />
+        <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/shiro/authenticator/CustomModularRealmAuthenticator.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/util/Constant.java" />
+        <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/shiro/realm/UserRealm.java" />
+        <option value="$PROJECT_DIR$/fleamarket-core/src/main/resources/log4j2.xml" />
+        <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/shiro/filter/ShiroFilter.java" />
+        <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/shiro/filter/IdentityFilter.java" />
+        <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/DeliveryAddrMapper.java" />
+        <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/IMapper.java" />
+        <option value="$PROJECT_DIR$/fleamarket-user/src/main/java/com/fleamarket/user/UserApplication.java" />
+        <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/mapper/IMapper.java" />
+        <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/IMapper.java" />
+        <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/mapper/AdminMapper.java" />
+        <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/mapper/AdminRoleMapper.java" />
+        <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/mapper/AnnouncementMapper.java" />
+        <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/mapper/CategoryMapper.java" />
+        <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/mapper/CommentMapper.java" />
+        <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/mapper/DeliveryAddrMapper.java" />
+        <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/mapper/LetterMapper.java" />
+        <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/mapper/LikeMapper.java" />
+        <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/mapper/OrderMapper.java" />
+        <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/mapper/PermissionMapper.java" />
+        <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/mapper/RoleMapper.java" />
+        <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/mapper/RolePermissionMapper.java" />
+        <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/mapper/TreasureMapper.java" />
+        <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/mapper/TreasurePictureMapper.java" />
+        <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/mapper/TreasureStarMapper.java" />
+        <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/mapper/UserMapper.java" />
+        <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/service/impl/BaseService.java" />
+        <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/fleamarket-user/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/fleamarket-core/src/test/java/com/fleamarket/core/MD5Test.java" />
+        <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/config/ShiroConfig.java" />
+        <option value="$PROJECT_DIR$/fleamarket-user/src/test/java/com/fleamarket/user/UserApplicationTests.java" />
+        <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/app-orange.css" />
+        <option value="$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/common/header.html" />
+        <option value="$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/common/footer.html" />
+        <option value="$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/common/common_resource.html" />
+        <option value="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/login.css" />
+        <option value="$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/login.html" />
+      </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -47,23 +637,23 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
-    <option name="width" value="1378" />
-    <option name="height" value="735" />
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-1866" />
+    <option name="y" value="-190" />
+    <option name="width" value="1680" />
+    <option name="height" value="1027" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-      <flattenPackages />
-      <showMembers />
-      <showModules />
-      <showLibraryContents />
-      <hideEmptyPackages />
-      <abbreviatePackageNames />
-      <autoscrollToSource />
-      <autoscrollFromSource />
-      <sortByType />
-      <manualOrder />
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
@@ -72,27 +662,296 @@
           <expand>
             <path>
               <item name="fleamarket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FleaMarket" type="462c0819:PsiDirectoryNode" />
+              <item name="fleamarket" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="fleamarket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FleaMarket" type="462c0819:PsiDirectoryNode" />
+              <item name="fleamarket" type="462c0819:PsiDirectoryNode" />
+              <item name="fleamarket-admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fleamarket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fleamarket" type="462c0819:PsiDirectoryNode" />
               <item name="fleamarket-core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fleamarket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fleamarket" type="462c0819:PsiDirectoryNode" />
+              <item name="fleamarket-core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fleamarket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fleamarket" type="462c0819:PsiDirectoryNode" />
+              <item name="fleamarket-core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fleamarket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fleamarket" type="462c0819:PsiDirectoryNode" />
+              <item name="fleamarket-core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fleamarket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fleamarket" type="462c0819:PsiDirectoryNode" />
+              <item name="fleamarket-core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fleamarket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fleamarket" type="462c0819:PsiDirectoryNode" />
+              <item name="fleamarket-core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fleamarket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fleamarket" type="462c0819:PsiDirectoryNode" />
+              <item name="fleamarket-core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fleamarket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fleamarket" type="462c0819:PsiDirectoryNode" />
+              <item name="fleamarket-core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fleamarket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fleamarket" type="462c0819:PsiDirectoryNode" />
+              <item name="fleamarket-core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fleamarket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fleamarket" type="462c0819:PsiDirectoryNode" />
+              <item name="fleamarket-core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="shiro" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fleamarket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fleamarket" type="462c0819:PsiDirectoryNode" />
+              <item name="fleamarket-core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="shiro" type="462c0819:PsiDirectoryNode" />
+              <item name="authenticator" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fleamarket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fleamarket" type="462c0819:PsiDirectoryNode" />
+              <item name="fleamarket-core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="shiro" type="462c0819:PsiDirectoryNode" />
+              <item name="filter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fleamarket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fleamarket" type="462c0819:PsiDirectoryNode" />
+              <item name="fleamarket-core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fleamarket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fleamarket" type="462c0819:PsiDirectoryNode" />
+              <item name="fleamarket-core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fleamarket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fleamarket" type="462c0819:PsiDirectoryNode" />
+              <item name="fleamarket-core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fleamarket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fleamarket" type="462c0819:PsiDirectoryNode" />
+              <item name="fleamarket-core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fleamarket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fleamarket" type="462c0819:PsiDirectoryNode" />
+              <item name="fleamarket-user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fleamarket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fleamarket" type="462c0819:PsiDirectoryNode" />
+              <item name="fleamarket-user" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fleamarket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fleamarket" type="462c0819:PsiDirectoryNode" />
+              <item name="fleamarket-user" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fleamarket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fleamarket" type="462c0819:PsiDirectoryNode" />
+              <item name="fleamarket-user" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fleamarket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fleamarket" type="462c0819:PsiDirectoryNode" />
+              <item name="fleamarket-user" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fleamarket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fleamarket" type="462c0819:PsiDirectoryNode" />
+              <item name="fleamarket-user" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fleamarket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fleamarket" type="462c0819:PsiDirectoryNode" />
+              <item name="fleamarket-user" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fleamarket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fleamarket" type="462c0819:PsiDirectoryNode" />
+              <item name="fleamarket-user" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fleamarket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fleamarket" type="462c0819:PsiDirectoryNode" />
+              <item name="fleamarket-user" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fleamarket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fleamarket" type="462c0819:PsiDirectoryNode" />
+              <item name="fleamarket-user" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fleamarket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fleamarket" type="462c0819:PsiDirectoryNode" />
+              <item name="fleamarket-user" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fleamarket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fleamarket" type="462c0819:PsiDirectoryNode" />
+              <item name="fleamarket-user" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
+    <property name="ExpandSpringBootSpringBootSettingsPanel" value="false" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/SQL Dialects" value="GenericSQL" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.fleamarket.core" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images" />
+      <recent name="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css" />
+      <recent name="$PROJECT_DIR$/fleamarket-user/src/main/resources/templates" />
+      <recent name="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/js" />
+      <recent name="$PROJECT_DIR$/fleamarket-user/src/main/resources/static" />
+    </key>
   </component>
   <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
     <option name="ruleStates">
       <list>
         <RuleState>
@@ -103,32 +962,62 @@
         </RuleState>
       </list>
     </option>
+    <option name="contentProportion" value="0.17194183" />
   </component>
-  <component name="RunManager" selected="Spring Boot.CoreApplication">
+  <component name="RunManager" selected="JUnit.UserApplicationTests.loginTest">
     <configuration default="true" type="Applet" factoryName="Applet">
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <module />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="MD5Test.md5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="fleamarket-core" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.fleamarket.core.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
+      <option name="PACKAGE_NAME" value="com.fleamarket.core" />
+      <option name="MAIN_CLASS_NAME" value="com.fleamarket.core.MD5Test" />
+      <option name="METHOD_NAME" value="md5" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="UserApplicationTests.loginTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="fleamarket-user" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.fleamarket.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.fleamarket.user" />
+      <option name="MAIN_CLASS_NAME" value="com.fleamarket.user.UserApplicationTests" />
+      <option name="METHOD_NAME" value="loginTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" />
@@ -138,42 +1027,32 @@
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="singleModule" />
       </option>
-      <envs />
       <patterns />
     </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-    </configuration>
     <configuration name="AdminApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.fleamarket.admin.AdminApplication" />
       <module name="fleamarket-admin" />
-      <envs />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.fleamarket.admin.AdminApplication" />
     </configuration>
     <configuration name="CoreApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.fleamarket.core.CoreApplication" />
       <module name="fleamarket-core" />
-      <envs />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.fleamarket.core.CoreApplication" />
     </configuration>
     <configuration name="FleaMarketApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sai.fleamarket.FleaMarketApplication" />
       <module name="fleamarket-parent" />
-      <envs />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sai.fleamarket.FleaMarketApplication" />
+    </configuration>
+    <configuration name="UserApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="fleamarket-user" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.fleamarket.user.UserApplication" />
+      <option name="WORKING_DIRECTORY" value="file://$MODULE_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
@@ -186,17 +1065,21 @@
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="singleModule" />
       </option>
       <option name="USE_DEFAULT_REPORTERS" value="false" />
       <option name="PROPERTIES_FILE" />
-      <envs />
       <properties />
       <listeners />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
@@ -204,14 +1087,24 @@
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
-    <list size="3">
-      <item index="0" class="java.lang.String" itemvalue="Spring Boot.CoreApplication" />
-      <item index="1" class="java.lang.String" itemvalue="Spring Boot.FleaMarketApplication" />
-      <item index="2" class="java.lang.String" itemvalue="Spring Boot.AdminApplication" />
+    <list>
+      <item itemvalue="Spring Boot.CoreApplication" />
+      <item itemvalue="Spring Boot.FleaMarketApplication" />
+      <item itemvalue="Spring Boot.AdminApplication" />
+      <item itemvalue="Spring Boot.UserApplication" />
+      <item itemvalue="JUnit.MD5Test.md5" />
+      <item itemvalue="JUnit.UserApplicationTests.loginTest" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.UserApplicationTests.loginTest" />
+        <item itemvalue="JUnit.MD5Test.md5" />
+      </list>
+    </recent_temporary>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
+  <component name="SpringBeansView">
+    <option name="showInfrastructureBeans" value="false" />
+    <option name="beanDetailsProportion" value="0.3" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -224,41 +1117,91 @@
       <option name="presentableId" value="Default" />
       <updated>1521387643498</updated>
       <workItem from="1521387644936" duration="130000" />
+      <workItem from="1521426890245" duration="1335000" />
+      <workItem from="1521429083065" duration="7253000" />
+      <workItem from="1521512559493" duration="9425000" />
+      <workItem from="1521598516901" duration="9670000" />
+      <workItem from="1521707018807" duration="11977000" />
+      <workItem from="1521721313134" duration="611000" />
+      <workItem from="1521775483778" duration="8112000" />
+      <workItem from="1522035783939" duration="4808000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="MD5Test_md5 - 2018.03.22 at 19h 58m 14s.xml">
+      <configuration name="MD5Test.md5" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserApplicationTests_loginTest - 2018.03.22 at 20h 08m 08s.xml">
+      <configuration name="UserApplicationTests.loginTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserApplicationTests_loginTest - 2018.03.22 at 20h 10m 59s.xml">
+      <configuration name="UserApplicationTests.loginTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserApplicationTests_loginTest - 2018.03.22 at 20h 23m 04s.xml">
+      <configuration name="UserApplicationTests.loginTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserApplicationTests_loginTest - 2018.03.22 at 20h 24m 42s.xml">
+      <configuration name="UserApplicationTests.loginTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserApplicationTests_loginTest - 2018.03.22 at 20h 26m 14s.xml">
+      <configuration name="UserApplicationTests.loginTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserApplicationTests_loginTest - 2018.03.22 at 20h 32m 00s.xml">
+      <configuration name="UserApplicationTests.loginTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserApplicationTests_loginTest - 2018.03.23 at 11h 25m 36s.xml">
+      <configuration name="UserApplicationTests.loginTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserApplicationTests_loginTest - 2018.03.23 at 11h 28m 19s.xml">
+      <configuration name="UserApplicationTests.loginTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserApplicationTests_loginTest - 2018.03.23 at 12h 42m 20s.xml">
+      <configuration name="UserApplicationTests.loginTest" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="130000" />
+    <option name="totallyTimeSpent" value="53321000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="-1866" y="-190" width="1680" height="1027" extended-state="0" />
     <layout>
-      <window_info id="Key Promoter X" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Tail" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5012285" side_tool="true" weight="0.3284091" />
+      <window_info anchor="right" id="Maven Projects" order="3" weight="0.15663391" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="2" />
+      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.1455774" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="bottom" id="Java Enterprise" order="8" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="bottom" id="Run Dashboard" order="7" sideWeight="0.83415234" visible="true" weight="0.28977272" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.78746927" weight="0.32954547" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4987715" weight="0.3284091" />
+      <window_info anchor="bottom" id="Spring" order="7" sideWeight="0.49938574" weight="0.2977273" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.85012287" weight="0.3284091" />
+      <window_info anchor="bottom" id="Problems" order="8" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4992" visible="true" weight="0.30405405" />
+      <window_info anchor="right" id="Bean Validation" order="4" />
+      <window_info id="Web" order="3" side_tool="true" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info id="Favorites" order="2" sideWeight="0.5008" side_tool="true" weight="0.16216215" />
+      <window_info anchor="bottom" id="Tail" order="7" />
+      <window_info anchor="bottom" id="Messages" order="8" sideWeight="0.49815726" weight="0.32954547" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="Database Console" order="9" sideWeight="0.4987715" visible="true" weight="0.32954547" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49938574" weight="0.32954547" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Key Promoter X" order="3" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,18 +1210,463 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager />
-    <watches-manager />
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/fleamarket-core/pom.xml">
+    <entry file="file://$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="16" column="41" lean-forward="true" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
-          <folding />
+        <state relative-caret-position="4180">
+          <caret line="220" column="66" selection-start-line="220" selection-start-column="66" selection-end-line="220" selection-end-column="66" />
+          <folding>
+            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0.jar!/org/apache/shiro/authc/SimpleAuthenticationInfo.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0-sources.jar!/org/apache/shiro/authc/SimpleAuthenticationInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="42" column="34" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0-sources.jar!/org/apache/shiro/authc/credential/HashedCredentialsMatcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3758">
+          <caret line="119" column="13" selection-start-line="119" selection-start-column="13" selection-end-line="119" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/shiro/realm/UserRealm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="37" column="19" lean-forward="true" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-core/src/main/resources/log4j2.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="51" column="55" selection-start-line="51" selection-start-column="55" selection-end-line="51" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-core/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/tk/mybatis/mapper-spring/1.0.0-beta3/mapper-spring-1.0.0-beta3.jar!/tk/mybatis/spring/annotation/MapperScan.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-user/src/main/java/com/fleamarket/user/UserApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/mapper/IMapper.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/tk/mybatis/mapper-core/1.0.0-beta3/mapper-core-1.0.0-beta3.jar!/tk/mybatis/mapper/annotation/RegisterMapper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/mapper/AdminMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/mapper/AdminRoleMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/mapper/AnnouncementMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/mapper/CategoryMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="22" lean-forward="true" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/mapper/CommentMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/mapper/DeliveryAddrMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/mapper/LetterMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/mapper/LikeMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/mapper/OrderMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/mapper/PermissionMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/mapper/RoleMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/mapper/RolePermissionMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/mapper/TreasureMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/mapper/TreasurePictureMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/mapper/TreasureStarMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/mapper/UserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-user/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0.jar!/org/apache/shiro/crypto/hash/SimpleHash.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="38" column="11" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0.jar!/org/apache/shiro/crypto/hash/Md5Hash.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://f56070b1-5698-47a4-9410-e9fa5764aa34/schema/fleamarket/table/user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-core/src/test/java/com/fleamarket/core/MD5Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="13" column="52" selection-start-line="13" selection-start-column="52" selection-end-line="13" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.16.20/lombok-1.16.20-sources.jar!/lombok/extern/log4j/Log4j2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="61" column="18" selection-start-line="61" selection-start-column="18" selection-end-line="61" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/shiro/filter/IdentityFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-218">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/shiro/authenticator/CustomModularRealmAuthenticator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/tk/mybatis/mapper-core/1.0.0-beta3/mapper-core-1.0.0-beta3-sources.jar!/tk/mybatis/mapper/annotation/RegisterMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/service/impl/BaseService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/config/ShiroConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="45" column="5" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/IMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-core/src/test/java/com/fleamarket/core/CoreApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-user/src/test/java/com/fleamarket/user/UserApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+          <folding>
+            <element signature="e#532#533#0" expanded="true" />
+            <element signature="e#561#562#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/app-orange.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29165">
+          <caret line="1535" column="26" selection-start-line="1535" selection-start-column="26" selection-end-line="1535" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/common/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="38" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/temp.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/common/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="510" column="13" selection-start-line="4" selection-start-column="4" selection-end-line="510" selection-end-column="13" />
+          <folding>
+            <element signature="n#header#0;n#th:block#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/login.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3078">
+          <caret line="162" column="20" selection-start-line="162" selection-start-column="20" selection-end-line="162" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/common/common_resource.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1140">
+          <caret line="60" column="33" selection-start-line="60" selection-start-column="33" selection-end-line="60" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1271">
+          <caret line="236" column="63" lean-forward="true" selection-start-line="236" selection-start-column="63" selection-end-line="236" selection-end-column="63" />
+          <folding>
+            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="13" column="29" lean-forward="true" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#521#522#0" expanded="true" />
+            <element signature="e#551#552#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>fleamarket-core</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: org.apache.shiro:shiro-spring:1.4.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

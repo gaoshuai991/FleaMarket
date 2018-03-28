@@ -1,0 +1,237 @@
+﻿<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>	
+	<title>My Account</title>
+	<meta charset="utf-8" />
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<!--&lt;!&ndash; GOOGLE WEB FONTS &ndash;&gt;-->
+	<!--&lt;!&ndash; GOOGLE WEB FONTS &ndash;&gt;-->
+	<!--<link rel="stylesheet" href="../static/css/font-awesome.min.css">-->
+
+	<!--&lt;!&ndash; BOOTSTRAP 3.3.7 CSS &ndash;&gt;-->
+	<!--<link rel="stylesheet" href="../static/css/bootstrap.min.css" />-->
+
+	<!--&lt;!&ndash; SLICK v1.6.0 CSS &ndash;&gt;-->
+	<!--<link rel="stylesheet" href="../static/css/slick-1.6.0/slick.css" />-->
+
+	<!--<link rel="stylesheet" href="../static/css/jquery.fancybox.css" />-->
+	<!--<link rel="stylesheet" href="../static/css/yith-woocommerce-compare/colorbox.css" />-->
+	<!--<link rel="stylesheet" href="../static/css/owl-carousel/owl.carousel.min.css" />-->
+	<!--<link rel="stylesheet" href="../static/css/owl-carousel/owl.theme.default.min.css" />-->
+	<!--<link rel="stylesheet" href="../static/css/js_composer/js_composer.min.css" />-->
+	<!--<link rel="stylesheet" href="../static/css/woocommerce/woocommerce.css" />-->
+	<!--<link rel="stylesheet" href="../static/css/yith-woocommerce-wishlist/style.css" />-->
+
+
+	<!--<link rel="stylesheet" href="../static/css/custom.css" />-->
+	<!--<link rel="stylesheet" href="../static/css/app-orange.css" id="theme_color" />-->
+	<!--<link rel="stylesheet" href="" id="rtl" />-->
+	<!--<link rel="stylesheet" href="../static/css/app-responsive.css" />-->
+	<th:block th:include="common/common_resource :: resources"/>
+</head>
+
+<body class="page woocommerce-account woocommerce-page">
+	<div class="body-wrapper theme-clearfix">
+		<th:block th:include="common/header::nav"/>
+		<div class="listings-title">
+			<div class="container">
+				<div class="wrap-title">
+					<h1>My Account</h1>
+					<div class="bread">
+						<div class="breadcrumbs theme-clearfix">
+							<div class="container">
+								<ul class="breadcrumb">
+									<li>
+										<a href="#">Home</a>
+										<span class="go-page"></span>
+									</li>
+									
+									<li class="active">
+										<span>My account</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>			
+		</div>
+		<!--Content-->
+		<div class="container">
+			<div class="row">
+				<div id="contents" role="main" class="main-page  col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="post-6 page type-page status-publish hentry">
+						<div class="entry">
+							<div class="entry-content">
+								<header>
+									<h2 class="entry-title">My Account</h2>
+								</header>
+								
+								<div class="entry-content">
+									<div class="woocommerce">
+										<nav class="woocommerce-MyAccount-navigation">
+											<ul>
+												<li class="is-active">
+													<a href="login.html">Dashboard</a>
+												</li>
+												
+												<li >
+												   <a href="http://demo.smartaddons.com/templates/html/etrostore/order.html">Orders</a>
+												</li>
+												
+												<li>
+													<a href="http://demo.smartaddons.com/templates/html/etrostore/addresses.html">Addresses</a>
+												</li>
+												
+												<li>
+												   <a href="http://demo.smartaddons.com/templates/html/etrostore/account_details.html">Account Details</a>
+												</li>
+												
+												<li>
+													<a href="create_account.html">Logout</a>
+												</li>
+											</ul>
+										</nav>
+									  
+										<div class="woocommerce-MyAccount-content">
+											<p>
+												Hello <strong>Tester</strong> (not Tester? <a href="create_account.html">Sign out</a>)
+											</p>
+											<p>
+												From your account dashboard you can view your 
+												<a href="http://demo.smartaddons.com/templates/html/etrostore/order.html">recent orders</a>, 
+												manage your <a href="http://demo.smartaddons.com/templates/html/etrostore/addresses.html">shipping and billing addresses</a> 
+												and <a href="http://demo.smartaddons.com/templates/html/etrostore/account_details.html">edit your password and account details</a>.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--End Content-->
+		<th:block th:include="common/footer::nav"/>
+	</div>
+   
+	<!-- DIALOGS -->
+	<div class="modal fade" id="search_form" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog block-popup-search-form">
+			<form role="search" method="get" class="form-search searchform" action="">
+				<input type="text" value="" name="s" class="search-query" placeholder="Enter your keyword..." />
+				
+				<button type="submit" class="fa fa-search button-search-pro form-button"></button>
+				
+				<a href="javascript:void(0)" title="Close" class="close close-search" data-dismiss="modal">X</a>
+			</form>
+		</div>
+	</div>
+	
+   <div class="modal fade" id="login_form" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog block-popup-login">
+			<a href="javascript:void(0)" title="Close" class="close close-login" data-dismiss="modal">Close</a>
+         
+			<div class="tt_popup_login">
+				<strong>Sign in Or Register</strong>
+			</div>
+         
+			<form action="" method="post" class="login">
+				<div class="block-content">
+					<div class="col-reg registered-account">
+						<div class="email-input">
+							<input type="text" class="form-control input-text username" name="username" id="username" placeholder="Username" />
+						</div>
+						
+						<div class="pass-input">
+							<input class="form-control input-text password" type="password" placeholder="Password" name="password" id="password" />
+						</div>
+						
+						<div class="ft-link-p">
+							<a href="#" title="Forgot your password">Forgot your password?</a>
+						</div>
+						
+						<div class="actions">
+							<div class="submit-login">
+								<input type="submit" class="button btn-submit-login" name="login" value="Login" />
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-reg login-customer">
+						<h2>NEW HERE?</h2>
+						
+						<p class="note-reg">Registration is free and easy!</p>
+						
+						<ul class="list-log">
+							<li>Faster checkout</li>
+							
+							<li>Save multiple shipping addresses</li>
+							
+							<li>View and track orders and more</li>
+						</ul>
+						
+						<a href="create_account.html" title="Register" class="btn-reg-popup">Create an account</a>
+					</div>
+				</div>
+			</form>
+			<div class="clear"></div>
+		</div>
+	</div>
+	
+	<a id="etrostore-totop" href="#"></a>	
+	
+	<div id="subscribe_popup" class="subscribe-popup" style="background: url(../static/images/icons/bg_newsletter.jpg)">
+		<div class="subscribe-popup-container">
+			<h2>Join our newsletter</h2>
+			<div class="description">Subscribe now to get 40% of on any product!</div>
+			<div class="subscribe-form">
+				<form id="mc4wp-form-2" class="mc4wp-form mc4wp-form-275" method="post" data-id="275" data-name="">
+					<div class="mc4wp-form-fields">
+						<div class="newsletter-content">
+							<input type="email" class="newsletter-email" name="EMAIL" placeholder="Your email" required="" />
+							<input class="newsletter-submit" type="submit" value="Subscribe" />
+						</div>
+					</div>
+					<div class="mc4wp-response"></div>
+				</form>		
+			</div>
+			
+			<div class="subscribe-checkbox">
+				<label for="popup_check">
+					<input id="popup_check" name="popup_check" type="checkbox" />
+					<span>Don't show this popup again!</span>
+				</label>
+			</div>
+			
+			<div class="subscribe-social">
+				<div class="subscribe-social-inner">
+					<a href="#" class="social-fb">
+						<span class="fa fa-facebook"></span>
+					</a>
+					
+					<a href="#" class="social-tw">
+						<span class="fa fa-twitter"></span>
+					</a>
+					
+					<a href="#" class="social-gplus">
+						<span class="fa fa-google-plus"></span>
+					</a>
+					
+					<a href="#" class="social-pin">
+						<span class="fa fa-instagram"></span>
+					</a>
+					
+					<a href="#" class="social-linkedin">
+						<span class="fa fa-pinterest-p"></span>
+					</a>				
+				</div>
+			</div>
+		</div>
+	</div>
+
+   </body>
+</html>
+
