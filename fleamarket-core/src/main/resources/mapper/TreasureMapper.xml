@@ -2,9 +2,6 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.fleamarket.core.mapper.TreasureMapper" >
   <resultMap id="BaseResultMap" type="com.fleamarket.core.model.Treasure" >
-    <!--
-      WARNING - @mbg.generated
-    -->
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="title" property="title" jdbcType="VARCHAR" />
     <result column="description" property="description" jdbcType="VARCHAR" />
@@ -21,9 +18,6 @@
     <result column="new_degree" property="newDegree" jdbcType="INTEGER" />
   </resultMap>
   <sql id="Base_Column_List" >
-    <!--
-      WARNING - @mbg.generated
-    -->
     id, title, description, picture, category, price, fare, total, sell_type, status, 
     create_time, like_count, comment_count, new_degree
   </sql>

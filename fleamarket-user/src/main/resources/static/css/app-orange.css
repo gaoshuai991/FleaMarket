@@ -3334,7 +3334,7 @@ ul.thumbnails {
   margin: 0 1px 0 0;
   padding: 0 16px;
   height: 42px;
-  width: 56%;
+  width: 70%;
   float: left;
 }
 .header .header-mid .top-form.top-search .topsearch-entry .cat-wrapper {
@@ -4595,7 +4595,8 @@ ul.thumbnails {
   clear: both;
 }
 .nav.vertical-megamenu > li.etrostore-mega-menu .column-3 {
-  min-width: 782px;
+  min-width: 582px;
+  min-height: 330px;
 }
 .nav.vertical-megamenu > li.etrostore-mega-menu .column-3 .woocommerce {
   padding-top: 10px;

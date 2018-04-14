@@ -2,6 +2,7 @@ package com.fleamarket.core.shiro.filter;
 
 import com.fleamarket.core.shiro.Identity;
 import lombok.extern.log4j.Log4j2;
+import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.web.filter.authc.UserFilter;
 
@@ -32,7 +33,7 @@ public class IdentityFilter extends UserFilter {
     @Override
     protected boolean isAccessAllowed(ServletRequest request, ServletResponse response, Object mappedValue) {
         if (isLoginRequest(request, response)) {
-            if(getSubject(request, response).getSession().getAttribute(identity.getValue()) != null){
+            if(SecurityUtils.getSubject().isRemembered()){
                 try {
                     ((HttpServletResponse) response).sendRedirect("index");
                 } catch (IOException e) {
@@ -41,7 +42,7 @@ public class IdentityFilter extends UserFilter {
             }
             return true;
         }else {
-            return getSubject(request, response).getSession().getAttribute(identity.getValue()) != null;
+            return SecurityUtils.getSubject().isRemembered();
         }
     }
 }

@@ -87,7 +87,7 @@ public class ShiroConfig {
         //用户配置
         filterChainMap.put("/logout", "anon");
         filterChainMap.put("/register/**", "anon");
-        filterChainMap.put("/**", "userAuth");
+//        filterChainMap.put("/**", "userAuth");
 
         shiroFilterFactoryBean.setFilterChainDefinitionMap(filterChainMap);
 

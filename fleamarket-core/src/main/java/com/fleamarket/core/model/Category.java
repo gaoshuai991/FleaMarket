@@ -9,6 +9,8 @@ public class Category {
 
     private String name;
 
+    private Integer pid;
+
     /**
      * @return id
      */
@@ -35,5 +37,13 @@ public class Category {
      */
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Integer getPid() {
+        return pid;
+    }
+
+    public void setPid(Integer pid) {
+        this.pid = pid;
     }
 }

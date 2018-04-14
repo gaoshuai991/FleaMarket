@@ -19,6 +19,8 @@ public class User {
 
     private String photo;
 
+    private String tel;
+
     private String sex;
 
     private Date birthday;
@@ -122,6 +124,20 @@ public class User {
      */
     public void setPhoto(String photo) {
         this.photo = photo;
+    }
+
+    /**
+     * @return tel
+     */
+    public String getTel() {
+        return tel;
+    }
+
+    /**
+     * @param tel
+     */
+    public void setTel(String tel) {
+        this.tel = tel;
     }
 
     /**

@@ -11,8 +11,8 @@ public class CustomToken extends UsernamePasswordToken {
  	 */
 	private Identity type;
 
-	public CustomToken(String username, String password, Identity type) {
-		super(username, password);
+	public CustomToken(String username, String password,boolean rememberMe, Identity type) {
+		super(username, password,rememberMe);
 		this.type = type;
 	}
 

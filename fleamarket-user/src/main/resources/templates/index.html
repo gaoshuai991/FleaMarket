@@ -1,549 +1,17 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>	
 	<title>Home</title>
 	<meta charset="utf-8" />
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	<!-- GOOGLE WEB FONTS -->
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	
-	<!-- BOOTSTRAP 3.3.7 CSS -->
-	<link rel="stylesheet" href="css/bootstrap.min.css" />
-	
-	<!-- SLICK v1.6.0 CSS -->
-	<link rel="stylesheet" href="css/slick-1.6.0/slick.css" />
-	
-	<link rel="stylesheet" href="css/jquery.fancybox.css" />
-	<link rel="stylesheet" href="css/yith-woocommerce-compare/colorbox.css" />
-	<link rel="stylesheet" href="css/owl-carousel/owl.carousel.min.css" />
-	<link rel="stylesheet" href="css/owl-carousel/owl.theme.default.min.css" />
-	<link rel="stylesheet" href="css/js_composer/js_composer.min.css" />
-	<link rel="stylesheet" href="css/woocommerce/woocommerce.css" />
-	<link rel="stylesheet" href="css/yith-woocommerce-wishlist/style.css" />
-	
-	
-	<link rel="stylesheet" href="css/yith-woocommerce-wishlist/style.css" />
-	<link rel="stylesheet" href="css/custom.css" />
-	<link rel="stylesheet" href="css/app-orange.css" id="theme_color" />
-	<link rel="stylesheet" href="" id="rtl" />
-	<link rel="stylesheet" href="css/app-responsive.css" /> 
+    <th:block th:include="common/common_resource :: resources"/>
+
 </head>
 
 <body class="page page-id-6 home-style1">
-
-     
-
-
 	<div class="body-wrapper theme-clearfix">
-		<header id="header" class="header header-style1">
-			<div class="header-top clearfix">
-				<div class="container">
-					<div class="rows">
-						<!-- SIDEBAR TOP MENU -->
-						<div class="pull-left top1">
-							<div class="widget text-2 widget_text pull-left">
-								<div class="widget-inner">
-									<div class="textwidget">
-										<div class="call-us"><span>Call Us Now: </span>0123-444-666654123</div>
-									</div>
-								</div>
-							</div>
-							
-							<div class="widget text-3 widget_text pull-left">
-								<div class="widget-inner">
-									<div class="textwidget">
-										<div id="lang_sel">
-											<ul class="nav">
-												<li>
-													<a class="lang_sel_sel icl-en">
-														<img class="iclflag" title="English" alt="en" src="images/icons/en.png" width="18" height="12" /> English
-													</a>
-													<ul>
-														<li class="icl-en">
-															<a href="#">
-																<img class="iclflag" title="English" alt="en" src="images/icons/en.png" width="18" height="12" /> English
-															</a>
-														</li>
-														
-														<li class="icl-ar">
-															<a href="#">
-																<img class="iclflag" title="Arabic" alt="ar" src="images/icons/ar.png" width="18" height="12" /> Arabic
-															</a>
-														</li>
-													</ul>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</div>
-							
-							<div class="widget woocommerce_currency_converter-2 widget_currency_converter pull-left">
-								<div class="widget-inner">
-									<form method="post" class="currency_converter" action="">
-										<ul class="currency_w">
-											<li>
-												<a href="#" class="">USD</a>
-												<ul class="currency_switcher">
-													<li><a href="#" class="reset default active" data-currencycode="USD">USD</a></li>
-													<li><a href="#" class="" data-currencycode="EUR">EUR</a></li>
-												</ul>
-											</li>
-										</ul>
-									</form>
-								</div>
-							</div>
-						</div>
-						
-						<div class="wrap-myacc pull-right">
-							<div class="sidebar-account pull-left">
-								<div class="account-title">My account</div>
-                        
-								<div id="my-account" class="my-account">
-									<div class="widget-1 widget-first widget nav_menu-4 widget_nav_menu">
-										<div class="widget-inner">
-											<ul id="menu-my-account" class="menu">
-												<li class="menu-my-account">
-													<a class="item-link" href="my_account.html">
-														<span class="menu-title">My Account</span>
-													</a>
-												</li>
-												
-												<li class="menu-cart">
-													<a class="item-link" href="cart.html">
-														<span class="menu-title">Cart</span>
-													</a>
-												</li>
-												
-												<li class="menu-checkout">
-													<a class="item-link" href="checkout.html">
-														<span class="menu-title">Checkout</span>
-													</a>
-												</li>
-												
-												<li class="menu-wishlist">
-													<a class="item-link" href="#">
-														<span class="menu-title">Wishlist</span>
-													</a>
-												</li>
-											</ul>
-										</div>
-									</div>
-									
-									<div class="widget-2 widget-last widget sw_top-4 sw_top">
-										<div class="widget-inner">
-											<div class="top-login">
-												<div class="div-logined">
-													<ul>
-														<li>
-															<a href="javascript:void(0);" data-toggle="modal" data-target="#login_form">
-																<span>Login</span>
-															</a>
-															<span class="wg">Welcome Guest</span>
-														</li>
-													</ul>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							
-							<div class="pull-left top2">
-								<div class="widget-1 widget-first widget nav_menu-2 widget_nav_menu">
-									<div class="widget-inner">
-										<ul id="menu-checkout" class="menu">
-											<li class="menu-checkout">
-												<a class="item-link" href="checkout.html">
-													<span class="menu-title">Checkout</span>
-												</a>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			
-			<div class="header-mid clearfix">
-				<div class="container">
-					<div class="rows">
-						<!-- LOGO -->
-						<div class="etrostore-logo pull-left">
-							<a href="#">
-								<img src="images/icons/logo-orange.png" alt="Shoopy">
-							</a>
-						</div>
-						
-						<div class="mid-header pull-right">
-							<div class="widget-1 widget-first widget sw_top-2 sw_top">
-								<div class="widget-inner">
-									<div class="top-form top-search">
-										<div class="topsearch-entry">
-											<form method="get" action="">
-												<div>
-												   <input type="text" value="" name="s" placeholder="Enter your keyword...">	
-													<div class="cat-wrapper">
-														<label class="label-search">
-															<select name="search_category" class="s1_option">
-																<option value="">All Categories</option>
-																<option value="8">Computers & Laptops</option>
-																<option value="13">Computers & Networking</option>
-																<option value="14">Smartphones & Tablet</option>
-																<option value="15">Home Furniture</option>
-																<option value="16">Home Appliances</option>
-																<option value="17">Electronic Component</option>
-																<option value="18">Household Goods</option>
-																<option value="32">Appliances</option>
-																<option value="49">Accessories</option>
-																<option value="51">Electronics</option>
-																<option value="78">Televisions</option>
-																<option value="80">Cameras & Accessories</option>
-															</select>
-														</label>
-													</div>
-													
-													<button type="submit" title="Search" class="fa fa-search button-search-pro form-button"></button>
-												</div>
-											</form>
-										</div>
-									</div>
-								</div>
-							</div>
-							
-							<div class="widget sw_top-3 sw_top pull-left">
-								<div class="widget-inner">
-									<div class="top-form top-form-minicart etrostore-minicart pull-right">
-										<div class="top-minicart-icon pull-right">
-											<i class="fa fa-shopping-cart"></i>
-											<a class="cart-contents" href="cart.html" title="View your shopping cart">
-												<span class="minicart-number">2</span>
-											</a>
-										</div>
-										
-										<div class="wrapp-minicart">
-											<div class="minicart-padding">
-												<div class="number-item">
-													There are <span>items</span> in your cart
-												</div>
-												
-												<ul class="minicart-content">
-													<li>
-														<a href="simple_product.html" class="product-image">
-															<img 	width="100" height="100" src="images/1903/45-150x150.jpg" class="attachment-100x100 size-100x100 wp-post-image" alt="" 
-																	srcset="images/1903/45-150x150.jpg 150w, images/1903/45-300x300.jpg 300w, images/1903/45-180x180.jpg 180w, images/1903/45.jpg 600w" 
-																	sizes="(max-width: 100px) 100vw, 100px" />
-														</a>
-														
-														<div class="detail-item">
-															<div class="product-details">
-																<h4>
-																	<a class="title-item" href="simple_product.html">Veniam Dolore</a>
-																</h4>
-																
-																<div class="product-price">
-																	<span class="price">
-																		<span class="woocommerce-Price-amount amount">
-																			<span class="woocommerce-Price-currencySymbol">$</span>190.00
-																		</span>
-																	</span>
-																	
-																	<div class="qty">
-																		<span class="qty-number">1</span>									
-																	</div>
-																</div>
-																
-																<div class="product-action clearfix">
-																	<a href="#" class="btn-remove" title="Remove this item">
-																		<span class="fa fa-trash-o"></span>
-																	</a>
-																	
-																	<a class="btn-edit" href="cart.html" title="View your shopping cart">
-																		<span class="fa fa-pencil"></span>
-																	</a>    
-																</div>
-															</div>
-														</div>
-													</li>
-													
-													<li>
-														<a href="simple_product.html" class="product-image">
-															<img 	width="100" height="100" src="images/1903/22-150x150.jpg" class="attachment-100x100 size-100x100 wp-post-image" alt="" 
-																	srcset="images/1903/22-150x150.jpg 150w, images/1903/22-300x300.jpg 300w, images/1903/22-180x180.jpg 180w, images/1903/22.jpg 600w" 
-																	sizes="(max-width: 100px) 100vw, 100px" />
-														</a>
-														
-														<div class="detail-item">
-															<div class="product-details">
-																<h4>
-																	<a class="title-item" href="simple_product.html">Cleaner with bag</a>
-																</h4>
-																
-																<div class="product-price">
-																	<span class="price">
-																		<span class="woocommerce-Price-amount amount">
-																			<span class="woocommerce-Price-currencySymbol">$</span>350.00
-																		</span>
-																	</span>
-																	
-																	<div class="qty">
-																		<span class="qty-number">1</span>									
-																	</div>
-																</div>
-																
-																<div class="product-action clearfix">
-																	<a href="#" class="btn-remove" title="Remove this item">
-																		<span class="fa fa-trash-o"></span>
-																	</a>
-																	
-																	<a class="btn-edit" href="cart.html" title="View your shopping cart">
-																		<span class="fa fa-pencil"></span>
-																	</a>
-																</div>
-															</div>
-														</div>
-													</li>
-												</ul>
-												
-												<div class="cart-checkout">
-													<div class="price-total">
-														<span class="label-price-total">Total</span>
-														
-														<span class="price-total-w">
-															<span class="price">
-																<span class="woocommerce-Price-amount amount">
-																	<span class="woocommerce-Price-currencySymbol">$</span>540.00
-																</span>
-															</span>
-														</span>			
-													</div>
-													
-													<div class="cart-links clearfix">
-														<div class="cart-link">
-															<a href="cart.html" title="Cart">View Cart</a>
-														</div>
-														
-														<div class="checkout-link">
-															<a href="checkout.html" title="Check Out">Check Out</a>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							
-							<div class="widget nav_menu-3 widget_nav_menu pull-left">
-								<div class="widget-inner">
-									<ul id="menu-wishlist" class="menu">
-										<li class="menu-wishlist">
-											<a class="item-link" href="#">
-												<span class="menu-title">Wishlist</span>
-											</a>
-										</li>
-										
-										<li class="yith-woocompare-open menu-compare">
-											<a class="item-link compare" href="#">
-												<span class="menu-title">Compare</span>
-											</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			
-			<div class="header-bottom clearfix">
-				<div class="container">
-					<div class="rows">
-						<!-- Primary navbar -->
-						<div id="main-menu" class="main-menu">
-							<nav id="primary-menu" class="primary-menu">
-								<div class="navbar-inner navbar-inverse">
-									<div class="resmenu-container">
-										<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#ResMenuprimary_menu">
-											<span class="sr-only">Categories</span>
-											<span class="icon-bar"></span>
-											<span class="icon-bar"></span>
-											<span class="icon-bar"></span>
-										</button>
-										
-										<div id="ResMenuprimary_menu" class="collapse menu-responsive-wrapper">
-											<ul id="menu-primary-menu" class="etrostore_resmenu">
-												<li><a href="index.html">Home</a></li>
-												<li><a href="cart.html">Cart</a></li>
-												<li><a href="checkout.html">Checkout</a></li>
-												<li><a href="my_account.html">My Account</a></li>
-												<li><a href="shop.html">Shop</a></li>
-												<li><a href="simple_product.html">Simple Product</a></li>
-												<li><a href="about_us.html">About Us</a></li>
-												<li><a href="contact_us.html">Contact Us</a></li>
-											</ul>
-										</div>
-									</div>
-									
-									<ul id="menu-primary-menu-1" class="nav nav-pills nav-mega etrostore-mega etrostore-menures">
-										<li><a href="index.html">Home</a></li>
-										<li><a href="cart.html">Cart</a></li>
-										<li><a href="checkout.html">Checkout</a></li>
-										<li><a href="my_account.html">My Account</a></li>
-										<li><a href="shop.html">Shop</a></li>
-										<li><a href="simple_product.html">Simple Product</a></li>
-										<li><a href="about_us.html">About Us</a></li>
-										<li><a href="contact_us.html">Contact Us</a></li>
-									</ul>
-								</div>
-							</nav>
-						</div>
-						<!-- /Primary navbar -->
-				  
-						<div class="top-form top-form-minicart etrostore-minicart pull-right">
-							<div class="top-minicart-icon pull-right">
-								<i class="fa fa-shopping-cart"></i>
-								<a class="cart-contents" href="cart.html" title="View your shopping cart">
-									<span class="minicart-number">2</span>
-								</a>
-							</div>
-						 
-							<div class="wrapp-minicart">
-								<div class="minicart-padding">
-									<div class="number-item">
-										There are <span>items</span> in your cart
-									</div>
-									
-									<ul class="minicart-content">
-										<li>
-											<a href="simple_product.html" class="product-image">
-												<img 	width="100" height="100" src="images/1903/45-150x150.jpg" class="attachment-100x100 size-100x100 wp-post-image" alt="" 
-														srcset="images/1903/45-150x150.jpg 150w, images/1903/45-300x300.jpg 300w, images/1903/45-180x180.jpg 180w, images/1903/45.jpg 600w" 
-														sizes="(max-width: 100px) 100vw, 100px" />
-											</a>
-											
-											<div class="detail-item">
-												<div class="product-details">
-													<h4>
-														<a class="title-item" href="simple_product.html">Veniam Dolore</a>
-													</h4>
-													
-													<div class="product-price">
-														<span class="price">														
-															<span class="woocommerce-Price-amount amount">
-																<span class="woocommerce-Price-currencySymbol">$</span>190.00
-															</span>
-														</span>	      
-														
-														<div class="qty">
-															<span class="qty-number">1</span>									
-														</div>
-													</div>
-													
-													<div class="product-action clearfix">
-														<a href="#" class="btn-remove" title="Remove this item">
-															<span class="fa fa-trash-o"></span>
-														</a>
-														
-														<a class="btn-edit" href="cart.html" title="View your shopping cart">
-															<span class="fa fa-pencil"></span>
-														</a>    
-													</div>
-												</div>
-											</div>
-										</li>
-									  
-										<li>
-											<a href="simple_product.html" class="product-image">
-												<img	 width="100" height="100" src="images/1903/22-150x150.jpg" class="attachment-100x100 size-100x100 wp-post-image" alt="" 
-														srcset="images/1903/22-150x150.jpg 150w, images/1903/22-300x300.jpg 300w, images/1903/22-180x180.jpg 180w, images/1903/22.jpg 600w" 
-														sizes="(max-width: 100px) 100vw, 100px" />
-											</a>
-											
-											<div class="detail-item">
-												<div class="product-details">
-													<h4>
-														<a class="title-item" href="simple_product.html">Cleaner with bag</a>
-													</h4>
-													
-													<div class="product-price">
-														<span class="price">
-															<span class="woocommerce-Price-amount amount">
-																<span class="woocommerce-Price-currencySymbol">$</span>350.00
-															</span>
-														</span>
-														
-														<div class="qty">
-															<span class="qty-number">1</span>									
-														</div>
-													</div>
-													
-													<div class="product-action clearfix">
-														<a href="#" class="btn-remove" title="Remove this item">
-															<span class="fa fa-trash-o"></span>
-														</a>           
-														
-														<a class="btn-edit" href="cart.html" title="View your shopping cart">
-															<span class="fa fa-pencil"></span>
-														</a>
-													</div>
-												</div>
-											</div>
-										</li>
-									</ul>
-									
-									<div class="cart-checkout">
-										<div class="price-total">
-											<span class="label-price-total">Total</span>
-											
-											<span class="price-total-w">
-												<span class="price">
-													<span class="woocommerce-Price-amount amount">
-														<span class="woocommerce-Price-currencySymbol">$</span>540.00
-													</span>
-												</span>
-											</span>			
-										</div>
-										
-										<div class="cart-links clearfix">
-											<div class="cart-link">
-												<a href="cart.html" title="Cart">View Cart</a>
-											</div>
-											
-											<div class="checkout-link">
-												<a href="checkout.html" title="Check Out">Check Out</a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-				  
-						<div class="mid-header pull-right">
-							<div class="widget sw_top">
-								<span class="stick-sr">
-									<i class="fa fa-search" aria-hidden="true"></i>
-								</span>
-								
-								<div class="top-form top-search">
-									<div class="topsearch-entry">
-										<form role="search" method="get" class="form-search searchform" action="">
-											<label class="hide"></label>
-											<input type="text" value="" name="s" class="search-query" placeholder="Keyword here..." />
-											<button type="submit" class="button-search-pro form-button">Search</button>
-										</form>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</header>
-		
+        <th:block th:include="common/header::nav"/>
 		<div class="listings-title">
 			<div class="container">
 				<div class="wrap-title">
@@ -585,13 +53,13 @@
 															<div class="wpb_wrapper">
 																<div class="vc_wp_custommenu wpb_content_element wrap-title">
 																	<div class="mega-left-title">
-																		<strong>Categories</strong>
+																		<strong>全部分类</strong>
 																	</div>
 																	
 																	<div class="wrapper_vertical_menu vertical_megamenu">
 																		<div class="resmenu-container">
 																			<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#ResMenuvertical_menu">
-																				<span class="sr-only">Categories</span>
+																				<span class="sr-only">全部分类</span>
 																				<span class="icon-bar"></span>
 																				<span class="icon-bar"></span>
 																				<span class="icon-bar"></span>
@@ -599,407 +67,226 @@
 																		 
 																			<div id="ResMenuvertical_menu" class="collapse menu-responsive-wrapper">
 																				<ul id="menu-vertical-menu" class="etrostore_resmenu">
-																					<li class="menu-computers-laptops">
-																						<a class="item-link" href="simple_product.html">Computers & Laptops</a>
+																					<!-- 循环输出 -->
+																					<li class="fix-menu res-dropdown menu-smartphones-tablet" th:each="ele : ${categories}">
+																						<a class="item-link dropdown-toggle" href="page_temp/simple_product.html">${ele.key.name}</a>
+																						<th:block th:if="${#lists.size(ele.value) gt 0}">
+																							<span class="show-dropdown"></span>
+																							<ul class="dropdown-resmenu">
+																								<li class="res-dropdown menu-electronics">
+																									<a class="item-link dropdown-toggle" th:href="@{'/category/'+${ele.key.id}}" th:text="${ele.key.name}"></a>
+																									<span class="show-dropdown"></span>
+
+																									<ul class="dropdown-resmenu">
+																										<li class="menu-laptop-desktop-accessories" th:each="sub_category : ${ele.value}">
+																											<a th:href="@{'/category/'+${sub_category.id}}" th:text="${sub_category.name}"></a>
+																										</li>
+																									</ul>
+																								</li>
+																							</ul>
+																						</th:block>
 																					</li>
-																				  
-																					<li class="fix-menu res-dropdown menu-smartphones-tablet">
-																						<a class="item-link dropdown-toggle" href="simple_product.html">Smartphones & Tablet</a>
-																						<span class="show-dropdown"></span>
-																					  
-																						<ul class="dropdown-resmenu">
-																							<li class="res-dropdown menu-electronics">
-																								<a class="item-link dropdown-toggle" href="#">Electronics</a>
-																								<span class="show-dropdown"></span>
-																								
-																								<ul class="dropdown-resmenu">
-																									<li class="menu-laptop-desktop-accessories"><a href="#">Laptop & Desktop Accessories</a></li>
-																									<li class="menu-storage-external-drives"><a href="#">Storage & External Drives</a></li>
-																									<li class="menu-networking-wireless"><a href="#">Networking & Wireless</a></li>
-																									<li class="menu-motherboards-cpus-psus"><a href="#">Motherboards, CPUs & PSUs</a></li>
-																									<li class="menu-webcams"><a href="#">Webcams</a></li>
-																								</ul>
-																							</li>
-																							
-																							<li class="res-dropdown menu-smartphone">
-																								<a class="item-link dropdown-toggle" href="#">Smartphone</a>
-																								<span class="show-dropdown"></span>
-																								
-																								<ul class="dropdown-resmenu">
-																									<li class="menu-mobile-phones"><a href="#">Mobile Phones</a></li>
-																									<li class="menu-smart-watches-accessories"><a href="#">Smart Watches & Accessories</a></li>
-																									<li class="menu-mobile-accessories"><a href="#">Mobile Accessories</a></li>
-																									<li class="menu-cases-covers"><a href="#">Cases & Covers</a></li>
-																									<li class="menu-power-banks"><a href="#">Power Banks</a></li>
-																								</ul>
-																							</li>
-																							
-																							<li class="res-dropdown menu-tablets">
-																								<a class="item-link dropdown-toggle" href="#">Tablets</a>
-																								<span class="show-dropdown"></span>
-																								
-																								<ul class="dropdown-resmenu">
-																									<li class="menu-tablet-accessories"><a href="#">Tablet Accessories</a></li>
-																									<li class="menu-cases-covers"><a href="#">Cases & Covers</a></li>
-																									<li class="menu-power-banks"><a href="#">Power Banks</a></li>
-																									<li class="menu-memory-cards"><a href="#">Memory Cards</a></li>
-																								</ul>
-																							</li>
-																							
-																							<li class="res-dropdown menu-computer">
-																								<a class="item-link dropdown-toggle" href="#">Computer</a>
-																								<span class="show-dropdown"></span>
-																								
-																								<ul class="dropdown-resmenu">
-																									<li class="menu-macbooks-imacs"><a href="#">Macbooks & iMacs</a></li>
-																									<li class="menu-computers-desktops"><a href="#">Computers & Desktops</a></li>
-																									<li class="menu-printers-scanners-faxs"><a href="#">Printers, Scanners, & Faxs</a></li>
-																									<li class="menu-laptop-desktop-accessories"><a href="#">Laptop & Desktop Accessories</a></li>
-																									<li class="menu-storage-external-drives"><a href="#">Storage & External Drives</a></li>
-																								</ul>
-																							</li>
-																						 
-																							<li class="fix-position res-dropdown menu-image">
-																								<a class="item-link dropdown-toggle" href="#">Image</a>
-																								<span class="show-dropdown"></span>
-																								
-																								<ul class="dropdown-resmenu">
-																									<li class="menu-image-1"><a href="#">Image 1</a></li>
-																									<li class="menu-image-2"><a href="#">Image 2</a></li>
-																									<li class="menu-image-3"><a href="#">Image 3</a></li>
-																								</ul>
-																							</li>
-																						</ul>
-																					</li>
-																					
-																					<li class="menu-cameras-camcorders">
-																						<a class="item-link" href="simple_product.html">Cameras & Camcorders</a>
-																					</li>
-																				  
-																					<li class="res-dropdown menu-electronic-component">
-																						<a class="item-link dropdown-toggle" href="simple_product.html">Electronic Component</a>
-																						<span class="show-dropdown"></span>
-																						
-																						<ul class="dropdown-resmenu">
-																							<li class="res-dropdown menu-electronics">
-																								<a class="item-link dropdown-toggle" href="#">Electronics</a>
-																								<span class="show-dropdown"></span>
-																								
-																								<ul class="dropdown-resmenu">
-																									<li class="menu-leds"><a href="#">Leds</a></li>
-																									<li class="menu-laptop-desktop-accessories"><a href="#">Laptop & Desktop Accessories</a></li>
-																									<li class="menu-storage-external-drives"><a href="#">Storage & External Drives</a></li>
-																									<li class="menu-networking-wireless"><a href="#">Networking & Wireless</a></li>
-																									<li class="menu-motherboards-cpus-psus"><a href="#">Motherboards, CPUs & PSUs</a></li>
-																									<li class="menu-webcams"><a href="#">Webcams</a></li>
-																									<li class="menu-gaming-mice"><a href="#">Gaming Mice</a></li>
-																								</ul>
-																							</li>
-																							
-																							<li class="res-dropdown menu-smartphone">
-																								<a class="item-link dropdown-toggle" href="#">Smartphone</a>
-																								<span class="show-dropdown"></span>
-																								
-																								<ul class="dropdown-resmenu">
-																									<li class="menu-smartphones"><a href="#">Smartphones</a></li>
-																									<li class="menu-mobile-phones"><a href="#">Mobile Phones</a></li>
-																									<li class="menu-smart-watches-accessories"><a href="#">Smart Watches & Accessories</a></li>
-																									<li class="menu-mobile-accessories"><a href="#">Mobile Accessories</a></li>
-																									<li class="menu-cases-covers"><a href="#">Cases & Covers</a></li>
-																									<li class="menu-power-banks"><a href="#">Power Banks</a></li>
-																									<li class="menu-memory-cards"><a href="#">Memory Cards</a></li>
-																								</ul>
-																							</li>
-																							
-																							<li class="res-dropdown menu-tablet">
-																								<a class="item-link dropdown-toggle" href="#">Tablet</a>
-																								<span class="show-dropdown"></span>
-																								
-																								<ul class="dropdown-resmenu">
-																									<li class="menu-tablets"><a href="#">Tablets</a></li>
-																									<li class="menu-tablet-accessories"><a href="#">Tablet Accessories</a></li>
-																									<li class="menu-cases-covers"><a href="#">Cases & Covers</a></li>
-																									<li class="menu-power-banks"><a href="#">Power Banks</a></li>
-																									<li class="menu-memory-cards"><a href="#">Memory Cards</a></li>
-																									<li class="menu-headphonesheadsets"><a href="#">Headphones/Headsets</a></li>
-																								</ul>
-																							</li>
-																						</ul>
-																					</li>
-																					
-																					<li class="menu-home-appliances">
-																						<a class="item-link" href="simple_product.html">Home Appliances</a>
-																					</li>
-																					
-																					<li class="menu-home-furniture">
-																						<a class="item-link" href="simple_product.html">Home Furniture</a>
-																					</li>
-																					
-																					<li class="menu-household-goods">
-																						<a class="item-link" href="simple_product.html">Household Goods</a>
-																					</li>
-																					
-																					<li class="menu-television">
-																						<a class="item-link" href="simple_product.html">Television</a>
-																					</li>
-																					
-																					<li class="menu-accessories-for-tablet">
-																						<a class="item-link" href="simple_product.html">Accessories for Tablet</a>
-																					</li>
-																					
-																					<li class="menu-laptops-accessories">
-																						<a class="item-link" href="simple_product.html">Laptops & Accessories</a>
-																					</li>
-																					
-																					<li class="menu-blender">
-																						<a class="item-link" href="simple_product.html">Blender</a>
-																					</li>
-																					
-																					<li class="menu-vacuum-cleaner">
-																						<a class="item-link" href="simple_product.html">Vacuum Cleaner</a>
-																					</li>
+																					<!--结束循环输出-->
+
+																					<!--<li class="menu-computers-laptops">-->
+																						<!--<a class="item-link" href="page_temp/simple_product.html">Computers & Laptops</a>-->
+																					<!--</li>-->
+
+																					<!--<li class="fix-menu res-dropdown menu-smartphones-tablet">-->
+																						<!--<a class="item-link dropdown-toggle" href="page_temp/simple_product.html">Smartphones & Tablet</a>-->
+																						<!--<span class="show-dropdown"></span>-->
+
+																						<!--<ul class="dropdown-resmenu">-->
+																							<!--<li class="res-dropdown menu-electronics">-->
+																								<!--<a class="item-link dropdown-toggle" href="#">Electronics</a>-->
+																								<!--<span class="show-dropdown"></span>-->
+
+																								<!--<ul class="dropdown-resmenu">-->
+																									<!--<li class="menu-laptop-desktop-accessories"><a href="#">Laptop & Desktop Accessories</a></li>-->
+																									<!--<li class="menu-storage-external-drives"><a href="#">Storage & External Drives</a></li>-->
+																									<!--<li class="menu-networking-wireless"><a href="#">Networking & Wireless</a></li>-->
+																									<!--<li class="menu-motherboards-cpus-psus"><a href="#">Motherboards, CPUs & PSUs</a></li>-->
+																									<!--<li class="menu-webcams"><a href="#">Webcams</a></li>-->
+																								<!--</ul>-->
+																							<!--</li>-->
+
+																							<!--<li class="res-dropdown menu-smartphone">-->
+																								<!--<a class="item-link dropdown-toggle" href="#">Smartphone</a>-->
+																								<!--<span class="show-dropdown"></span>-->
+
+																								<!--<ul class="dropdown-resmenu">-->
+																									<!--<li class="menu-mobile-phones"><a href="#">Mobile Phones</a></li>-->
+																									<!--<li class="menu-smart-watches-accessories"><a href="#">Smart Watches & Accessories</a></li>-->
+																									<!--<li class="menu-mobile-accessories"><a href="#">Mobile Accessories</a></li>-->
+																									<!--<li class="menu-cases-covers"><a href="#">Cases & Covers</a></li>-->
+																									<!--<li class="menu-power-banks"><a href="#">Power Banks</a></li>-->
+																								<!--</ul>-->
+																							<!--</li>-->
+
+																							<!--<li class="res-dropdown menu-tablets">-->
+																								<!--<a class="item-link dropdown-toggle" href="#">Tablets</a>-->
+																								<!--<span class="show-dropdown"></span>-->
+
+																								<!--<ul class="dropdown-resmenu">-->
+																									<!--<li class="menu-tablet-accessories"><a href="#">Tablet Accessories</a></li>-->
+																									<!--<li class="menu-cases-covers"><a href="#">Cases & Covers</a></li>-->
+																									<!--<li class="menu-power-banks"><a href="#">Power Banks</a></li>-->
+																									<!--<li class="menu-memory-cards"><a href="#">Memory Cards</a></li>-->
+																								<!--</ul>-->
+																							<!--</li>-->
+
+																							<!--<li class="res-dropdown menu-computer">-->
+																								<!--<a class="item-link dropdown-toggle" href="#">Computer</a>-->
+																								<!--<span class="show-dropdown"></span>-->
+
+																								<!--<ul class="dropdown-resmenu">-->
+																									<!--<li class="menu-macbooks-imacs"><a href="#">Macbooks & iMacs</a></li>-->
+																									<!--<li class="menu-computers-desktops"><a href="#">Computers & Desktops</a></li>-->
+																									<!--<li class="menu-printers-scanners-faxs"><a href="#">Printers, Scanners, & Faxs</a></li>-->
+																									<!--<li class="menu-laptop-desktop-accessories"><a href="#">Laptop & Desktop Accessories</a></li>-->
+																									<!--<li class="menu-storage-external-drives"><a href="#">Storage & External Drives</a></li>-->
+																								<!--</ul>-->
+																							<!--</li>-->
+
+																							<!--<li class="fix-position res-dropdown menu-image">-->
+																								<!--<a class="item-link dropdown-toggle" href="#">Image</a>-->
+																								<!--<span class="show-dropdown"></span>-->
+
+																								<!--<ul class="dropdown-resmenu">-->
+																									<!--<li class="menu-image-1"><a href="#">Image 1</a></li>-->
+																									<!--<li class="menu-image-2"><a href="#">Image 2</a></li>-->
+																									<!--<li class="menu-image-3"><a href="#">Image 3</a></li>-->
+																								<!--</ul>-->
+																							<!--</li>-->
+																						<!--</ul>-->
+																					<!--</li>-->
+
+																					<!--<li class="menu-cameras-camcorders">-->
+																						<!--<a class="item-link" href="page_temp/simple_product.html">Cameras & Camcorders</a>-->
+																					<!--</li>-->
+
+																					<!--<li class="res-dropdown menu-electronic-component">-->
+																						<!--<a class="item-link dropdown-toggle" href="page_temp/simple_product.html">Electronic Component</a>-->
+																						<!--<span class="show-dropdown"></span>-->
+
+																						<!--<ul class="dropdown-resmenu">-->
+																							<!--<li class="res-dropdown menu-electronics">-->
+																								<!--<a class="item-link dropdown-toggle" href="#">Electronics</a>-->
+																								<!--<span class="show-dropdown"></span>-->
+
+																								<!--<ul class="dropdown-resmenu">-->
+																									<!--<li class="menu-leds"><a href="#">Leds</a></li>-->
+																									<!--<li class="menu-laptop-desktop-accessories"><a href="#">Laptop & Desktop Accessories</a></li>-->
+																									<!--<li class="menu-storage-external-drives"><a href="#">Storage & External Drives</a></li>-->
+																									<!--<li class="menu-networking-wireless"><a href="#">Networking & Wireless</a></li>-->
+																									<!--<li class="menu-motherboards-cpus-psus"><a href="#">Motherboards, CPUs & PSUs</a></li>-->
+																									<!--<li class="menu-webcams"><a href="#">Webcams</a></li>-->
+																									<!--<li class="menu-gaming-mice"><a href="#">Gaming Mice</a></li>-->
+																								<!--</ul>-->
+																							<!--</li>-->
+
+																							<!--<li class="res-dropdown menu-smartphone">-->
+																								<!--<a class="item-link dropdown-toggle" href="#">Smartphone</a>-->
+																								<!--<span class="show-dropdown"></span>-->
+
+																								<!--<ul class="dropdown-resmenu">-->
+																									<!--<li class="menu-smartphones"><a href="#">Smartphones</a></li>-->
+																									<!--<li class="menu-mobile-phones"><a href="#">Mobile Phones</a></li>-->
+																									<!--<li class="menu-smart-watches-accessories"><a href="#">Smart Watches & Accessories</a></li>-->
+																									<!--<li class="menu-mobile-accessories"><a href="#">Mobile Accessories</a></li>-->
+																									<!--<li class="menu-cases-covers"><a href="#">Cases & Covers</a></li>-->
+																									<!--<li class="menu-power-banks"><a href="#">Power Banks</a></li>-->
+																									<!--<li class="menu-memory-cards"><a href="#">Memory Cards</a></li>-->
+																								<!--</ul>-->
+																							<!--</li>-->
+
+																							<!--<li class="res-dropdown menu-tablet">-->
+																								<!--<a class="item-link dropdown-toggle" href="#">Tablet</a>-->
+																								<!--<span class="show-dropdown"></span>-->
+
+																								<!--<ul class="dropdown-resmenu">-->
+																									<!--<li class="menu-tablets"><a href="#">Tablets</a></li>-->
+																									<!--<li class="menu-tablet-accessories"><a href="#">Tablet Accessories</a></li>-->
+																									<!--<li class="menu-cases-covers"><a href="#">Cases & Covers</a></li>-->
+																									<!--<li class="menu-power-banks"><a href="#">Power Banks</a></li>-->
+																									<!--<li class="menu-memory-cards"><a href="#">Memory Cards</a></li>-->
+																									<!--<li class="menu-headphonesheadsets"><a href="#">Headphones/Headsets</a></li>-->
+																								<!--</ul>-->
+																							<!--</li>-->
+																						<!--</ul>-->
+																					<!--</li>-->
+
+																					<!--<li class="menu-home-appliances">-->
+																						<!--<a class="item-link" href="page_temp/simple_product.html">Home Appliances</a>-->
+																					<!--</li>-->
+
+																					<!--<li class="menu-home-furniture">-->
+																						<!--<a class="item-link" href="page_temp/simple_product.html">Home Furniture</a>-->
+																					<!--</li>-->
+
+																					<!--<li class="menu-household-goods">-->
+																						<!--<a class="item-link" href="page_temp/simple_product.html">Household Goods</a>-->
+																					<!--</li>-->
+
+																					<!--<li class="menu-television">-->
+																						<!--<a class="item-link" href="page_temp/simple_product.html">Television</a>-->
+																					<!--</li>-->
+
+																					<!--<li class="menu-accessories-for-tablet">-->
+																						<!--<a class="item-link" href="page_temp/simple_product.html">Accessories for Tablet</a>-->
+																					<!--</li>-->
+
+																					<!--<li class="menu-laptops-accessories">-->
+																						<!--<a class="item-link" href="page_temp/simple_product.html">Laptops & Accessories</a>-->
+																					<!--</li>-->
+
+																					<!--<li class="menu-blender">-->
+																						<!--<a class="item-link" href="page_temp/simple_product.html">Blender</a>-->
+																					<!--</li>-->
+
+																					<!--<li class="menu-vacuum-cleaner">-->
+																						<!--<a class="item-link" href="page_temp/simple_product.html">Vacuum Cleaner</a>-->
+																					<!--</li>-->
 																				</ul>
 																			</div>
 																		</div>
 													  
 																		<ul id="menu-vertical-menu-1" class="nav vertical-megamenu etrostore-mega etrostore-menures">
-																			<li class="menu-computers-laptops etrostore-menu-custom level1">
-																				<a href="simple_product.html" class="item-link">
-																					<span class="have-title">
-																						<span class="menu-color" data-color="#7ac143"></span>
-																						
-																						<span class="menu-title">Computers & Laptops</span>
-																					</span>
-																				</a>
-																			</li>
-																			
-																			<li class="fix-menu dropdown menu-smartphones-tablet etrostore-mega-menu level1">
-																				<a href="simple_product.html" class="item-link dropdown-toggle">
+																			<!--循环-->
+																			<li class="fix-menu dropdown menu-smartphones-tablet etrostore-mega-menu level1" th:each="ele : ${categories}">
+																				<a href="page_temp/simple_product.html" class="item-link">
 																					<span class="have-title">
 																						<span class="menu-color" data-color="#efc73a"></span>
 																						
-																						<span class="menu-title">Smartphones & Tablet</span>
+																						<span class="menu-title" th:text="${ele.key.name}"></span>
 																					</span>
 																				</a>
-																				
-																				<ul class="dropdown-menu nav-level1 column-3">
+																				<ul class="dropdown-menu nav-level1 column-3" th:if="${#lists.size(ele.value) gt 0}">
 																					<li class="dropdown-submenu column-3 menu-electronics">
 																						<a href="#">
 																							<span class="have-title">
-																								<span class="menu-title">Electronics</span>
+																								<span class="menu-title" th:text="${ele.key.name}"></span>
 																							</span>
 																						</a>
 																						
 																						<ul class="dropdown-sub nav-level2">
-																							<li class="menu-laptop-desktop-accessories">
-																								<a href="#">
+																							<li class="menu-laptop-desktop-accessories" th:each="sub_category : ${ele.value}">
+																								<a th:href="@{'/category/'+${sub_category.id}}">
 																									<span class="have-title">
-																										<span class="menu-title">Laptop & Desktop Accessories</span>
-																									</span>
-																								</a>
-																							</li>
-																							
-																							<li class="menu-storage-external-drives">
-																								<a href="#">
-																									<span class="have-title">
-																										<span class="menu-title">Storage & External Drives</span>
-																									</span>
-																								</a>
-																							</li>
-																							
-																							<li class="menu-networking-wireless">
-																								<a href="#">
-																									<span class="have-title">
-																										<span class="menu-title">Networking & Wireless</span>
-																									</span>
-																								</a>
-																							</li>
-																							
-																							<li class="menu-motherboards-cpus-psus">
-																								<a href="#">
-																									<span class="have-title">
-																										<span class="menu-title">Motherboards, CPUs & PSUs</span>
-																									</span>
-																								</a>
-																							</li>
-																							
-																							<li class="menu-webcams">
-																								<a href="#">
-																									<span class="have-title">
-																										<span class="menu-title">Webcams</span>
+																										<span class="menu-title" th:text="${sub_category.name}"></span>
 																									</span>
 																								</a>
 																							</li>
 																						</ul>
 																					</li>
-																					
-																					<li class="dropdown-submenu column-3 menu-smartphone">
-																						<a href="#">
-																							<span class="have-title">
-																								<span class="menu-title">Smartphone</span>
-																							</span>
-																						</a>
-																						
-																						<ul class="dropdown-sub nav-level2">
-																							<li class="menu-mobile-phones">
-																								<a href="#">
-																									<span class="have-title">
-																										<span class="menu-title">Mobile Phones</span>
-																									</span>
-																								</a>
-																							</li>
-																							
-																							<li class="menu-smart-watches-accessories">
-																								<a href="#">
-																									<span class="have-title">
-																										<span class="menu-title">Smart Watches & Accessories</span>
-																									</span>
-																								</a>
-																							</li>
-																							
-																							<li class="menu-mobile-accessories">
-																								<a href="#">
-																									<span class="have-title">
-																										<span class="menu-title">Mobile Accessories</span>
-																									</span>
-																								</a>
-																							</li>
-																							
-																							<li class="menu-cases-covers">
-																								<a href="#">
-																									<span class="have-title">
-																										<span class="menu-title">Cases & Covers</span>
-																									</span>
-																								</a>
-																							</li>
-																							
-																							<li class="menu-power-banks">
-																								<a href="#">
-																									<span class="have-title">
-																										<span class="menu-title">Power Banks</span>
-																									</span>
-																								</a>
-																							</li>
-																						</ul>
-																					</li>
-																				   
-																					<li class="dropdown-submenu column-3 menu-tablets">
-																						<a href="#">
-																							<span class="have-title">
-																								<span class="menu-title">Tablets</span>
-																							</span>
-																						</a>
-																						
-																						<ul class="dropdown-sub nav-level2">
-																							<li class="menu-tablet-accessories">
-																								<a href="#">
-																									<span class="have-title">
-																										<span class="menu-title">Tablet Accessories</span>
-																									</span>
-																								</a>
-																							</li>
-																							
-																							<li class="menu-cases-covers">
-																								<a href="#">
-																									<span class="have-title">
-																										<span class="menu-title">Cases & Covers</span>
-																									</span>
-																								</a>
-																							</li>
-																							
-																							<li class="menu-power-banks">
-																								<a href="#">
-																									<span class="have-title">
-																										<span class="menu-title">Power Banks</span>
-																									</span>
-																								</a>
-																							</li>
-																							
-																							<li class="menu-memory-cards">
-																								<a href="#">
-																									<span class="have-title">
-																										<span class="menu-title">Memory Cards</span>
-																									</span>
-																								</a>
-																							</li>
-																						</ul>
-																					</li>
-																				   
-																					<li class="dropdown-submenu column-3 menu-computer">
-																						<a href="#">
-																							<span class="have-title">
-																								<span class="menu-title">Computer</span>
-																							</span>
-																						</a>
-																						
-																						<ul class="dropdown-sub nav-level2">
-																							<li class="menu-macbooks-imacs">
-																								<a href="#">
-																									<span class="have-title">
-																										<span class="menu-title">Macbooks & iMacs</span>
-																									</span>
-																								</a>
-																							</li>
-																							
-																							<li class="menu-computers-desktops">
-																								<a href="#">
-																									<span class="have-title">
-																										<span class="menu-title">Computers & Desktops</span>
-																									</span>
-																								</a>
-																							</li>
-																							
-																							<li class="menu-printers-scanners-faxs">
-																								<a href="#">
-																									<span class="have-title">
-																										<span class="menu-title">Printers, Scanners, & Faxs</span>
-																									</span>
-																								</a>
-																							</li>
-																							
-																							<li class="menu-laptop-desktop-accessories">
-																								<a href="#">
-																									<span class="have-title">
-																										<span class="menu-title">Laptop & Desktop Accessories</span>
-																									</span>
-																								</a>
-																							</li>
-																							
-																							<li class="menu-storage-external-drives">
-																								<a href="#">
-																									<span class="have-title">
-																										<span class="menu-title">Storage & External Drives</span>
-																									</span>
-																								</a>
-																							</li>
-																						</ul>
-																					</li>
-																					
+
 																					<li class="fix-position dropdown-submenu column-3 menu-image">
 																						<ul class="dropdown-sub nav-level2">
 																							<li class="menu-image-1 etrostore-menu-img">
 																								<a href="#">
 																									<span class="">
 																										<span class="menu-img">
-																											<img src="images/1903/menu-bn7.jpg" alt="Menu Image" /></span>
-																									</span>
-																								</a>
-																							</li>
-																							
-																							<li class="menu-image-2 etrostore-menu-img">
-																								<a href="#">
-																									<span class="">
-																										<span class="menu-img">
-																											<img src="images/1903/menu-bn8.jpg" alt="Menu Image" /></span>
-																									</span>
-																								</a>
-																							</li>
-																							
-																							<li class="menu-image-3 etrostore-menu-img">
-																								<a href="#">
-																									<span class="">
-																										<span class="menu-img">
-																											<img src="images/1903/menu-bn9.jpg" alt="Menu Image" /></span>
+																											<img th:src="@{/images/1903/menu-bn8.jpg}" alt="Menu Image" /></span>
 																									</span>
 																								</a>
 																							</li>
@@ -1007,310 +294,24 @@
 																					</li>
 																				</ul>
 																			</li>
-																			
-																			<li class="menu-cameras-camcorders etrostore-menu-custom level1">
-																				<a href="simple_product.html" class="item-link">
-																					<span class="have-title">
-																						<span class="menu-color" data-color="#fe9901"></span>
-																						
-																						<span class="menu-title">Cameras & Camcorders</span>
-																					</span>
-																				</a>
-																			</li>
-																			
-																			<li class="dropdown menu-electronic-component etrostore-mega-menu level1">
-																				<a href="simple_product.html" class="item-link dropdown-toggle">
-																					<span class="have-title">
-																						<span class="menu-color" data-color="#f03442"></span>
-																						
-																						<span class="menu-title">Electronic Component</span>
-																					</span>
-																				</a>
-																				
-																				<ul class="dropdown-menu nav-level1 column-3">
-																					<li class="dropdown-submenu column-3 menu-electronics etrostore-menu-img">
-																						<a href="#">
-																							<span class="have-title">
-																								<span class="menu-img">
-																									<img src="images/1903/menu-bn7.jpg" alt="Menu Image" />
-																								</span>
-																								
-																								<span class="menu-title">Electronics</span>
-																							</span>
-																						</a>
-																						
-																						<ul class="dropdown-sub nav-level2">
-																							<li class="menu-leds">
-																								<a href="#">
-																									<span class="have-title">
-																										<span class="menu-title">Leds</span>
-																									</span>
-																								</a>
-																							</li>
-																							
-																							<li class="menu-laptop-desktop-accessories">
-																								<a href="#">
-																									<span class="have-title">
-																										<span class="menu-title">Laptop & Desktop Accessories</span>
-																									</span>
-																								</a>
-																							</li>
-																							
-																							<li class="menu-storage-external-drives">
-																								<a href="#">
-																									<span class="have-title">
-																										<span class="menu-title">Storage & External Drives</span>
-																									</span>
-																								</a>
-																							</li>
-																							
-																							<li class="menu-networking-wireless">
-																								<a href="#">
-																									<span class="have-title">
-																										<span class="menu-title">Networking & Wireless</span>
-																									</span>
-																								</a>
-																							</li>
-																							
-																							<li class="menu-motherboards-cpus-psus">
-																								<a href="#">
-																									<span class="have-title">
-																										<span class="menu-title">Motherboards, CPUs & PSUs</span>
-																									</span>
-																								</a>
-																							</li>
-																							
-																							<li class="menu-webcams">
-																								<a href="#">
-																									<span class="have-title">
-																										<span class="menu-title">Webcams</span>
-																									</span>
-																								</a>
-																							</li>
-																							
-																							<li class="menu-gaming-mice">
-																								<a href="#">
-																									<span class="have-title">
-																										<span class="menu-title">Gaming Mice</span>
-																									</span>
-																								</a>
-																							</li>
-																						</ul>
-																					</li>
-																					
-																					<li class="dropdown-submenu column-3 menu-smartphone etrostore-menu-img">
-																						<a href="#">
-																							<span class="have-title">
-																								<span class="menu-img">
-																									<img src="images/1903/menu-bn8.jpg" alt="Menu Image" />
-																								</span>
-																								
-																								<span class="menu-title">Smartphone</span>
-																							</span>
-																						</a>
-																						
-																						<ul class="dropdown-sub nav-level2">
-																							<li class="menu-smartphones">
-																								<a href="#">
-																									<span class="have-title">
-																										<span class="menu-title">Smartphones</span>
-																									</span>
-																								</a>
-																							</li>
-																							
-																							<li class="menu-mobile-phones">
-																								<a href="#">
-																									<span class="have-title">
-																										<span class="menu-title">Mobile Phones</span>
-																									</span>
-																								</a>
-																							</li>
-																							
-																							<li class="menu-smart-watches-accessories">
-																								<a href="#">
-																									<span class="have-title">
-																										<span class="menu-title">Smart Watches & Accessories</span>
-																									</span>
-																								</a>
-																							</li>
-																							
-																							<li class="menu-mobile-accessories">
-																								<a href="#">
-																									<span class="have-title">
-																										<span class="menu-title">Mobile Accessories</span>
-																									</span>
-																								</a>
-																							</li>
-																							
-																							<li class="menu-cases-covers">
-																								<a href="#">
-																									<span class="have-title">
-																										<span class="menu-title">Cases & Covers</span>
-																									</span>
-																								</a>
-																							</li>
-																							
-																							<li class="menu-power-banks">
-																								<a href="#">
-																									<span class="have-title">
-																										<span class="menu-title">Power Banks</span>
-																									</span>
-																								</a>
-																							</li>
-																							
-																							<li class="menu-memory-cards">
-																								<a href="#">
-																									<span class="have-title">
-																										<span class="menu-title">Memory Cards</span>
-																									</span>
-																								</a>
-																							</li>
-																						</ul>
-																					</li>
-																					
-																					<li class="dropdown-submenu column-3 menu-tablet etrostore-menu-img">
-																						<a href="#">
-																							<span class="have-title">
-																								<span class="menu-img">
-																									<img src="images/1903/menu-bn9.jpg" alt="Menu Image" />
-																								</span>
-																								
-																								<span class="menu-title">Tablet</span>
-																							</span>
-																						</a>
-																						
-																						<ul class="dropdown-sub nav-level2">
-																							<li class="menu-tablets">
-																								<a href="#">
-																									<span class="have-title">
-																										<span class="menu-title">Tablets</span>
-																									</span>
-																								</a>
-																							</li>
-																							
-																							<li class="menu-tablet-accessories">
-																								<a href="#">
-																									<span class="have-title">
-																										<span class="menu-title">Tablet Accessories</span>
-																									</span>
-																								</a>
-																							</li>
-																							
-																							<li class="menu-cases-covers">
-																								<a href="#">
-																									<span class="have-title">
-																										<span class="menu-title">Cases & Covers</span>
-																									</span>
-																								</a>
-																							</li>
-																							
-																							<li class="menu-power-banks">
-																								<a href="#">
-																									<span class="have-title">
-																										<span class="menu-title">Power Banks</span>
-																									</span>
-																								</a>
-																							</li>
-																							
-																							<li class="menu-memory-cards">
-																								<a href="#">
-																									<span class="have-title">
-																										<span class="menu-title">Memory Cards</span>
-																									</span>
-																								</a>
-																							</li>
-																							
-																							<li class="menu-headphonesheadsets">
-																								<a href="#">
-																									<span class="have-title">
-																										<span class="menu-title">Headphones/Headsets</span>
-																									</span>
-																								</a>
-																							</li>
-																						</ul>
-																					</li>
-																				</ul>
-																			</li>
-																			
-																			<li class="menu-home-appliances etrostore-menu-custom level1">
-																				<a href="simple_product.html" class="item-link">
-																					<span class="have-title">
-																						<span class="menu-color" data-color="#f034ca"></span>
-																						
-																						<span class="menu-title">Home Appliances</span>
-																					</span>
-																				</a>
-																			</li>
-																			
-																			<li class="menu-home-furniture etrostore-menu-custom level1">
-																				<a href="simple_product.html" class="item-link">
-																					<span class="have-title">
-																						<span class="menu-color" data-color="#7745bc"></span>
-																						
-																						<span class="menu-title">Home Furniture</span>
-																					</span>
-																				</a>
-																			</li>
-																			
-																			<li class="menu-household-goods etrostore-menu-custom level1">
-																				<a href="simple_product.html" class="item-link">
-																					<span class="have-title">
-																						<span class="menu-color" data-color="#42b8d1"></span>
-																						
-																						<span class="menu-title">Household Goods</span>
-																					</span>
-																				</a>
-																			</li>
-																			
-																			<li class="menu-television etrostore-menu-custom level1">
-																				<a href="simple_product.html" class="item-link">
-																					<span class="have-title">
-																						<span class="menu-color" data-color="#3f5eca"></span>
-																						
-																						<span class="menu-title">Television</span>
-																					</span>
-																				</a>
-																			</li>
-																			
-																			<li class="menu-accessories-for-tablet etrostore-menu-custom level1">
-																				<a href="simple_product.html" class="item-link">
-																					<span class="have-title">
-																						<span class="menu-color" data-color="#13528c"></span>
-																						
-																						<span class="menu-title">Accessories for Tablet</span>
-																					</span>
-																				</a>
-																			</li>
-																			
-																			<li class="menu-laptops-accessories etrostore-menu-custom level1">
-																				<a href="simple_product.html" class="item-link">
-																					<span class="have-title">
-																						<span class="menu-color" data-color="#2f2e2e"></span>
-																						
-																						<span class="menu-title">Laptops & Accessories</span>
-																					</span>
-																				</a>
-																			</li>
-																			
-																			<li class="menu-blender etrostore-menu-custom level1" style="display: none;">
-																				<a href="simple_product.html" class="item-link">
-																					<span class="have-title">
-																						<span class="menu-color" data-color="#e93434"></span>
-																						
-																						<span class="menu-title">Blender</span>
-																					</span>
-																				</a>
-																			</li>
-																			
-																			<li class="menu-vacuum-cleaner etrostore-menu-custom level1" style="display: none;">
-																				<a href="simple_product.html" class="item-link">
-																					<span class="have-title">
-																						<span class="menu-color" data-color="#f034ca"></span>
-																						
-																						<span class="menu-title">Vacuum Cleaner</span>
-																					</span>
-																				</a>
-																			</li>
+																			<!--<li class="menu-blender etrostore-menu-custom level1" style="display:none;">-->
+																				<!--<a href="page_temp/simple_product.html" class="item-link">-->
+																					<!--<span class="have-title">-->
+																						<!--<span class="menu-color" data-color="#e93434"></span>-->
+																						<!--<span class="menu-title">Blender</span>-->
+																					<!--</span>-->
+																				<!--</a>-->
+																			<!--</li>-->
+
+																			<!--<li class="menu-vacuum-cleaner etrostore-menu-custom level1" style="display:none;">-->
+																				<!--<a href="page_temp/simple_product.html" class="item-link">-->
+																					<!--<span class="have-title">-->
+																						<!--<span class="menu-color" data-color="#f034ca"></span>-->
+
+																						<!--<span class="menu-title">Vacuum Cleaner</span>-->
+																					<!--</span>-->
+																				<!--</a>-->
+																			<!--</li>-->
 																		</ul>
 																	</div>
 																</div>
@@ -1329,13 +330,13 @@
 																				<div id="main-slider" class="fullwidthbanner-container" style="position:relative; width:100%; height:auto; margin-top:0px; margin-bottom:0px">
 																					<div class="module slideshow no-margin">
 																						<div class="item">
-																							<a href="simple_product.html"><img src="images/1903/slider2.jpg" alt="slider1" class="img-responsive" height="559"></a>
+																							<a href="page_temp/simple_product.html"><img src="images/1903/slider2.jpg" alt="slider1" class="img-responsive" height="559"></a>
 																						</div>
 																						<div class="item">
-																							<a href="simple_product.html"><img src="images/1903/01_index_v1.jpg" alt="slider2" class="img-responsive" height="559"></a>
+																							<a href="page_temp/simple_product.html"><img src="images/1903/01_index_v1.jpg" alt="slider2" class="img-responsive" height="559"></a>
 																						</div>
 																						<div class="item">
-																							<a href="simple_product.html"><img src="images/1903/slider3.jpg" alt="slider3" class="img-responsive" height="559"></a>
+																							<a href="page_temp/simple_product.html"><img src="images/1903/slider3.jpg" alt="slider3" class="img-responsive" height="559"></a>
 																						</div>
 																					</div>
 																					<div class="loadeding"></div>
@@ -1485,7 +486,7 @@
 																			<!-- end rating  -->
 																			
 																			<h4>
-																				<a href="simple_product.html" title="veniam dolore">veniam dolore</a>
+																				<a href="page_temp/simple_product.html" title="veniam dolore">veniam dolore</a>
 																			</h4>
 																			
 																			<!-- Price -->
@@ -1513,7 +514,7 @@
 																		<div class="item-image-countdown">
 																			<span class="onsale">Sale!</span>
 																			
-																			<a href="simple_product.html">
+																			<a href="page_temp/simple_product.html">
 																				<div class="product-thumb-hover">
 																					<img 	width="300" height="300" src="images/1903/45-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" 
 																							srcset="images/1903/45-300x300.jpg 300w, images/1903/45-150x150.jpg 150w, images/1903/45-180x180.jpg 180w, images/1903/45.jpg 600w" 
@@ -1570,7 +571,7 @@
 																			<!-- end rating  -->
 																			
 																			<h4>
-																				<a href="simple_product.html" title="Cleaner with bag">Cleaner with bag</a>
+																				<a href="page_temp/simple_product.html" title="Cleaner with bag">Cleaner with bag</a>
 																			</h4>
 																			
 																			<!-- Price -->
@@ -1598,7 +599,7 @@
 																		<div class="item-image-countdown">
 																			<span class="onsale">Sale!</span>
 																			
-																			<a href="simple_product.html">
+																			<a href="page_temp/simple_product.html">
 																				<div class="product-thumb-hover">
 																					<img 	width="300" height="300" src="images/1903/22-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" 
 																							srcset="images/1903/22-300x300.jpg 300w, images/1903/22-150x150.jpg 150w, images/1903/22-180x180.jpg 180w, images/1903/22.jpg 600w" 
@@ -1653,7 +654,7 @@
 																			<!-- end rating  -->
 																			
 																			<h4>
-																				<a href="simple_product.html" title="philips stand">philips stand</a>
+																				<a href="page_temp/simple_product.html" title="philips stand">philips stand</a>
 																			</h4>
 																			
 																			<!-- Price -->
@@ -1680,7 +681,7 @@
 																		
 																		<div class="item-image-countdown">
 																			<span class="onsale">Sale!</span>
-																			<a href="simple_product.html">
+																			<a href="page_temp/simple_product.html">
 																				<div class="product-thumb-hover">
 																					<img 	width="300" height="300" src="images/1903/62-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" 
 																							srcset="images/1903/62-300x300.jpg 300w, images/1903/62-150x150.jpg 150w, images/1903/62-180x180.jpg 180w, images/1903/62.jpg 600w" 
@@ -1737,7 +738,7 @@
 																			<!-- end rating  -->
 																			
 																			<h4>
-																				<a href="simple_product.html" title="Vacuum cleaner">Vacuum cleaner</a>
+																				<a href="page_temp/simple_product.html" title="Vacuum cleaner">Vacuum cleaner</a>
 																			</h4>
 																			
 																			<!-- Price -->
@@ -1765,7 +766,7 @@
 																		<div class="item-image-countdown">
 																			<span class="onsale">Sale!</span>
 																			
-																			<a href="simple_product.html">
+																			<a href="page_temp/simple_product.html">
 																				<div class="product-thumb-hover">
 																					<img 	width="300" height="300" src="images/1903/26-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" 
 																							srcset="images/1903/26-300x300.jpg 300w, images/1903/26-150x150.jpg 150w, images/1903/26-180x180.jpg 180w, images/1903/26.jpg 600w" 
@@ -1820,7 +821,7 @@
 																			<!-- end rating  -->
 																			
 																			<h4>
-																				<a href="simple_product.html" title="nisi ball tip">Nisi ball tip</a>
+																				<a href="page_temp/simple_product.html" title="nisi ball tip">Nisi ball tip</a>
 																			</h4>
 																			
 																			<!-- Price -->
@@ -1847,7 +848,7 @@
 																		<div class="item-image-countdown">
 																			<span class="onsale">Sale!</span>
 																			
-																			<a href="simple_product.html">
+																			<a href="page_temp/simple_product.html">
 																				<div class="product-thumb-hover">
 																					<img	width="300" height="300" src="images/1903/11-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" 
 																							srcset="images/1903/11-300x300.jpg 300w, images/1903/11-150x150.jpg 150w, images/1903/11-180x180.jpg 180w, images/1903/11.jpg 600w" 
@@ -1902,7 +903,7 @@
 																			<!-- end rating  -->
 																			
 																			<h4>
-																				<a href="simple_product.html" title="MacBook Air">MacBook Air</a>
+																				<a href="page_temp/simple_product.html" title="MacBook Air">MacBook Air</a>
 																			</h4>
 																			
 																			<!-- Price -->
@@ -1930,7 +931,7 @@
 																		<div class="item-image-countdown">
 																			<span class="onsale">Sale!</span>
 																			
-																			<a href="simple_product.html">
+																			<a href="page_temp/simple_product.html">
 																				<div class="product-thumb-hover">
 																					<img 	width="300" height="300" src="images/1903/50-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" 
 																							srcset="images/1903/50-300x300.jpg 300w, images/1903/50-150x150.jpg 150w, images/1903/50-180x180.jpg 180w, images/1903/50.jpg 600w" 
@@ -2057,7 +1058,7 @@
 																					<!-- end rating  -->
 																					
 																					<h4>
-																						<a href="simple_product.html" title="voluptate ipsum">Voluptate ipsum</a>
+																						<a href="page_temp/simple_product.html" title="voluptate ipsum">Voluptate ipsum</a>
 																					</h4>
 																					
 																					<!-- Price -->
@@ -2071,7 +1072,7 @@
 																				</div>
 																				
 																				<div class="item-img products-thumb">
-																					<a href="simple_product.html">
+																					<a href="page_temp/simple_product.html">
 																						<div class="product-thumb-hover">
 																							<img 	width="300" height="300" src="images/1903/52-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" 
 																									srcset="images/1903/52-300x300.jpg 300w, images/1903/52-150x150.jpg 150w, images/1903/52-180x180.jpg 180w, images/1903/52.jpg 600w" 
@@ -2123,7 +1124,7 @@
 																					<!-- end rating  -->
 																					
 																					<h4>
-																						<a href="simple_product.html" title="veniam dolore">Veniam dolore</a>
+																						<a href="page_temp/simple_product.html" title="veniam dolore">Veniam dolore</a>
 																					</h4>
 																					
 																					<!-- Price -->
@@ -2137,7 +1138,7 @@
 																				</div>
 																				
 																				<div class="item-img products-thumb">
-																					<a href="simple_product.html">
+																					<a href="page_temp/simple_product.html">
 																						<div class="product-thumb-hover">
 																							<img 	width="300" height="300" src="images/1903/50-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" 
 																									srcset="images/1903/50-300x300.jpg 300w, images/1903/50-150x150.jpg 150w, images/1903/50-180x180.jpg 180w, images/1903/50.jpg 600w" 
@@ -2194,7 +1195,7 @@
 																					<!-- end rating  -->
 																					
 																					<h4>
-																						<a href="simple_product.html" title="Cleaner with bag">Cleaner with bag</a>
+																						<a href="page_temp/simple_product.html" title="Cleaner with bag">Cleaner with bag</a>
 																					</h4>
 																					
 																					<!-- Price -->
@@ -2220,7 +1221,7 @@
 																				<div class="item-img products-thumb">
 																					<span class="onsale">Sale!</span>
 																					
-																					<a href="simple_product.html">
+																					<a href="page_temp/simple_product.html">
 																						<div class="product-thumb-hover">
 																							<img 	width="300" height="300" src="images/1903/22-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" 
 																									srcset="images/1903/22-300x300.jpg 300w, images/1903/22-150x150.jpg 150w, images/1903/22-180x180.jpg 180w, images/1903/22.jpg 600w" 
@@ -2273,7 +1274,7 @@
 																					<!-- end rating  -->
 																					
 																					<h4>
-																						<a href="simple_product.html" title="Sony BRAVIA 4K">Sony BRAVIA 4K</a>
+																						<a href="page_temp/simple_product.html" title="Sony BRAVIA 4K">Sony BRAVIA 4K</a>
 																					</h4>
 																					
 																					<!-- Price -->
@@ -2287,7 +1288,7 @@
 																				</div>
 																				
 																				<div class="item-img products-thumb">
-																					<a href="simple_product.html">
+																					<a href="page_temp/simple_product.html">
 																						<div class="product-thumb-hover">
 																							<img 	width="300" height="300" src="images/1903/6-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" 
 																									srcset="images/1903/6-300x300.jpg 300w, images/1903/6-150x150.jpg 150w, images/1903/6-180x180.jpg 180w, images/1903/6.jpg 600w" 
@@ -2341,7 +1342,7 @@
 																					<!-- end rating  -->
 																					
 																					<h4>
-																						<a href="simple_product.html" title="Samsung SUHD">Samsung SUHD</a>
+																						<a href="page_temp/simple_product.html" title="Samsung SUHD">Samsung SUHD</a>
 																					</h4>
 																					
 																					<!-- Price -->
@@ -2355,7 +1356,7 @@
 																				</div>
 																				
 																				<div class="item-img products-thumb">
-																					<a href="simple_product.html">
+																					<a href="page_temp/simple_product.html">
 																						<div class="product-thumb-hover">
 																							<img 	width="300" height="300" src="images/1903/3-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" 
 																									srcset="images/1903/3-300x300.jpg 300w, images/1903/3-150x150.jpg 150w, images/1903/3-180x180.jpg 180w, images/1903/3.jpg 600w" 
@@ -2407,7 +1408,7 @@
 																					<!-- end rating  -->
 																					
 																					<h4>
-																						<a href="simple_product.html" title="nisi ball tip">nisi ball tip</a>
+																						<a href="page_temp/simple_product.html" title="nisi ball tip">nisi ball tip</a>
 																					</h4>
 																					
 																					<!-- Price -->
@@ -2433,7 +1434,7 @@
 																				<div class="item-img products-thumb">
 																					<span class="onsale">Sale!</span>
 																					
-																					<a href="simple_product.html">
+																					<a href="page_temp/simple_product.html">
 																						<div class="product-thumb-hover">
 																							<img 	width="300" height="300" src="images/1903/11-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" 
 																									srcset="images/1903/11-300x300.jpg 300w, images/1903/11-150x150.jpg 150w, images/1903/11-180x180.jpg 180w, images/1903/11.jpg 600w" 
@@ -2487,7 +1488,7 @@
 																<div class="item">
 																	<div class="item-inner">
 																		<div class="item-img">
-																			<a href="simple_product.html" title="Sony BRAVIA 4K">
+																			<a href="page_temp/simple_product.html" title="Sony BRAVIA 4K">
 																				<img 	width="180" height="180" src="images/1903/6-180x180.jpg" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt="" 
 																						srcset="images/1903/6-180x180.jpg 180w, images/1903/6-150x150.jpg 150w, images/1903/6-300x300.jpg 300w, images/1903/6.jpg 600w" 
 																						sizes="(max-width: 180px) 100vw, 180px" />
@@ -2505,7 +1506,7 @@
 																			<!-- end rating  -->
 																			
 																			<h4>
-																				<a href="simple_product.html" title="Sony BRAVIA 4K">Sony BRAVIA 4K</a>
+																				<a href="page_temp/simple_product.html" title="Sony BRAVIA 4K">Sony BRAVIA 4K</a>
 																			</h4>
 																			
 																			<div class="item-price">
@@ -2520,7 +1521,7 @@
 																<div class="item">
 																	<div class="item-inner">
 																		<div class="item-img">
-																			<a href="simple_product.html" title="iPad Mini 2 Retina">
+																			<a href="page_temp/simple_product.html" title="iPad Mini 2 Retina">
 																				<img 	width="180" height="180" src="images/1903/39-180x180.jpg" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt="" 
 																						srcset="images/1903/39-180x180.jpg 180w, images/1903/39-150x150.jpg 150w, images/1903/39-300x300.jpg 300w, images/1903/39.jpg 600w" 
 																						sizes="(max-width: 180px) 100vw, 180px" />
@@ -2538,7 +1539,7 @@
 																			<!-- end rating  -->
 																			
 																			<h4>
-																				<a href="simple_product.html" title="iPad Mini 2 Retina">iPad Mini 2 Retina</a>
+																				<a href="page_temp/simple_product.html" title="iPad Mini 2 Retina">iPad Mini 2 Retina</a>
 																			</h4>
 																			
 																			<div class="item-price">
@@ -2561,7 +1562,7 @@
 																<div class="item">
 																	<div class="item-inner">
 																		<div class="item-img">
-																			<a href="simple_product.html" title="ipsum fugiat">
+																			<a href="page_temp/simple_product.html" title="ipsum fugiat">
 																				<img 	width="180" height="180" src="images/1903/66-180x180.jpg" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt="" 
 																						srcset="images/1903/66-180x180.jpg 180w, images/1903/66-150x150.jpg 150w, images/1903/66-300x300.jpg 300w, images/1903/66.jpg 600w" 
 																						sizes="(max-width: 180px) 100vw, 180px" />
@@ -2579,7 +1580,7 @@
 																			<!-- end rating  -->
 																			
 																			<h4>
-																				<a href="simple_product.html" title="ipsum fugiat">ipsum fugiat</a>
+																				<a href="page_temp/simple_product.html" title="ipsum fugiat">ipsum fugiat</a>
 																			</h4>
 																			
 																			<div class="item-price">
@@ -2594,7 +1595,7 @@
 																<div class="item">
 																	<div class="item-inner">
 																		<div class="item-img">
-																			<a href="simple_product.html" title="veniam dolore">
+																			<a href="page_temp/simple_product.html" title="veniam dolore">
 																				<img 	width="180" height="180" src="images/1903/50-180x180.jpg" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt="" 
 																						srcset="images/1903/50-180x180.jpg 180w, images/1903/50-150x150.jpg 150w, images/1903/50-300x300.jpg 300w, images/1903/50.jpg 600w" 
 																						sizes="(max-width: 180px) 100vw, 180px" />
@@ -2612,7 +1613,7 @@
 																			<!-- end rating  -->
 																			
 																			<h4>
-																				<a href="simple_product.html" title="veniam dolore">Veniam dolore</a>
+																				<a href="page_temp/simple_product.html" title="veniam dolore">Veniam dolore</a>
 																			</h4>
 																			
 																			<div class="item-price">
@@ -2627,7 +1628,7 @@
 																<div class="item">
 																	<div class="item-inner">
 																		<div class="item-img">
-																			<a href="simple_product.html" title="voluptate ipsum">
+																			<a href="page_temp/simple_product.html" title="voluptate ipsum">
 																				<img 	width="180" height="180" src="images/1903/52-180x180.jpg" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt="" 
 																						srcset="images/1903/52-180x180.jpg 180w, images/1903/52-150x150.jpg 150w, images/1903/52-300x300.jpg 300w, images/1903/52.jpg 600w" 
 																						sizes="(max-width: 180px) 100vw, 180px" />
@@ -2645,7 +1646,7 @@
 																			<!-- end rating  -->
 																			
 																			<h4>
-																				<a href="simple_product.html" title="voluptate ipsum">voluptate ipsum</a>
+																				<a href="page_temp/simple_product.html" title="voluptate ipsum">voluptate ipsum</a>
 																			</h4>
 																			
 																			<div class="item-price">
@@ -2781,7 +1782,7 @@
 																					<!-- end rating  -->
 																					
 																					<h4>
-																						<a href="simple_product.html" title="voluptate ipsum">Voluptate ipsum</a>
+																						<a href="page_temp/simple_product.html" title="voluptate ipsum">Voluptate ipsum</a>
 																					</h4>
 																					
 																					<!-- Price -->
@@ -2795,7 +1796,7 @@
 																				</div>
 																				
 																				<div class="item-img products-thumb">
-																					<a href="simple_product.html">
+																					<a href="page_temp/simple_product.html">
 																						<div class="product-thumb-hover">
 																							<img 	width="300" height="300" src="images/1903/52-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" 
 																									srcset="images/1903/52-300x300.jpg 300w, images/1903/52-150x150.jpg 150w, images/1903/52-180x180.jpg 180w, images/1903/52.jpg 600w" 
@@ -2847,7 +1848,7 @@
 																					<!-- end rating  -->
 																					
 																					<h4>
-																						<a href="simple_product.html" title="veniam dolore">Veniam dolore</a>
+																						<a href="page_temp/simple_product.html" title="veniam dolore">Veniam dolore</a>
 																					</h4>
 																					
 																					<!-- Price -->
@@ -2861,7 +1862,7 @@
 																				</div>
 																				
 																				<div class="item-img products-thumb">
-																					<a href="simple_product.html">
+																					<a href="page_temp/simple_product.html">
 																						<div class="product-thumb-hover">
 																							<img 	width="300" height="300" src="images/1903/50-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" 
 																									srcset="images/1903/50-300x300.jpg 300w, images/1903/50-150x150.jpg 150w, images/1903/50-180x180.jpg 180w, images/1903/50.jpg 600w" 
@@ -2918,7 +1919,7 @@
 																					<!-- end rating  -->
 																					
 																					<h4>
-																						<a href="simple_product.html" title="Cleaner with bag">Cleaner with bag</a>
+																						<a href="page_temp/simple_product.html" title="Cleaner with bag">Cleaner with bag</a>
 																					</h4>
 																					
 																					<!-- Price -->
@@ -2944,7 +1945,7 @@
 																				<div class="item-img products-thumb">
 																					<span class="onsale">Sale!</span>
 																					
-																					<a href="simple_product.html">
+																					<a href="page_temp/simple_product.html">
 																						<div class="product-thumb-hover">
 																							<img 	width="300" height="300" src="images/1903/22-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" 
 																									srcset="images/1903/22-300x300.jpg 300w, images/1903/22-150x150.jpg 150w, images/1903/22-180x180.jpg 180w, images/1903/22.jpg 600w" 
@@ -2997,7 +1998,7 @@
 																					<!-- end rating  -->
 																					
 																					<h4>
-																						<a href="simple_product.html" title="Sony BRAVIA 4K">Sony BRAVIA 4K</a>
+																						<a href="page_temp/simple_product.html" title="Sony BRAVIA 4K">Sony BRAVIA 4K</a>
 																					</h4>
 																					
 																					<!-- Price -->
@@ -3011,7 +2012,7 @@
 																				</div>
 																				
 																				<div class="item-img products-thumb">
-																					<a href="simple_product.html">
+																					<a href="page_temp/simple_product.html">
 																						<div class="product-thumb-hover">
 																							<img 	width="300" height="300" src="images/1903/6-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" 
 																									srcset="images/1903/6-300x300.jpg 300w, images/1903/6-150x150.jpg 150w, images/1903/6-180x180.jpg 180w, images/1903/6.jpg 600w" 
@@ -3065,7 +2066,7 @@
 																					<!-- end rating  -->
 																					
 																					<h4>
-																						<a href="simple_product.html" title="Samsung SUHD">Samsung SUHD</a>
+																						<a href="page_temp/simple_product.html" title="Samsung SUHD">Samsung SUHD</a>
 																					</h4>
 																					
 																					<!-- Price -->
@@ -3079,7 +2080,7 @@
 																				</div>
 																				
 																				<div class="item-img products-thumb">
-																					<a href="simple_product.html">
+																					<a href="page_temp/simple_product.html">
 																						<div class="product-thumb-hover">
 																							<img 	width="300" height="300" src="images/1903/3-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" 
 																									srcset="images/1903/3-300x300.jpg 300w, images/1903/3-150x150.jpg 150w, images/1903/3-180x180.jpg 180w, images/1903/3.jpg 600w" 
@@ -3131,7 +2132,7 @@
 																					<!-- end rating  -->
 																					
 																					<h4>
-																						<a href="simple_product.html" title="nisi ball tip">nisi ball tip</a>
+																						<a href="page_temp/simple_product.html" title="nisi ball tip">nisi ball tip</a>
 																					</h4>
 																					
 																					<!-- Price -->
@@ -3157,7 +2158,7 @@
 																				<div class="item-img products-thumb">
 																					<span class="onsale">Sale!</span>
 																					
-																					<a href="simple_product.html">
+																					<a href="page_temp/simple_product.html">
 																						<div class="product-thumb-hover">
 																							<img 	width="300" height="300" src="images/1903/11-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" 
 																									srcset="images/1903/11-300x300.jpg 300w, images/1903/11-150x150.jpg 150w, images/1903/11-180x180.jpg 180w, images/1903/11.jpg 600w" 
@@ -3211,7 +2212,7 @@
 																<div class="item">
 																	<div class="item-inner">
 																		<div class="item-img">
-																			<a href="simple_product.html" title="corned beef enim">
+																			<a href="page_temp/simple_product.html" title="corned beef enim">
 																				<img 	width="180" height="180" src="images/1903/65-180x180.jpg" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt="" 
 																						srcset="images/1903/65-180x180.jpg 180w, images/1903/65-150x150.jpg 150w, images/1903/65-300x300.jpg 300w, images/1903/65.jpg 600w" 
 																						sizes="(max-width: 180px) 100vw, 180px" />
@@ -3229,7 +2230,7 @@
 																			<!-- end rating  -->
 																			
 																			<h4>
-																				<a href="simple_product.html" title="corned beef enim">corned beef enim</a>
+																				<a href="page_temp/simple_product.html" title="corned beef enim">corned beef enim</a>
 																			</h4>
 																			
 																			<div class="item-price">
@@ -3244,7 +2245,7 @@
 																<div class="item">
 																	<div class="item-inner">
 																		<div class="item-img">
-																			<a href="simple_product.html" title="veniam dolore">
+																			<a href="page_temp/simple_product.html" title="veniam dolore">
 																				<img 	width="180" height="180" src="images/1903/45-180x180.jpg" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt="" 
 																						srcset="images/1903/45-180x180.jpg 180w, images/1903/45-150x150.jpg 150w, images/1903/45-300x300.jpg 300w, images/1903/45.jpg 600w" 
 																						sizes="(max-width: 180px) 100vw, 180px" />
@@ -3262,7 +2263,7 @@
 																			<!-- end rating  -->
 																			
 																			<h4>
-																				<a href="simple_product.html" title="veniam dolore">veniam dolore</a>
+																				<a href="page_temp/simple_product.html" title="veniam dolore">veniam dolore</a>
 																			</h4>
 																			
 																			<div class="item-price">
@@ -3285,7 +2286,7 @@
 																<div class="item">
 																	<div class="item-inner">
 																		<div class="item-img">
-																			<a href="simple_product.html" title="MacBook Air">
+																			<a href="page_temp/simple_product.html" title="MacBook Air">
 																				<img 	width="180" height="180" src="images/1903/50-180x180.jpg" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt="" 
 																						srcset="images/1903/50-180x180.jpg 180w, images/1903/50-150x150.jpg 150w, images/1903/50-300x300.jpg 300w, images/1903/50.jpg 600w" 
 																						sizes="(max-width: 180px) 100vw, 180px" />
@@ -3303,7 +2304,7 @@
 																			<!-- end rating  -->
 																			
 																			<h4>
-																				<a href="simple_product.html" title="MacBook Air">MacBook Air</a>
+																				<a href="page_temp/simple_product.html" title="MacBook Air">MacBook Air</a>
 																			</h4>
 																			
 																			<div class="item-price">
@@ -3326,7 +2327,7 @@
 																<div class="item">
 																	<div class="item-inner">
 																		<div class="item-img">
-																			<a href="simple_product.html" title="ipsum esse nisi">
+																			<a href="page_temp/simple_product.html" title="ipsum esse nisi">
 																				<img 	width="180" height="180" src="images/1903/51-180x180.jpg" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt="" 
 																						srcset="images/1903/51-180x180.jpg 180w, images/1903/51-150x150.jpg 150w, images/1903/51-300x300.jpg 300w, images/1903/51.jpg 600w" 
 																						sizes="(max-width: 180px) 100vw, 180px" />
@@ -3344,7 +2345,7 @@
 																			<!-- end rating  -->
 																			
 																			<h4>
-																				<a href="simple_product.html" title="ipsum esse nisi">ipsum esse nisi</a>
+																				<a href="page_temp/simple_product.html" title="ipsum esse nisi">ipsum esse nisi</a>
 																			</h4>
 																			
 																			<div class="item-price">
@@ -3367,7 +2368,7 @@
 																<div class="item">
 																	<div class="item-inner">
 																		<div class="item-img">
-																			<a href="simple_product.html" title="turkey qui">
+																			<a href="page_temp/simple_product.html" title="turkey qui">
 																				<img 	width="180" height="180" src="images/1903/49-180x180.jpg" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt="" 
 																						srcset="images/1903/49-180x180.jpg 180w, images/1903/49-150x150.jpg 150w, images/1903/49-300x300.jpg 300w, images/1903/49.jpg 600w" 
 																						sizes="(max-width: 180px) 100vw, 180px" />
@@ -3385,7 +2386,7 @@
 																			<!-- end rating  -->
 																			
 																			<h4>
-																				<a href="simple_product.html" title="turkey qui">turkey qui</a>
+																				<a href="page_temp/simple_product.html" title="turkey qui">turkey qui</a>
 																			</h4>
 																			
 																			<div class="item-price">
@@ -3523,7 +2524,7 @@
 																					<!-- end rating  -->
 																			   
 																					<h4>
-																						<a href="simple_product.html" title="Cleaner with bag">Cleaner with bag</a>
+																						<a href="page_temp/simple_product.html" title="Cleaner with bag">Cleaner with bag</a>
 																					</h4>
 																					
 																					<!-- Price -->
@@ -3549,7 +2550,7 @@
 																				<div class="item-img products-thumb">
 																					<span class="onsale">Sale!</span>
 																					
-																					<a href="simple_product.html">
+																					<a href="page_temp/simple_product.html">
 																						<div class="product-thumb-hover">
 																							<img 	width="300" height="300" src="images/1903/22-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" 
 																									srcset="images/1903/22-300x300.jpg 300w, images/1903/22-150x150.jpg 150w, images/1903/22-180x180.jpg 180w, images/1903/22.jpg 600w" 
@@ -3604,7 +2605,7 @@
 																					<!-- end rating  -->
 																					
 																					<h4>
-																						<a href="simple_product.html" title="sint turkey">Sint turkey</a>
+																						<a href="page_temp/simple_product.html" title="sint turkey">Sint turkey</a>
 																					</h4>
 																			 
 																					<!-- Price -->
@@ -3618,7 +2619,7 @@
 																				</div>
 																				
 																				<div class="item-img products-thumb">
-																					<a href="simple_product.html">
+																					<a href="page_temp/simple_product.html">
 																						<div class="product-thumb-hover">
 																							<img 	width="300" height="300" src="images/1903/60-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" 
 																									srcset="images/1903/60-300x300.jpg 300w, images/1903/60-150x150.jpg 150w, images/1903/60-180x180.jpg 180w, images/1903/60.jpg 600w" 
@@ -3675,7 +2676,7 @@
 																					<!-- end rating  -->
 																					
 																					<h4>
-																						<a href="simple_product.html" title="philips stand">Philips stand</a>
+																						<a href="page_temp/simple_product.html" title="philips stand">Philips stand</a>
 																					</h4>
 																			   
 																					<!-- Price -->
@@ -3701,7 +2702,7 @@
 																				<div class="item-img products-thumb">
 																					<span class="onsale">Sale!</span>
 																					
-																					<a href="simple_product.html">
+																					<a href="page_temp/simple_product.html">
 																						<div class="product-thumb-hover">
 																							<img 	width="300" height="300" src="images/1903/62-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" 
 																									srcset="images/1903/62-300x300.jpg 300w, images/1903/62-150x150.jpg 150w, images/1903/62-180x180.jpg 180w, images/1903/62.jpg 600w" 
@@ -3756,7 +2757,7 @@
 																					<!-- end rating  -->
 																					
 																					<h4>
-																						<a href="simple_product.html" title="Vacuum cleaner">Vacuum cleaner</a>
+																						<a href="page_temp/simple_product.html" title="Vacuum cleaner">Vacuum cleaner</a>
 																					</h4>
 																					
 																					<!-- Price -->
@@ -3781,7 +2782,7 @@
 																				<div class="item-img products-thumb">
 																					<span class="onsale">Sale!</span>
 																					
-																					<a href="simple_product.html">
+																					<a href="page_temp/simple_product.html">
 																						<div class="product-thumb-hover">
 																							<img 	width="300" height="300" src="images/1903/26-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" 
 																									srcset="images/1903/26-300x300.jpg 300w, images/1903/26-150x150.jpg 150w, images/1903/26-180x180.jpg 180w, images/1903/26.jpg 600w" 
@@ -3838,7 +2839,7 @@
 																					<!-- end rating  -->
 																					
 																					<h4>
-																						<a href="simple_product.html" title="nisi ball tip">Nisi ball tip</a>
+																						<a href="page_temp/simple_product.html" title="nisi ball tip">Nisi ball tip</a>
 																					</h4>
 																					
 																					<!-- Price -->
@@ -3864,7 +2865,7 @@
 																				<div class="item-img products-thumb">
 																					<span class="onsale">Sale!</span>
 																					
-																					<a href="simple_product.html">
+																					<a href="page_temp/simple_product.html">
 																						<div class="product-thumb-hover">
 																							<img 	width="300" height="300" src="images/1903/11-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" 
 																									srcset="images/1903/11-300x300.jpg 300w, images/1903/11-150x150.jpg 150w, images/1903/11-180x180.jpg 180w, images/1903/11.jpg 600w" 
@@ -3919,7 +2920,7 @@
 																					<!-- end rating  -->
 																					
 																					<h4>
-																						<a href="simple_product.html" title="exercitation jerky">Exercitation jerky</a>
+																						<a href="page_temp/simple_product.html" title="exercitation jerky">Exercitation jerky</a>
 																					</h4>
 																					
 																					<!-- Price -->
@@ -3933,7 +2934,7 @@
 																				</div>
 																				
 																				<div class="item-img products-thumb">
-																					<a href="simple_product.html">
+																					<a href="page_temp/simple_product.html">
 																						<div class="product-thumb-hover">
 																							<img 	width="300" height="300" src="images/1903/61-300x300.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" 
 																									srcset="images/1903/61-300x300.jpg 300w, images/1903/61-150x150.jpg 150w, images/1903/61-180x180.jpg 180w, images/1903/61.jpg 600w" 
@@ -3987,7 +2988,7 @@
 																<div class="item">
 																	<div class="item-inner">
 																		<div class="item-img">
-																			<a href="simple_product.html" title="Vacuum cleaner">
+																			<a href="page_temp/simple_product.html" title="Vacuum cleaner">
 																				<img 	width="180" height="180" src="images/1903/26-180x180.jpg" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt="" 
 																						srcset="images/1903/26-180x180.jpg 180w, images/1903/26-150x150.jpg 150w, images/1903/26-300x300.jpg 300w, images/1903/26.jpg 600w" 
 																						sizes="(max-width: 180px) 100vw, 180px" />
@@ -4010,7 +3011,7 @@
 																			<!-- end rating  -->
 																			
 																			<h4>
-																				<a href="simple_product.html" title="Vacuum cleaner">Vacuum cleaner</a>
+																				<a href="page_temp/simple_product.html" title="Vacuum cleaner">Vacuum cleaner</a>
 																			</h4>
 																			
 																			<div class="item-price">
@@ -4033,7 +3034,7 @@
 																<div class="item">
 																	<div class="item-inner">
 																		<div class="item-img">
-																			<a href="simple_product.html" title="philips stand">
+																			<a href="page_temp/simple_product.html" title="philips stand">
 																				<img 	width="180" height="180" src="images/1903/62-180x180.jpg" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt="" 
 																						srcset="images/1903/62-180x180.jpg 180w, images/1903/62-150x150.jpg 150w, images/1903/62-300x300.jpg 300w, images/1903/62.jpg 600w" 
 																						sizes="(max-width: 180px) 100vw, 180px" />
@@ -4054,7 +3055,7 @@
 																			<!-- end rating  -->
 																			
 																			<h4>
-																				<a href="simple_product.html" title="philips stand">philips stand</a>
+																				<a href="page_temp/simple_product.html" title="philips stand">philips stand</a>
 																			</h4>
 																			
 																			<div class="item-price">
@@ -4077,7 +3078,7 @@
 																<div class="item">
 																	<div class="item-inner">
 																		<div class="item-img">
-																			<a href="simple_product.html" title="exercitation jerky">
+																			<a href="page_temp/simple_product.html" title="exercitation jerky">
 																				<img 	width="180" height="180" src="images/1903/61-180x180.jpg" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt="" 
 																						srcset="images/1903/61-180x180.jpg 180w, images/1903/61-150x150.jpg 150w, images/1903/61-300x300.jpg 300w, images/1903/61.jpg 600w" 
 																						sizes="(max-width: 180px) 100vw, 180px" />
@@ -4100,7 +3101,7 @@
 																			<!-- end rating  -->
 																			
 																			<h4>
-																				<a href="simple_product.html" title="exercitation jerky">Exercitation jerky</a>
+																				<a href="page_temp/simple_product.html" title="exercitation jerky">Exercitation jerky</a>
 																			</h4>
 																			
 																			<div class="item-price">
@@ -4115,7 +3116,7 @@
 																<div class="item">
 																	<div class="item-inner">
 																		<div class="item-img">
-																			<a href="simple_product.html" title="nisi ball tip">
+																			<a href="page_temp/simple_product.html" title="nisi ball tip">
 																				<img 	width="180" height="180" src="images/1903/11-180x180.jpg" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt="" 
 																						srcset="images/1903/11-180x180.jpg 180w, images/1903/11-150x150.jpg 150w, images/1903/11-300x300.jpg 300w, images/1903/11.jpg 600w" 
 																						sizes="(max-width: 180px) 100vw, 180px" />
@@ -4136,7 +3137,7 @@
 																			<!-- end rating  -->
 																			
 																			<h4>
-																				<a href="simple_product.html" title="nisi ball tip">Nisi ball tip</a>
+																				<a href="page_temp/simple_product.html" title="nisi ball tip">Nisi ball tip</a>
 																			</h4>
 																			
 																			<div class="item-price">
@@ -4159,7 +3160,7 @@
 																<div class="item">
 																	<div class="item-inner">
 																		<div class="item-img">
-																			<a href="simple_product.html" title="Cleaner with bag">
+																			<a href="page_temp/simple_product.html" title="Cleaner with bag">
 																				<img 	width="180" height="180" src="images/1903/22-180x180.jpg" class="attachment-shop_thumbnail size-shop_thumbnail wp-post-image" alt="" 
 																						srcset="images/1903/22-180x180.jpg 180w, images/1903/22-150x150.jpg 150w, images/1903/22-300x300.jpg 300w, images/1903/22.jpg 600w" 
 																						sizes="(max-width: 180px) 100vw, 180px" />
@@ -4182,7 +3183,7 @@
 																			<!-- end rating  -->
 																			
 																			<h4>
-																				<a href="simple_product.html" title="Cleaner with bag">Cleaner with bag</a>
+																				<a href="page_temp/simple_product.html" title="Cleaner with bag">Cleaner with bag</a>
 																			</h4>
 																			
 																			<div class="item-price">
@@ -4513,7 +3514,7 @@
 														
 														<ul id="menu-your-links" class="menu">
 															<li class="menu-my-account">
-																<a class="item-link" href="my_account.html">
+																<a class="item-link" href="page_temp/my_account.html">
 																	<span class="menu-title">My Account</span>
 																</a>
 															</li>
@@ -4621,7 +3622,7 @@
 											</li>
 											
 											<li class="menu-contact-us">
-												<a class="item-link" href="contact_us.html">
+												<a class="item-link" href="page_temp/contact_us.html">
 													<span class="menu-title">Contact Us</span>
 												</a>
 											</li>

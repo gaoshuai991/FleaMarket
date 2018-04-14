@@ -2,9 +2,6 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.fleamarket.core.mapper.UserMapper" >
   <resultMap id="BaseResultMap" type="com.fleamarket.core.model.User" >
-    <!--
-      WARNING - @mbg.generated
-    -->
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="username" property="username" jdbcType="VARCHAR" />
     <result column="password" property="password" jdbcType="VARCHAR" />
@@ -21,13 +18,10 @@
     <result column="like_count" property="likeCount" jdbcType="INTEGER" />
   </resultMap>
   <sql id="Base_Column_List" >
-    <!--
-      WARNING - @mbg.generated
-    -->
     id, username, password, nickname, create_time, photo, sex, birthday, city, school, 
     signature, status, star_count, like_count
   </sql>
   <select id="selectByPrincipal" resultType="User">
-    SELECT * FROM user WHERE #{username} IN(username,tel)
+    SELECT * FROM user WHERE #{principal} IN(username,tel)
   </select>
 </mapper>

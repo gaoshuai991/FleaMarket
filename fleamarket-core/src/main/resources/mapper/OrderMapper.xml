@@ -2,9 +2,6 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.fleamarket.core.mapper.OrderMapper" >
   <resultMap id="BaseResultMap" type="com.fleamarket.core.model.Order" >
-    <!--
-      WARNING - @mbg.generated
-    -->
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="treasure_id" property="treasureId" jdbcType="INTEGER" />
     <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
@@ -13,9 +10,6 @@
     <result column="logistics" property="logistics" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
-    <!--
-      WARNING - @mbg.generated
-    -->
     id, treasure_id, create_time, note, status, logistics
   </sql>
 </mapper>
