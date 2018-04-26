@@ -84,3 +84,20 @@
 a[data-theme], a[data-advanced] {
 	cursor: pointer;
 }
+/* Gss Custom */
+.treasure-title {
+    padding-top: 11px;
+    padding-bottom: 11px;
+    min-height: 38px;
+    color: darkgray;
+}
+.treasure-content {
+    padding-top: 11px;
+    padding-bottom: 11px;
+    min-height: 38px;
+    color: grey;
+}
+.checkbox-group{
+    display: inline-block;
+    padding-right: 15px;
+}

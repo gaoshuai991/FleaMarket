@@ -7,4 +7,5 @@ package com.fleamarket.core.util;
 public class Constant {
     public static final int USER_LOCKED_STATUS = 0;
     public static final int USER_NORMAL_STATUS = 1;
+
 }

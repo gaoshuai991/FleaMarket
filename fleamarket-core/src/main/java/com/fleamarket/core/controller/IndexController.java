@@ -26,4 +26,9 @@ public class IndexController {
         request.setAttribute("categories", categoryService.getAllCategoryGraded());
         return "index";
     }
+
+    @GetMapping("user/treasure")
+    public String publishTreasure(){
+        return "user/treasure_publish";
+    }
 }

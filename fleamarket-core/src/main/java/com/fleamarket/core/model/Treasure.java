@@ -1,7 +1,10 @@
 package com.fleamarket.core.model;
 
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.util.Date;
-import javax.persistence.*;
 
 public class Treasure {
     @Id
@@ -35,6 +38,11 @@ public class Treasure {
      * 【出售状态】0：下架、1：在售、2：已售出
      */
     private Integer status;
+    /**
+     * 交易方式
+     */
+    @Column(name = "trading_method")
+    private Integer tradingMethod;
 
     @Column(name = "create_time")
     private Date createTime;
@@ -46,7 +54,7 @@ public class Treasure {
     private Integer commentCount;
 
     @Column(name = "new_degree")
-    private Integer newDegree;
+    private String newDegree;
 
     /**
      * @return id
@@ -200,6 +208,14 @@ public class Treasure {
         this.status = status;
     }
 
+    public Integer getTradingMethod() {
+        return tradingMethod;
+    }
+
+    public void setTradingMethod(Integer tradingMethod) {
+        this.tradingMethod = tradingMethod;
+    }
+
     /**
      * @return create_time
      */
@@ -245,14 +261,14 @@ public class Treasure {
     /**
      * @return new_degree
      */
-    public Integer getNewDegree() {
+    public String getNewDegree() {
         return newDegree;
     }
 
     /**
      * @param newDegree
      */
-    public void setNewDegree(Integer newDegree) {
+    public void setNewDegree(String newDegree) {
         this.newDegree = newDegree;
     }
 }

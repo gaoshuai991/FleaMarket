@@ -15,7 +15,7 @@
     <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
     <result column="like_count" property="likeCount" jdbcType="INTEGER" />
     <result column="comment_count" property="commentCount" jdbcType="INTEGER" />
-    <result column="new_degree" property="newDegree" jdbcType="INTEGER" />
+    <result column="new_degree" property="newDegree" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
     id, title, description, picture, category, price, fare, total, sell_type, status, 
