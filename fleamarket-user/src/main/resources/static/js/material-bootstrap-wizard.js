@@ -143,7 +143,16 @@ $(document).ready(function () {
     $('[data-toggle="wizard-checkbox"]').click(function () {
         if ($(this).hasClass('active')) {
             $(this).removeClass('active');
-            $(this).find('[type="checkbox"]').removeAttr('checked');
+            var $tradingMethod = $(this).find('[type="checkbox"]');
+            $tradingMethod.removeAttr('checked');
+            var tmId = $tradingMethod.attr('id');
+            if(tmId == 'pickUp'){
+                contentVue.pickUp = false;
+            }else if(tmId == 'faceGay'){
+                contentVue.faceGay = false;
+            }else{
+                contentVue.postMan = false;
+            }
             if ($(this).hasClass('post-choice')) {
                 $('#fare-group').css('display', 'none');
                 $('#fare-group input').val('');
@@ -151,7 +160,16 @@ $(document).ready(function () {
             }
         } else {
             $(this).addClass('active');
-            $(this).find('[type="checkbox"]').attr('checked', 'checked');
+            var $tradingMethod = $(this).find('[type="checkbox"]');
+            $tradingMethod.attr('checked', 'checked');
+            var tmId = $tradingMethod.attr('id');
+            if(tmId == 'pickUp'){
+                contentVue.pickUp = true;
+            }else if(tmId == 'faceGay'){
+                contentVue.faceGay = true;
+            }else{
+                contentVue.postMan = true;
+            }
             if ($(this).hasClass('post-choice')) {
                 $('#fare-group').css('display', 'table');
                 $('#fare-group input').removeAttr('disabled');
