@@ -5,6 +5,7 @@
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="title" property="title" jdbcType="VARCHAR" />
     <result column="description" property="description" jdbcType="VARCHAR" />
+    <result column="trading_method" property="tradingMethod" jdbcType="VARCHAR" />
     <result column="picture" property="picture" jdbcType="VARCHAR" />
     <result column="category" property="category" jdbcType="INTEGER" />
     <result column="price" property="price" jdbcType="DOUBLE" />
@@ -18,7 +19,11 @@
     <result column="new_degree" property="newDegree" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
-    id, title, description, picture, category, price, fare, total, sell_type, status, 
+    id, title, description, trading_method, picture, category, price, fare, total, sell_type, status,
     create_time, like_count, comment_count, new_degree
   </sql>
+  <insert id="insertTreasure" parameterType="Treasure">
+    INSERT INTO treasure(title,description,picture,category,price,fare,total,trading_method,new_degree)
+    VALUES (#{title},#{description},#{picture},#{category},#{price},#{fare},#{total},#{tradingMethod},#{newDegree})
+  </insert>
 </mapper>

@@ -1,0 +1,349 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+	<title>商品发布</title>
+	<!--meta-->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+	<!-- GOOGLE WEB FONTS -->
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+	<link rel="stylesheet" th:href="@{/css/font-awesome.min.css}">
+
+	<!-- BOOTSTRAP 3.3.7 CSS -->
+	<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
+	<link rel="stylesheet" href="../../static/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="../../static/css/fontawesome-all.min.css" />
+	<link rel="stylesheet" href="../../static/css/material-bootstrap-wizard.css" />
+	<link rel="stylesheet" th:href="@{/css/material-bootstrap-wizard.css}"/>
+
+	<link rel="stylesheet" th:href="@{/css/woocommerce/woocommerce.css}" />
+	<link rel="stylesheet" th:href="@{/css/yith-woocommerce-wishlist/style.css}" />
+	<link rel="stylesheet" th:href="@{/css/custom.css}" />
+	<link rel="stylesheet" th:href="@{/css/app-orange.css}" id="theme_color" />
+	<link rel="stylesheet" th:href="@{/css/jquery.toolbar.css}"/>
+</head>
+
+<body class="page woocommerce-account woocommerce-page">
+	<div class="body-wrapper theme-clearfix">
+		<th:block th:include="common/header::nav"/>
+		<div class="listings-title">
+			<div class="container">
+				<div class="wrap-title">
+					<h1>My Account</h1>
+					<div class="bread">
+						<div class="breadcrumbs theme-clearfix">
+							<div class="container">
+								<ul class="breadcrumb">
+									<li>
+										<a href="#">Home</a>
+										<span class="go-page"></span>
+									</li>
+
+									<li class="active">
+										<span>My account</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--Content-->
+		<div class="container">
+			<div class="row">
+				<div id="contents" role="main" class="main-page  col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="post-6 page type-page status-publish hentry">
+						<div class="entry">
+							<div class="entry-content">
+								<!--<header>-->
+									<!--<h2 class="entry-title">My Account</h2>-->
+								<!--</header>-->
+								<div class="row">
+									<!--<div class="col-md-10 col-sm-10">-->
+									<!--      Wizard container        -->
+										<div class="wizard-container">
+											<div class="card wizard-card" data-color="green" id="wizardProfile">
+													<!--        You can switch " data-color="purple" "  with one of the next bright colors: "green", "orange", "red", "blue"       -->
+													<!--<div class="wizard-header">-->
+														<!--<h3 class="wizard-title">-->
+															<!--Build Your Profile-->
+														<!--</h3>-->
+														<!--<h5>This information will let us know more about you.</h5>-->
+													<!--</div>-->
+													<div class="wizard-navigation">
+														<ul>
+															<li><a href="#content" data-toggle="tab">宝贝发布成功！</a></li>
+														</ul>
+													</div>
+
+													<div class="tab-content">
+														<div class="tab-pane" id="content">
+															<div class="row">
+																<h4 class="info-text">宝贝发布成功，快去<a href="#">完善照片</a>吧~</h4>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="wizard-footer">
+														<!--<div class="pull-right">-->
+															<!--<a th:href="@{/}" class='btn btn-finish btn-fill btn-success btn-wd' name='publish'>返回首页</a>-->
+														<!--</div>-->
+
+														<div class="pull-left">
+															<a th:href="@{/}" class='btn btn-finish btn-fill btn-success btn-wd' name='publish'>返回首页</a>
+														</div>
+														<div class="clearfix"></div>
+													</div>
+											</div>
+                                        </div> <!-- wizard container -->
+									<!--</div>-->
+								</div><!-- end row -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--End Content-->
+		<th:block th:include="common/footer::nav"/>
+	</div>
+
+	<!-- DIALOGS -->
+	<div class="modal fade" id="search_form" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog block-popup-search-form">
+			<form role="search" method="get" class="form-search searchform" action="">
+				<input type="text" value="" name="s" class="search-query" placeholder="Enter your keyword..." />
+
+				<button type="submit" class="fa fa-search button-search-pro form-button"></button>
+
+				<a href="javascript:void(0)" title="Close" class="close close-search" data-dismiss="modal">X</a>
+			</form>
+		</div>
+	</div>
+
+	<a id="etrostore-totop" href="#"></a>
+
+	<div id="subscribe_popup" class="subscribe-popup" style="background: url(../../static/images/icons/bg_newsletter.jpg)">
+		<div class="subscribe-popup-container">
+			<h2>Join our newsletter</h2>
+			<div class="description">Subscribe now to get 40% of on any product!</div>
+			<div class="subscribe-form">
+				<form id="mc4wp-form-2" class="mc4wp-form mc4wp-form-275" method="post" data-id="275" data-name="">
+					<div class="mc4wp-form-fields">
+						<div class="newsletter-content">
+							<input type="email" class="newsletter-email" name="EMAIL" placeholder="Your email" required="" />
+							<input class="newsletter-submit" type="submit" value="Subscribe" />
+						</div>
+					</div>
+					<div class="mc4wp-response"></div>
+				</form>
+			</div>
+
+			<div class="subscribe-checkbox">
+				<label for="popup_check">
+					<input id="popup_check" name="popup_check" type="checkbox" />
+					<span>Don't show this popup again!</span>
+				</label>
+			</div>
+
+			<div class="subscribe-social">
+				<div class="subscribe-social-inner">
+					<a href="#" class="social-fb">
+						<span class="fa fa-facebook"></span>
+					</a>
+
+					<a href="#" class="social-tw">
+						<span class="fa fa-twitter"></span>
+					</a>
+
+					<a href="#" class="social-gplus">
+						<span class="fa fa-google-plus"></span>
+					</a>
+
+					<a href="#" class="social-pin">
+						<span class="fa fa-instagram"></span>
+					</a>
+
+					<a href="#" class="social-linkedin">
+						<span class="fa fa-pinterest-p"></span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script th:src="@{/js/jquery/jquery-1.11.2.min.js}"></script>
+	<script th:src="@{/js/bootstrap.min.js}"></script>
+	<script th:src="@{/js/jquery/jquery.bootstrap.js}"></script>
+	<script>
+		$(function () {
+            // Wizard Initialization
+            $('.wizard-card').bootstrapWizard({
+                'tabClass': 'nav nav-pills',
+                'nextSelector': '.btn-next',
+                'previousSelector': '.btn-previous',
+
+                onNext: function (tab, navigation, index) {
+                    var $valid = $('.wizard-card form').valid();
+                    if (!$valid) {
+                        $validator.focusInvalid();
+                        return false;
+                    }
+                },
+
+                onInit: function (tab, navigation, index) {
+                    //check number of tabs and fill the entire row
+                    var $total = navigation.find('li').length;
+                    var $wizard = navigation.closest('.wizard-card');
+
+                    $first_li = navigation.find('li:first-child a').html();
+                    $moving_div = $('<div class="moving-tab">' + $first_li + '</div>');
+                    $('.wizard-card .wizard-navigation').append($moving_div);
+
+                    refreshAnimation($wizard, index);
+
+                    $('.moving-tab').css('transition', 'transform 0s');
+                },
+
+                onTabClick: function (tab, navigation, index) {
+                    var $valid = $('.wizard-card form').valid();
+
+                    if (!$valid) {
+                        return false;
+                    } else {
+                        return true;
+                    }
+                },
+
+                onTabShow: function (tab, navigation, index) {
+                    var $total = navigation.find('li').length;
+                    var $current = index + 1;
+
+                    var $wizard = navigation.closest('.wizard-card');
+
+                    // If it's the last tab then hide the last button and show the finish instead
+                    if ($current >= $total) {
+                        $($wizard).find('.btn-next').hide();
+                        $($wizard).find('.btn-finish').show();
+                    } else {
+                        $($wizard).find('.btn-next').show();
+                        $($wizard).find('.btn-finish').hide();
+                    }
+
+                    button_text = navigation.find('li:nth-child(' + $current + ') a').html();
+
+                    setTimeout(function () {
+                        $('.moving-tab').text(button_text);
+                    }, 150);
+
+                    var checkbox = $('.footer-checkbox');
+
+                    if (!index == 0) {
+                        $(checkbox).css({
+                            'opacity': '0',
+                            'visibility': 'hidden',
+                            'position': 'absolute'
+                        });
+                    } else {
+                        $(checkbox).css({
+                            'opacity': '1',
+                            'visibility': 'visible'
+                        });
+                    }
+
+                    refreshAnimation($wizard, index);
+                }
+            });
+            $(window).resize(function () {
+                $('.wizard-card').each(function () {
+                    $wizard = $(this);
+
+                    index = $wizard.bootstrapWizard('currentIndex');
+                    refreshAnimation($wizard, index);
+
+                    $('.moving-tab').css({
+                        'transition': 'transform 0s'
+                    });
+                });
+            });
+
+            function refreshAnimation($wizard, index) {
+                $total = $wizard.find('.nav li').length;
+                $li_width = 100 / $total;
+
+                total_steps = $wizard.find('.nav li').length;
+                move_distance = $wizard.width() / total_steps;
+                index_temp = index;
+                vertical_level = 0;
+
+                mobile_device = $(document).width() < 600 && $total > 3;
+
+                if (mobile_device) {
+                    move_distance = $wizard.width() / 2;
+                    index_temp = index % 2;
+                    $li_width = 50;
+                }
+
+                $wizard.find('.nav li').css('width', $li_width + '%');
+
+                step_width = move_distance;
+                move_distance = move_distance * index_temp;
+
+                $current = index + 1;
+
+                if ($current == 1 || (mobile_device == true && (index % 2 == 0) )) {
+                    move_distance -= 8;
+                } else if ($current == total_steps || (mobile_device == true && (index % 2 == 1))) {
+                    move_distance += 8;
+                }
+
+                if (mobile_device) {
+                    vertical_level = parseInt(index / 2);
+                    vertical_level = vertical_level * 38;
+                }
+
+                $wizard.find('.moving-tab').css('width', step_width);
+                $('.moving-tab').css({
+                    'transform': 'translate3d(' + move_distance + 'px, ' + vertical_level + 'px, 0)',
+                    'transition': 'all 0.5s cubic-bezier(0.29, 1.42, 0.79, 1)'
+
+                });
+            }
+
+            materialDesign = {
+
+                checkScrollForTransparentNavbar: debounce(function () {
+                    if ($(document).scrollTop() > 260) {
+                        if (transparent) {
+                            transparent = false;
+                            $('.navbar-color-on-scroll').removeClass('navbar-transparent');
+                        }
+                    } else {
+                        if (!transparent) {
+                            transparent = true;
+                            $('.navbar-color-on-scroll').addClass('navbar-transparent');
+                        }
+                    }
+                }, 17)
+            };
+
+            function debounce(func, wait, immediate) {
+                var timeout;
+                return function () {
+                    var context = this, args = arguments;
+                    clearTimeout(timeout);
+                    timeout = setTimeout(function () {
+                        timeout = null;
+                        if (!immediate) func.apply(context, args);
+                    }, wait);
+                    if (immediate && !timeout) func.apply(context, args);
+                };
+            };
+
+        })
+	</script>
+   </body>
+</html>
+

@@ -29,17 +29,22 @@ $(document).ready(function () {
     // Code for the Validator
     var $validator = $('.wizard-card form').validate({
         rules: {
-            firstname: {
+            title: {
                 required: true,
-                minlength: 3
+                maxlength: 25
             },
-            lastname: {
+            description: {
                 required: true,
-                minlength: 3
+                maxlength: 120
             },
-            email: {
-                required: true,
-                minlength: 3,
+            category: {
+                required: true
+            },
+            newDegree: {
+                required: true
+            },
+            price: {
+                required: true
             }
         },
 
@@ -152,6 +157,7 @@ $(document).ready(function () {
                 contentVue.faceGay = false;
             }else{
                 contentVue.postMan = false;
+                contentVue.fare = 0;
             }
             if ($(this).hasClass('post-choice')) {
                 $('#fare-group').css('display', 'none');
@@ -177,6 +183,21 @@ $(document).ready(function () {
         }
     });
     $('.set-full-height').css('height', 'auto');
+
+    $('#price').on('change',function () {
+        if($(this).val() == ''){
+            $(this).val('0')
+        }
+    });
+    $('#fare').on('change',function () {
+        if($(this).val() == ''){
+            $(this).val('0')
+        }
+    });
+    $('#category').on('change',function () {
+        contentVue.category = $(this).find(' option:selected').text();
+    });
+
 });
 
 
@@ -188,7 +209,9 @@ function readURL(input) {
 
         reader.onload = function (e) {
             $('#wizardPicturePreview').attr('src', e.target.result).fadeIn('slow');
+            $('#photo-preview').attr('src', e.target.result).fadeIn('slow');
         }
+
         reader.readAsDataURL(input.files[0]);
     }
 }
@@ -265,7 +288,7 @@ materialDesign = {
         }
     }, 17)
 
-}
+};
 
 function debounce(func, wait, immediate) {
     var timeout;

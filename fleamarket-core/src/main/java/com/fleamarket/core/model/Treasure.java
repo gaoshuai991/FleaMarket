@@ -11,6 +11,8 @@ public class Treasure {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    private Integer uid;
+
     private String title;
 
     private String description;
@@ -42,7 +44,7 @@ public class Treasure {
      * 交易方式
      */
     @Column(name = "trading_method")
-    private Integer tradingMethod;
+    private String tradingMethod;
 
     @Column(name = "create_time")
     private Date createTime;
@@ -70,7 +72,15 @@ public class Treasure {
         this.id = id;
     }
 
-    /**
+	public Integer getUid() {
+		return uid;
+	}
+
+	public void setUid(Integer uid) {
+		this.uid = uid;
+	}
+
+	/**
      * @return title
      */
     public String getTitle() {
@@ -208,11 +218,11 @@ public class Treasure {
         this.status = status;
     }
 
-    public Integer getTradingMethod() {
+    public String getTradingMethod() {
         return tradingMethod;
     }
 
-    public void setTradingMethod(Integer tradingMethod) {
+    public void setTradingMethod(String tradingMethod) {
         this.tradingMethod = tradingMethod;
     }
 
@@ -270,5 +280,26 @@ public class Treasure {
      */
     public void setNewDegree(String newDegree) {
         this.newDegree = newDegree;
+    }
+
+    @Override
+    public String toString() {
+        return "Treasure{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                ", picture='" + picture + '\'' +
+                ", category=" + category +
+                ", price=" + price +
+                ", fare=" + fare +
+                ", total=" + total +
+                ", sellType=" + sellType +
+                ", status=" + status +
+                ", tradingMethod=" + tradingMethod +
+                ", createTime=" + createTime +
+                ", likeCount=" + likeCount +
+                ", commentCount=" + commentCount +
+                ", newDegree='" + newDegree + '\'' +
+                '}';
     }
 }

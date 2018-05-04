@@ -23,10 +23,6 @@ public class UserApplicationTests {
 	public void contextLoads() {
 	}
 	@Test
-	public void loginTest() {
-		userController.login();
-	}
-	@Test
 	public void upload(){
 		File file = new File("/Users/jackiegao/Documents/7d6e12985dfdb526e902443a7dc9abfe_r.jpg");
 		try {

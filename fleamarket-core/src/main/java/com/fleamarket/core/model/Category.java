@@ -46,4 +46,5 @@ public class Category {
     public void setPid(Integer pid) {
         this.pid = pid;
     }
+
 }

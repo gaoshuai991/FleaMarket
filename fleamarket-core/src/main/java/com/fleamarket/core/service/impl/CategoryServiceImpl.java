@@ -8,35 +8,47 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * Created by jackiegao on 2018/4/10.
  */
 @Service
 public class CategoryServiceImpl extends BaseService<Category> implements CategoryService {
-    @Autowired
-    private CategoryMapper mapper;
-    @Override
-    protected IMapper<Category> getMapper() {
-        return mapper;
-    }
+	@Autowired
+	private CategoryMapper mapper;
 
-    @Override
-    public Map<Category, List<Category>> getAllCategoryGraded() {
-        Map<Category, List<Category>> result = new LinkedHashMap<>();
-        List<Category> categories = selectAll();
-        categories.forEach(category -> {
-            if(category.getPid() == null)
-                result.put(category, new ArrayList<>());
-        });
-        categories.forEach(category -> {
-            if(category.getPid() != null){
-                result.forEach((key, value) -> {
-                    if (category.getPid().equals(key.getId()))
-                        value.add(category);
-                });
-            }
-        });
-        return result;
-    }
+	@Override
+	protected IMapper<Category> getMapper() {
+		return mapper;
+	}
+
+	@Override
+	public Map<Category, List<Category>> getAllCategoryGraded() {
+		Map<Category, List<Category>> result = new LinkedHashMap<>();
+		List<Category> categories = selectAll();
+		categories.forEach(category -> {
+			if (category.getPid() == null)
+				result.put(category, new ArrayList<>());
+		});
+		categories.forEach(category -> {
+			if (category.getPid() != null) {
+				result.forEach((key, value) -> {
+					if (category.getPid().equals(key.getId()))
+						value.add(category);
+				});
+			}
+		});
+		return result;
+	}
+
+	@Override
+	public Map<Integer, String> selectAllChildren() {
+		Map<Integer, String> childrenMap = new LinkedHashMap<>();
+		selectAll().forEach(category -> {
+			if(category.getPid() != null)
+				childrenMap.put(category.getId(), category.getName());
+		});
+		return childrenMap;
+	}
 }

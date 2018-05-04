@@ -14,4 +14,6 @@ public interface CategoryService extends IService<Category> {
      * @return
      */
     Map<Category,List<Category>> getAllCategoryGraded();
+
+    Map<Integer,String> selectAllChildren();
 }
