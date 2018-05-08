@@ -1,5 +1,6 @@
 package com.fleamarket.core.config;
 
+import at.pollux.thymeleaf.shiro.dialect.ShiroDialect;
 import com.fleamarket.core.shiro.Identity;
 import com.fleamarket.core.shiro.authenticator.CustomModularRealmAuthenticator;
 import com.fleamarket.core.shiro.filter.IdentityFilter;
@@ -21,6 +22,8 @@ import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.filter.DelegatingFilterProxy;
+
+
 
 import javax.servlet.Filter;
 import java.util.Arrays;
@@ -237,5 +240,9 @@ public class ShiroConfig {
         AuthorizationAttributeSourceAdvisor authorizationAttributeSourceAdvisor = new AuthorizationAttributeSourceAdvisor();
         authorizationAttributeSourceAdvisor.setSecurityManager(securityManager);
         return authorizationAttributeSourceAdvisor;
+    }
+    @Bean
+    public ShiroDialect shiroDialect() {
+        return new ShiroDialect();
     }
 }

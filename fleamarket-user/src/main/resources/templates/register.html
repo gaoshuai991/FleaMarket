@@ -1,302 +1,317 @@
-<!DOCTYPE html>
-<html  lang="en" xmlns:th="http://www.thymeleaf.org">
+﻿<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-<title>Register</title>
-<link th:href="@{css/bootstrap-3.1.1.min.css}" rel='stylesheet' type='text/css' />
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script th:src="@{js/jquery.min.js}"></script>
-<!-- Custom Theme files -->
-<!--theme-style-->
-<link th:href="@{css/style.css}" rel="stylesheet" type="text/css" media="all" />
-<!--//theme-style-->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
-<!-- start menu -->
-<script th:src="@{js/bootstrap.min.js}"></script>
-<script th:src="@{js/simpleCart.min.js}"> </script>
-<!-- slide -->
-<script th:src="@{js/responsiveslides.min.js}"></script>
-   <script>
-    $(function () {
-      $("#slider").responsiveSlides({
-      	auto: true,
-      	speed: 500,
-        namespace: "callbacks",
-        pager: true,
-      });
-    });
-  </script>
+    <title>My Account</title>
+    <meta charset="utf-8"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <!--&lt;!&ndash; GOOGLE WEB FONTS &ndash;&gt;-->
+    <!--&lt;!&ndash; GOOGLE WEB FONTS &ndash;&gt;-->
+    <!--<link rel="stylesheet" href="../static/css/font-awesome.min.css">-->
+
+    <!--&lt;!&ndash; BOOTSTRAP 3.3.7 CSS &ndash;&gt;-->
+    <!--<link rel="stylesheet" href="../static/css/bootstrap.min.css" />-->
+
+    <!--&lt;!&ndash; SLICK v1.6.0 CSS &ndash;&gt;-->
+    <!--<link rel="stylesheet" href="../static/css/slick-1.6.0/slick.css" />-->
+
+    <!--<link rel="stylesheet" href="../static/css/jquery.fancybox.css" />-->
+    <!--<link rel="stylesheet" href="../static/css/yith-woocommerce-compare/colorbox.css" />-->
+    <!--<link rel="stylesheet" href="../static/css/owl-carousel/owl.carousel.min.css" />-->
+    <!--<link rel="stylesheet" href="../static/css/owl-carousel/owl.theme.default.min.css" />-->
+    <!--<link rel="stylesheet" href="../static/css/js_composer/js_composer.min.css" />-->
+    <!--<link rel="stylesheet" href="../static/css/woocommerce/woocommerce.css" />-->
+    <!--<link rel="stylesheet" href="../static/css/yith-woocommerce-wishlist/style.css" />-->
+
+
+    <!--<link rel="stylesheet" href="../static/css/custom.css" />-->
+    <!--<link rel="stylesheet" href="../static/css/app-orange.css" id="theme_color" />-->
+    <!--<link rel="stylesheet" href="" id="rtl" />-->
+    <!--<link rel="stylesheet" href="../static/css/app-responsive.css" />-->
+    <!--<th:block th:include="common/common_resource :: resources"/>-->
+
+    <!--<script th:src="@{/plugins/nice-validator/jquery.validator.js(local=zh-CN)}"></script>-->
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" th:href="@{/css/slick-1.6.0/slick.css}"/>
+
+    <link rel="stylesheet" th:href="@{/css/jquery.fancybox.css}"/>
+    <link rel="stylesheet" th:href="@{/css/yith-woocommerce-compare/colorbox.css}"/>
+    <link rel="stylesheet" th:href="@{/css/owl-carousel/owl.carousel.min.css}"/>
+    <link rel="stylesheet" th:href="@{/css/owl-carousel/owl.theme.default.min.css}"/>
+    <link rel="stylesheet" th:href="@{/css/js_composer/js_composer.min.css}"/>
+    <link rel="stylesheet" th:href="@{/css/woocommerce/woocommerce.css}"/>
+    <link rel="stylesheet" th:href="@{/css/yith-woocommerce-wishlist/style.css}"/>
+
+
+    <link rel="stylesheet" th:href="@{/css/custom.css}"/>
+    <link rel="stylesheet" th:href="@{/css/app-orange.css}" id="theme_color"/>
+    <link rel="stylesheet" href="" id="rtl"/>
+    <link rel="stylesheet" th:href="@{/css/app-responsive.css}"/>
+    <link rel="stylesheet" th:href="@{/css/login.css}"/>
 </head>
-<body>
-<!--header-->
-<div class="header">
-	<div class="header-top">
-		<div class="container">
-				<div class="col-sm-4 logo">
-					<h1><a href="index.html">Youth <span>Fashion</span></a></h1>
-				</div>
-			<div class="col-sm-4 world">
-					<div class="cart box_1">
-						<a href="checkout.html">
-						<h3> <div class="total">
-							<span class="simpleCart_total"></span></div>
-							<img th:src="@{images/cart.png}" alt=""/></h3>
-						</a>
-						<p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
+<script type="text/javascript" src="js/jquery/jquery.min.js"></script>
 
-					</div>
-			</div>
-			<div class="col-sm-2 number">
-					<span><i class="glyphicon glyphicon-phone"></i>085 596 234</span>
-					<p>Call me</p>
-				</div>
-			<div class="col-sm-2 search">		
-				<a class="play-icon popup-with-zoom-anim" href="#small-dialog"><i class="glyphicon glyphicon-search"> </i> </a>
-			</div>
-				<div class="clearfix"> </div>
-		</div>
-	</div>
-		<div class="container">
-			<div class="head-top">
-			<div class="n-avigation">
-			
-				<nav class="navbar nav_bottom" role="navigation">
-				
-				 <!-- Brand and toggle get grouped for better mobile display -->
-				  <div class="navbar-header nav_2">
-					  <button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					  </button>
-					  <a class="navbar-brand" href="#"></a>
-				   </div> 
-				   <!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
-						<ul class="nav navbar-nav nav_1">
-							<li><a href="index.html">Home</a></li>
-							<li class="dropdown mega-dropdown active">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Women<span class="caret"></span></a>				
-								<div class="dropdown-menu mega-dropdown-menu">
-									<div class="container-fluid">
-										<!-- Tab panes -->
-										<div class="tab-content">
-										  <div class="tab-pane active" >
-											<ul class="nav-list list-inline">
-												<li><a href="women.html"><img src="images/t7.jpg" class="img-responsive" alt=""/></a></li>
-												<li><a href="women.html"><img src="images/t8.jpg" class="img-responsive" alt=""/></a></li>
-												<li><a href="women.html"><img src="images/t9.jpg" class="img-responsive" alt=""/></a></li>
-												<li><a href="women.html"><img src="images/t11.jpg" class="img-responsive" alt=""/></a></li>
-												<li><a href="women.html"><img src="images/t1.jpg" class="img-responsive" alt=""/></a></li>
-												<li><a href="women.html"><img src="images/t12.jpg" class="img-responsive" alt=""/></a></li>
-											</ul>
-										  </div>
-									   </div>
-									</div>
-									<!-- Nav tabs -->
-									                
-								</div>				
-							</li>
-							<li class="dropdown mega-dropdown active">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Men<span class="caret"></span></a>				
-								<div class="dropdown-menu mega-dropdown-menu">
-									<div class="container-fluid">
-										<!-- Tab panes -->
-										<div class="tab-content">
-										  <div class="tab-pane active" id="men">
-											<ul class="nav-list list-inline">
-												<li><a href="men.html"><img src="images/t10.jpg" class="img-responsive" alt=""/></a></li>
-												<li><a href="men.html"><img src="images/t2.jpg" class="img-responsive" alt=""/></a></li>
-												<li><a href="men.html"><img src="images/t3.jpg" class="img-responsive" alt=""/></a></li>
-												<li><a href="men.html"><img src="images/t4.jpg" class="img-responsive" alt=""/></a></li>
-												<li><a href="men.html"><img src="images/t5.jpg" class="img-responsive" alt=""/></a></li>
-												<li><a href="men.html"><img src="images/t6.jpg" class="img-responsive" alt=""/></a></li>
-											</ul>
-										  </div>
-										 
-									   </div>
-									</div>
-									<!-- Nav tabs -->
-									                   
-								</div>				
-							</li>
-							<li><a href="products.html">Products</a></li>
-							<li><a href="account.html">Sign In</a></li>
-							<li class="last"><a href="contact.html">Contact</a></li>
-						</ul>
-					 </div><!-- /.navbar-collapse -->
-				  
-				</nav>
-			</div>
-			
-				
-		<div class="clearfix"> </div>
-			<!---pop-up-box---->   
-					<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all"/>
-					<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
-					<!---//pop-up-box---->
-				<div id="small-dialog" class="mfp-hide">
-				<div class="search-top">
-						<div class="login">
-							<form action="#" method="post">
-								<input type="submit" value="">
-								<input type="text" name="search" value="Type something..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}">		
-							
-							</form>
-						</div>
-						<p>	Shopping</p>
-					</div>				
-				</div>
-				 <script>
-						$(document).ready(function() {
-						$('.popup-with-zoom-anim').magnificPopup({
-							type: 'inline',
-							fixedContentPos: false,
-							fixedBgPos: true,
-							overflowY: 'auto',
-							closeBtnInside: true,
-							preloader: false,
-							midClick: true,
-							removalDelay: 300,
-							mainClass: 'my-mfp-zoom-in'
-						});
-																						
-						});
-				</script>			
-	<!---->		
-		</div>
-	</div>
+<script type="text/javascript">
+    // Date.prototype.format = function(format)
+    // {
+    //     var o = {
+    //         "M+" : this.getMonth()+1, //month
+    //         "d+" : this.getDate(),    //day
+    //         "h+" : this.getHours(),   //hour
+    //         "m+" : this.getMinutes(), //minute
+    //         "s+" : this.getSeconds(), //second
+    //         "q+" : Math.floor((this.getMonth()+3)/3),  //quarter
+    //         "S" : this.getMilliseconds() //millisecond
+    //     }
+    //     if(/(y+)/.test(format)) format=format.replace(RegExp.$1,
+    //         (this.getFullYear()+"").substr(4 - RegExp.$1.length));
+    //     for(var k in o)if(new RegExp("("+ k +")").test(format))
+    //         format = format.replace(RegExp.$1,
+    //             RegExp.$1.length==1 ? o[k] :
+    //                 ("00"+ o[k]).substr((""+ o[k]).length));
+    //     return format;
+    // }
+
+    $(function(){
+        // $("#birthday").val(new Date().format('yyyy-MM-dd'));
+        $("#principal").bind("input propertychange",function () {
+            var principal = $("#principal").val();
+            $.ajax({
+                type: "post",
+                url: "exist",
+                data: { principal: principal },
+                dataType: "json",
+                success: function (data) {
+                    if (data.status ==  1) {
+                        $("#adiv").html("用户名被注册");
+                    }
+                    if(data.status == 2){
+                        $("#adiv").html("用户名可用");
+                    }
+                }
+            });
+        })
+        $("#bu").click(function () {
+            var i1=$("#password0").val();
+            var i2=$("#password1").val();
+            var i3=$("#adiv").html();
+            if(i1!=i2){
+                $("#adiv1").html("密码不一致");
+            }
+            if(i1==i2&&i3=="用户名可用"){
+                $("#formsubmit").submit();
+            }
+
+        })
+    })
+
+</script>
+<body class="page woocommerce-account woocommerce-page">
+<div class="body-wrapper theme-clearfix">
+    <header id="header" class="header header-style1">
+        <div class="header-top clearfix">
+            <div class="container">
+                <div class="rows">
+                    <!-- SIDEBAR TOP MENU -->
+                    <div class="pull-left top1">
+                        <div class="widget text-2 widget_text pull-left">
+                            <div class="widget-inner">
+                                <div class="textwidget">
+                                    <div class="call-us"><span>联系我们: </span>011-666654123</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="widget text-3 widget_text pull-left">
+                            <div class="widget-inner">
+                                <div class="textwidget">
+                                    <div id="lang_sel">
+                                        <ul class="nav">
+                                            <li>
+                                                <a class="lang_sel_sel icl-en">
+                                                    <img class="iclflag" title="English" alt="en"
+                                                         th:src="@{/images/icons/en.png}" width="18" height="12"/>
+                                                    English
+                                                </a>
+                                                <ul>
+                                                    <li class="icl-en">
+                                                        <a href="#">
+                                                            <img class="iclflag" title="English" alt="en"
+                                                                 th:src="@{/images/icons/en.png}" width="18"
+                                                                 height="12"/> English
+                                                        </a>
+                                                    </li>
+
+                                                    <li class="icl-ar">
+                                                        <a href="#">
+                                                            <img class="iclflag" title="Arabic" alt="ar"
+                                                                 th:src="@{/images/icons/ar.png}" width="18"
+                                                                 height="12"/> Arabic
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="widget woocommerce_currency_converter-2 widget_currency_converter pull-left">
+                            <div class="widget-inner">
+                                <form method="post" class="currency_converter" action="">
+                                    <ul class="currency_w">
+                                        <li>
+                                            <a href="#" class="">USD</a>
+                                            <ul class="currency_switcher">
+                                                <li><a href="#" class="reset default active"
+                                                       data-currencycode="USD">USD</a></li>
+                                                <li><a href="#" class="" data-currencycode="EUR">EUR</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="wrap-myacc pull-right">
+                        <div class="sidebar-account pull-left">
+                            <div class="account-title">My account</div>
+
+                            <div id="my-account" class="my-account">
+                                <div class="widget-1 widget-first widget nav_menu-4 widget_nav_menu">
+                                    <div class="widget-inner">
+                                        <ul id="menu-my-account" class="menu">
+                                            <li class="menu-my-account">
+                                                <a class="item-link" href="my_account.html">
+                                                    <span class="menu-title">My Account</span>
+                                                </a>
+                                            </li>
+
+                                            <li class="menu-cart">
+                                                <a class="item-link" href="cart.html">
+                                                    <span class="menu-title">Cart</span>
+                                                </a>
+                                            </li>
+
+                                            <li class="menu-checkout">
+                                                <a class="item-link" href="checkout.html">
+                                                    <span class="menu-title">Checkout</span>
+                                                </a>
+                                            </li>
+
+                                            <li class="menu-wishlist">
+                                                <a class="item-link" href="#">
+                                                    <span class="menu-title">Wishlist</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="widget-2 widget-last widget sw_top-4 sw_top">
+                                    <div class="widget-inner">
+                                        <div class="top-login">
+                                            <div class="div-logined">
+                                                <ul>
+                                                    <li>
+                                                        <a href="javascript:void(0);" data-toggle="modal"
+                                                           data-target="#login_form">
+                                                            <span>register</span>
+                                                        </a>
+                                                        <span class="wg">Welcome Guest</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pull-left top2">
+                            <div class="widget-1 widget-first widget nav_menu-2 widget_nav_menu">
+                                <div class="widget-inner">
+                                    <ul id="menu-checkout" class="menu">
+                                        <li class="menu-checkout">
+                                            <a class="item-link" href="checkout.html">
+                                                <span class="menu-title">Checkout</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-mid clearfix">
+            <div class="container">
+                <div class="rows">
+                    <!-- LOGO -->
+                    <div class="etrostore-logo pull-left">
+                        <a href="#">
+                            <img th:src="@{/images/icons/logo-orange.png}" alt="Shoopy">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="main">
+        <h1>二手市场登录</h1>
+        <div class="wthree_top_forms">
+            <div class="agile-info_w3ls agile-info_w3ls_sub hvr-buzz-out">
+                <h3 style="margin-bottom: 0">Login</h3>
+                <div class="agile-info_w3ls_grid second">
+                    <form action="/register" method="post" id="formsubmit" name="formsubmit">
+                        <label  class="youpasswd" data-icon="p"> 用户名 </label><br>
+                        <input type="text" name="principal" id="principal" placeholder="用户名" required><div id="adiv"></div><br>
+                        <label  class="youpasswd" data-icon="p"> 密码</label><br>
+                        <input type="password" name="password0" id="password0" placeholder="Password" required><div id="adiv1"></div><br>
+                        <label  class="youpasswd" data-icon="p"> 确认密码 </label><br>
+                        <input type="password" name="password1" id="password1" placeholder="Password" required><br>
+                        <!--<label  class="youpasswd" data-icon="p">  昵称 </label><br>-->
+                        <!--<input type="Text" name="nickname" placeholder="昵称" required><br>-->
+                        <!--<label  class="youpasswd" data-icon="p"> 性别 </label><br>-->
+                        <!--<input class="myforms-3-2" type="radio" checked ="checked" name="2" value="sex1">男-->
+                        <!--<input class="myforms-3-3" type="radio"  name="2" value="sex2">女<br>-->
+                        <!--<label  class="youpasswd" data-icon="p">  电话号码 </label><br>-->
+                        <!--<input type="Text" name="tel" placeholder="111 1111 1111" required><br>-->
+
+                        <!--<label  class="youpasswd" data-icon="p">  生日 </label><br>-->
+                        <!--<input id="birthday" name="birthday" type="date" /><br>-->
+
+                        <input type="button" name="bu" id="bu"   value="Create New Account">
+
+                    </form>
+                    <h4>Continue With</h4>
+                    <div class="social_icons agileinfo">
+                        <section class="social">
+                            <a href="" class="icon fb"><img th:src="@{/images/f.png}" alt=""/></a>
+                            <a href="" class="icon tw"><img th:src="@{/images/t.png}" alt=""/></a>
+                            <a href="" class="icon gp"><img th:src="@{/images/g.png}" alt=""/></a>
+                        </section>
+                    </div>
+                    <h5>Don't have an account? <a href="#">Sign Up</a></h5>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="agileits_copyright">
+            <p>© 2016 Collective Forms Widget. All rights reserved | Design by <a
+                    href="http://www.xmoban.cn">xmoban.cn</a></p>
+        </div>
+    </div>
 </div>
-<!--//header-->
-<div class="breadcrumbs">
-		<div class="container">
-			<ol class="breadcrumb breadcrumb1 animated wow slideInLeft animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: slideInLeft;">
-				<li><a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
-				<li class="active">Register</li>
-			</ol>
-		</div>
-	</div>
-<div class="container">
-	<div class="register">
-		<h2>Register</h2>
-		  	  <form action="#" method="post">
-				 <div class="col-md-6  register-top-grid">
-					
-					<div class="mation">
-						<span>First Name</span>
-						<input type="text" name="firstname"> 
-					
-						<span>Last Name</span>
-						<input type="text" name="lastname"> 
-					 
-						 <span>Email Address</span>
-						 <input type="text" name="email"> 
-					</div>
-					 <div class="clearfix"> </div>
-					   <a class="news-letter" href="#">
-						 <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i>Sign Up</label>
-					   </a>
-					 </div>
-				     <div class=" col-md-6 register-bottom-grid">
-						   
-							<div class="mation">
-								<span>Password</span>
-								<input type="password" name="password">
-								<span>Confirm Password</span>
-								<input type="password" name="password">
-							</div>
-					 </div>
-					 <div class="clearfix"> </div>
-				</form>
-				
-				<div class="register-but">
-				  <form action="#" method="post">
-					   <input type="submit" value="submit">
-					   <div class="clearfix"> </div>
-				   </form>
-				</div>
-		   </div>
+<!--End Content-->
 </div>
 
-<!--footer-->
-<div class="footer">
-	<div class="container">
-		<div class="footer-top">
-			<div class="col-md-6 top-footer">
-				<h3>Follow Us On</h3>
-				<div class="social-icons">
-					<ul class="social">
-						<li><a href="#"><i></i></a> </li>
-						<li><a href="#"><i class="facebook"></i></a></li>	
-						<li><a href="#"><i class="google"></i> </a></li>
-						<li><a href="#"><i class="linked"></i> </a></li>						
-					</ul>
-						<div class="clearfix"></div>
-				 </div>
-			</div>
-			<div class="col-md-6 top-footer1">
-				<h3>Newsletter</h3>
-					<form action="#" method="post">
-						<input type="text" name="email" value="" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='';}">
-						<input type="submit" value="SUBSCRIBE">
-					</form>
-			</div>
-			<div class="clearfix"> </div>	
-		</div>	
-	</div>
-		<div class="footer-bottom">
-		<div class="container">
-				<div class="col-md-3 footer-bottom-cate">
-					<h6>Categories</h6>
-					<ul>
-						<li><a href="products.html">Curabitur sapien</a></li>
-						<li><a href="single.html">Dignissim purus</a></li>
-						<li><a href="men.html">Tempus pretium</a></li>
-						<li><a href="products.html">Dignissim neque</a></li>
-						<li><a href="single.html">Ornared id aliquet</a></li>
-						
-					</ul>
-				</div>
-				<div class="col-md-3 footer-bottom-cate">
-					<h6>Feature Projects</h6>
-					<ul>
-						<li><a href="products.html">Dignissim purus</a></li>
-						<li><a href="men.html">Curabitur sapien</a></li>
-						<li><a href="single.html">Tempus pretium</a></li>
-						<li><a href="men.html">Dignissim neque</a></li>
-						<li><a href="products.html">Ornared id aliquet</a></li>
-					</ul>
-				</div>
-				<div class="col-md-3 footer-bottom-cate">
-					<h6>Top Brands</h6>
-					<ul>
-						<li><a href="products.html">Tempus pretium</a></li>
-						<li><a href="single.html">Curabitur sapien</a></li>
-						<li><a href="men.html">Dignissim purus</a></li>
-						<li><a href="single.html">Dignissim neque</a></li>
-						<li><a href="men.html">Ornared id aliquet</a></li>
-						
-						
-					</ul>
-				</div>
-				<div class="col-md-3 footer-bottom-cate cate-bottom">
-					<h6>Our Address</h6>
-					<ul>
-						<li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>Address : 12th Avenue, 5th block, <span>Sydney.</span></li>
-						<li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>Email : <a href="mailto:info@example.com">info@example.com</a></li>
-						<li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>Phone : +1234 567 567</li>
-					</ul>
-				</div>
-				<div class="clearfix"> </div>
-				<p class="footer-class">Copyright &copy; 2016.Company name All rights reserved.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>
-			</div>
-	</div>
-</div>
-<!--footer-->
+
+
 </body>
 </html>
+

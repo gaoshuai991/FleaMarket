@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
 <!-- 公共导航栏，引入方式：<th:block th:include="common/header::nav"/> -->
 <th:block th:fragment="nav">
     <header id="header" class="header header-style1">
@@ -64,7 +64,7 @@
 
                     <div class="wrap-myacc pull-right">
                         <div class="sidebar-account pull-left">
-                            <div class="account-title">My account</div>
+                            <div class="account-title"><a class="account-title" href="/myAccount">My account</a></div>
 
                             <div id="my-account" class="my-account">
                                 <div class="widget-1 widget-first widget nav_menu-4 widget_nav_menu">
@@ -82,22 +82,22 @@
                                                 </a>
                                             </li>
 
-                                            <li class="menu-wishlist">
-                                                <a class="item-link" href="#">
-                                                    <span class="menu-title">个人设置</span>
-                                                </a>
-                                            </li>
+                                            <!--<li class="menu-wishlist">-->
+                                                <!--<a class="item-link" href="#">-->
+                                                    <!--<span class="menu-title">个人设置</span>-->
+                                                <!--</a>-->
+                                            <!--</li>-->
                                         </ul>
                                     </div>
                                 </div>
-
+                                <shiro:guest>
                                 <div class="widget-2 widget-last widget sw_top-4 sw_top">
                                     <div class="widget-inner">
                                         <div class="top-login">
                                             <div class="div-logined">
                                                 <ul>
                                                     <li>
-                                                        <a href="javascript:void(0);" data-toggle="modal" data-target="#login_form">
+                                                        <a href="/login" data-toggle="modal" >
                                                             <span>Login</span>
                                                         </a>
                                                         <span class="wg">Welcome Guest</span>
@@ -107,6 +107,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                </shiro:guest>
                             </div>
                         </div>
 

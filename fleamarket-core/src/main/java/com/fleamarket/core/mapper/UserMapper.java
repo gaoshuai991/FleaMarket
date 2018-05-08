@@ -13,4 +13,5 @@ public interface UserMapper extends IMapper<User> {
      * @return
      */
     User selectByPrincipal(@Param("principal") String principal);
+    Boolean addUser(User user);
 }

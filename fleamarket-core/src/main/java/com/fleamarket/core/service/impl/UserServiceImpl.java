@@ -21,4 +21,8 @@ public class UserServiceImpl extends BaseService<User> implements UserService {
     public User selectByPrincipal(String principal) {
         return mapper.selectByPrincipal(principal);
     }
+    @Override
+    public Boolean addUser(User user){
+        return mapper.addUser(user);
+    }
 }

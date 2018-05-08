@@ -1,173 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3ec31878-967b-43b1-a41b-1506a83fe366" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/animate.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/bootstrap-3.1.1.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/flexslider.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/popuo-box.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/style.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/CroissantOne-Regular.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/FontAwesome.otf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/OleoScript-Regular.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/Roboto-Regular.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/fontawesome-webfont.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/glyphicons-halflings-regular.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/glyphicons-halflings-regular.woff2" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/js/imagezoom.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/js/jquery.flexslider.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/js/jquery.magnific-popup.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/js/jquery.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/js/memenu.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/js/responsiveslides.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/js/simpleCart.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/js/wow.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/register.html" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_1_1_9.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_1_1_9.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_3_4.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_3_4.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_4_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_4_0.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_2_7_8.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_2_7_8.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_3_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_3_2.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_persistence_persistence_api_1_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_persistence_persistence_api_1_0.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_transaction_javax_transaction_api_1_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_transaction_javax_transaction_api_1_2.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_45.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_45.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_7_10.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_7_10.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_7_10.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_7_10.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_1_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_1_2.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_3.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_10_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_10_0.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_13.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_13.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_9_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_9_1.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_attoparser_attoparser_2_0_4_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_attoparser_attoparser_2_0_4_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_library_1_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_library_1_3.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_0_1_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_0_1_Final.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_2_14_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_2_14_Final.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_0_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_0_Final.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_22_0_GA.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_22_0_GA.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_0_3_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_0_3_Final.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_2_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_2_Final.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_2_15_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_2_15_0.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_4_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_4_6.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_3_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_3_2.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_autoconfigure_1_3_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_autoconfigure_1_3_2.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_starter_1_3_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_starter_1_3_2.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_2_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_2_6.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_4.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_4.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_16_20.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_16_20.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_0.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_25.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_25.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_0_0_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_0_0_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_0_0_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_0_0_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_configuration_processor_2_0_0_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_configuration_processor_2_0_0_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_0_0_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_0_0_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_2_0_0_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_2_0_0_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_2_0_0_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_2_0_0_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_0_0_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_0_0_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_0_0_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_0_0_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_thymeleaf_2_0_0_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_thymeleaf_2_0_0_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_0_0_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_0_0_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_0_0_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_0_0_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_0_5_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_0_5_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_2_0_5_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_2_0_5_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_0_4_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_0_4_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_5_0_4_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_5_0_4_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_0_4_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_0_4_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_0_4_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_0_4_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_0_4_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_0_4_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_0_4_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_0_4_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_0_4_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_0_4_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_0_4_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_0_4_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_5_0_4_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_5_0_4_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_0_4_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_0_4_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_0_4_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_0_4_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_extras_thymeleaf_extras_java8time_3_0_1_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_extras_thymeleaf_extras_java8time_3_0_1_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_3_0_9_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_3_0_9_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_spring5_3_0_9_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_spring5_3_0_9_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_unbescape_unbescape_1_1_5_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_unbescape_unbescape_1_1_5_RELEASE.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_5_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_5_1.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_19.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_19.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__tk_mybatis_mapper_base_1_0_0_beta3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__tk_mybatis_mapper_base_1_0_0_beta3.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__tk_mybatis_mapper_core_1_0_0_beta3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__tk_mybatis_mapper_core_1_0_0_beta3.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__tk_mybatis_mapper_spring_1_0_0_beta3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__tk_mybatis_mapper_spring_1_0_0_beta3.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__tk_mybatis_mapper_spring_boot_autoconfigure_2_0_0_beta3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__tk_mybatis_mapper_spring_boot_autoconfigure_2_0_0_beta3.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__tk_mybatis_mapper_spring_boot_starter_2_0_0_beta3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__tk_mybatis_mapper_spring_boot_starter_2_0_0_beta3.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__tk_mybatis_mapper_weekend_1_1_3_beta3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__tk_mybatis_mapper_weekend_1_1_3_beta3.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+    <list default="true" id="3ec31878-967b-43b1-a41b-1506a83fe366" name="Default" comment="注册页面已完成】，添加shiro标签配置、个人信息页面">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/fleamarket-core/pom.xml" afterPath="$PROJECT_DIR$/fleamarket-core/pom.xml" />
+      <change beforePath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/config/ShiroConfig.java" afterPath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/config/ShiroConfig.java" />
+      <change beforePath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/controller/IndexController.java" afterPath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/controller/IndexController.java" />
       <change beforePath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/controller/UserController.java" afterPath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/controller/UserController.java" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/shiro/token/CustomToken.java" afterPath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/shiro/token/CustomToken.java" />
+      <change beforePath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/mapper/UserMapper.java" afterPath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/mapper/UserMapper.java" />
+      <change beforePath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/service/UserService.java" afterPath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/service/UserService.java" />
+      <change beforePath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/service/impl/UserServiceImpl.java" afterPath="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/service/impl/UserServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/fleamarket-core/src/main/resources/mapper/UserMapper.xml" afterPath="$PROJECT_DIR$/fleamarket-core/src/main/resources/mapper/UserMapper.xml" />
       <change beforePath="$PROJECT_DIR$/fleamarket-parent.iml" afterPath="$PROJECT_DIR$/fleamarket-parent.iml" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/app-orange.css" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/app-orange.css" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/app-responsive.css" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/app-responsive.css" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/bootstrap.min.css" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/custom.css" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/custom.css" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/fancy/close-popup.png" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/fancy/close-popup.png" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/fancy/fancybox_loading.gif" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/fancy/fancybox_loading.gif" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/fancy/fancybox_loading@2x.gif" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/fancy/fancybox_loading@2x.gif" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/fancy/fancybox_overlay.png" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/fancy/fancybox_overlay.png" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/fancy/fancybox_sprite.png" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/fancy/fancybox_sprite.png" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/fancy/fancybox_sprite@2x.png" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/fancy/fancybox_sprite@2x.png" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/font-awesome.min.css" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/jquery.fancybox.css" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/jquery.fancybox.css" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/js_composer/js_composer.min.css" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/js_composer/js_composer.min.css" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/login.css" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/login.css" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/owl-carousel/owl.carousel.min.css" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/owl-carousel/owl.carousel.min.css" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/owl-carousel/owl.theme.default.min.css" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/owl-carousel/owl.theme.default.min.css" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/select2/select2.css" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/select2/select2.css" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/slick-1.6.0/slick.css" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/slick-1.6.0/slick.css" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/woocommerce/prettyPhoto.css" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/woocommerce/prettyPhoto.css" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/woocommerce/woocommerce-layout.css" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/woocommerce/woocommerce-layout.css" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/woocommerce/woocommerce-smallscreen.css" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/woocommerce/woocommerce-smallscreen.css" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/woocommerce/woocommerce.css" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/woocommerce/woocommerce.css" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/yith-woocommerce-compare/colorbox.css" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/yith-woocommerce-compare/colorbox.css" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/yith-woocommerce-wishlist/style.css" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/yith-woocommerce-wishlist/style.css" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsBold.eot" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsBold.eot" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsBold.ttf" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsBold.ttf" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsBold.woff" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsBold.woff" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsBold.woff2" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsBold.woff2" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsLight.eot" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsLight.eot" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsLight.ttf" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsLight.ttf" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsLight.woff" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsLight.woff" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsLight.woff2" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsLight.woff2" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsMedium.eot" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsMedium.eot" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsMedium.ttf" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsMedium.ttf" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsMedium.woff" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsMedium.woff" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsMedium.woff2" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsMedium.woff2" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsRegular.eot" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsRegular.eot" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsRegular.ttf" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsRegular.ttf" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsRegular.woff" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsRegular.woff" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsRegular.woff2" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsRegular.woff2" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsSemiBold.eot" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsSemiBold.eot" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsSemiBold.ttf" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsSemiBold.ttf" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsSemiBold.woff" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsSemiBold.woff" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsSemiBold.woff2" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsSemiBold.woff2" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/RobotoBold.eot" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/RobotoBold.eot" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/RobotoBold.ttf" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/RobotoBold.ttf" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/RobotoBold.woff" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/RobotoBold.woff" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/RobotoBold.woff2" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/RobotoBold.woff2" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/RobotoMedium.eot" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/RobotoMedium.eot" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/RobotoMedium.ttf" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/RobotoMedium.ttf" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/RobotoMedium.woff" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/RobotoMedium.woff" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/RobotoMedium.woff2" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/RobotoMedium.woff2" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/RobotoRegular.eot" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/RobotoRegular.eot" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/RobotoRegular.ttf" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/RobotoRegular.ttf" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/RobotoRegular.woff" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/RobotoRegular.woff" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/RobotoRegular.woff2" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/RobotoRegular.woff2" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/fontawesome-webfont.eot" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/fontawesome-webfont.ttf" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/fontawesome-webfont.woff" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/fontawesome-webfont.woff2" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/fontawesome-webfont.woff2" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/glyphicons-halflings-regular.eot" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/glyphicons-halflings-regular.ttf" />
-      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/glyphicons-halflings-regular.woff" />
+      <change beforePath="$PROJECT_DIR$/fleamarket-user/pom.xml" afterPath="$PROJECT_DIR$/fleamarket-user/pom.xml" />
+      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/common/header.html" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/common/header.html" />
+      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/index.html" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/index.html" />
       <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/login.html" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/login.html" />
+      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/page_temp/my_account.html" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/page_temp/my_account.html" />
+      <change beforePath="$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/register.html" afterPath="$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/register.html" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/fleamarket-admin/target/" />
@@ -206,102 +57,54 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="register.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/register.html">
+      <file leaf-file-name="my_account.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/page_temp/my_account.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="115" column="20" lean-forward="false" selection-start-line="115" selection-start-column="20" selection-end-line="115" selection-end-column="20" />
+            <state relative-caret-position="402">
+              <caret line="216" column="20" lean-forward="true" selection-start-line="216" selection-start-column="20" selection-end-line="217" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserApplication.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fleamarket-user/src/main/java/com/fleamarket/user/UserApplication.java">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state relative-caret-position="123">
+              <caret line="3729" column="81" lean-forward="false" selection-start-line="3729" selection-start-column="81" selection-end-line="3729" selection-end-column="81" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/controller/UserController.java">
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="32" column="40" lean-forward="true" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
+            <state relative-caret-position="132">
+              <caret line="204" column="18" lean-forward="true" selection-start-line="204" selection-start-column="18" selection-end-line="204" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CustomToken.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/shiro/token/CustomToken.java">
+      <file leaf-file-name="header.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/common/header.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="198">
+              <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserRealm.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/shiro/realm/UserRealm.java">
+      <file leaf-file-name="IndexController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/controller/IndexController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="45" column="34" lean-forward="true" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ByteSource.class" pinned="false" current-in-tab="false">
-        <entry file="jar://F:/maven/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0.jar!/org/apache/shiro/util/ByteSource.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="24" column="125" lean-forward="true" selection-start-line="24" selection-start-column="125" selection-end-line="24" selection-end-column="125" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FastDFSController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/controller/FastDFSController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="36" column="80" lean-forward="true" selection-start-line="36" selection-start-column="80" selection-end-line="36" selection-end-column="80" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Md5Hash.class" pinned="false" current-in-tab="false">
-        <entry file="jar://F:/maven/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0.jar!/org/apache/shiro/crypto/hash/Md5Hash.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CustomModularRealmAuthenticator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/shiro/authenticator/CustomModularRealmAuthenticator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="26" column="13" lean-forward="true" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IdentityFilter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/shiro/filter/IdentityFilter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
-              <folding />
+            <state relative-caret-position="218">
+              <caret line="64" column="30" lean-forward="true" selection-start-line="64" selection-start-column="30" selection-end-line="64" selection-end-column="30" />
+              <folding>
+                <element signature="e#2361#2362#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -322,20 +125,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>src=&quot;assets/img.*png&quot;</find>
-      <find>src=&quot;assets/img</find>
-      <find>img</find>
-      <find>material-icons</find>
-      <find>url</find>
-      <find>wizardPicturePreview</find>
-      <find>picture-</find>
-      <find>wizard-picture</find>
-      <find>picture-container</find>
-      <find>count</find>
-      <find>label-floating</find>
-      <find>choice</find>
-      <find>h6</find>
-      <find>dd</find>
       <find>previ</find>
       <find>next</find>
       <find>previou</find>
@@ -348,10 +137,24 @@
       <find>create</find>
       <find>button</find>
       <find>sign in</find>
-      <find>login</find>
       <find>hre</find>
       <find>src</find>
       <find>min</find>
+      <find>My account</find>
+      <find>我的收藏</find>
+      <find>My a</find>
+      <find>Login</find>
+      <find>login_form</find>
+      <find>SecurityUtils</find>
+      <find>个人设置</find>
+      <find>login</find>
+      <find>shiroDialect</find>
+      <find>com.github.theborakompanioni</find>
+      <find>submit</find>
+      <find>formsubmit</find>
+      <find>My</find>
+      <find>My Account</find>
+      <find>home</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;../static/images</replace>
@@ -380,22 +183,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/mapper/TreasureStarMapper.java" />
-        <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/mapper/UserMapper.java" />
-        <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/service/impl/BaseService.java" />
-        <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/service/impl/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/fleamarket-core/src/test/java/com/fleamarket/core/MD5Test.java" />
-        <option value="$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/page_temp/about_us.html" />
         <option value="$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/about_us.html" />
         <option value="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/login.css" />
-        <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/config/ShiroConfig.java" />
-        <option value="$PROJECT_DIR$/fleamarket-core/src/main/resources/mapper/UserMapper.xml" />
         <option value="$PROJECT_DIR$/fleamarket-core/src/main/resources/mapper/AdminMapper.xml" />
         <option value="$PROJECT_DIR$/fleamarket-core/src/main/resources/mapper/AdminRoleMapper.xml" />
         <option value="$PROJECT_DIR$/fleamarket-core/src/main/resources/mapper/AnnouncementMapper.xml" />
         <option value="$PROJECT_DIR$/fleamarket.sql" />
-        <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/model/User.java" />
-        <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/shiro/realm/UserRealm.java" />
         <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/shiro/filter/IdentityFilter.java" />
         <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/service/CatagoryService.java" />
         <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/service/CategoryService.java" />
@@ -410,12 +203,8 @@
         <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/service/impl/UploadServiceImpl.java" />
         <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/controller/FastDFSController.java" />
         <option value="$PROJECT_DIR$/fleamarket-core/src/test/java/com/fleamarket/core/CoreApplicationTests.java" />
-        <option value="$PROJECT_DIR$/fleamarket-user/src/main/java/com/fleamarket/user/UserApplication.java" />
         <option value="$PROJECT_DIR$/fleamarket-user/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/fleamarket-core/pom.xml" />
         <option value="$PROJECT_DIR$/fleamarket-user/src/test/java/com/fleamarket/user/UserApplicationTests.java" />
-        <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/controller/IndexController.java" />
-        <option value="$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/common/header.html" />
         <option value="$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/common/footer.html" />
         <option value="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/material-font.css" />
         <option value="$PROJECT_DIR$/fleamarket-core/src/main/resources/mapper/TreasureMapper.xml" />
@@ -426,11 +215,25 @@
         <option value="$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/user/treasure_publish.html" />
         <option value="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/js/material-bootstrap-wizard.js" />
         <option value="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/js/fleamarket/user/treasure_publish.js" />
-        <option value="$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/login.html" />
-        <option value="$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/index.html" />
-        <option value="$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/register.html" />
-        <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/controller/UserController.java" />
         <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/shiro/token/CustomToken.java" />
+        <option value="$PROJECT_DIR$/fleamarket-user/src/main/java/com/fleamarket/user/UserApplication.java" />
+        <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/model/User.java" />
+        <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/mapper/UserMapper.java" />
+        <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/shiro/realm/UserRealm.java" />
+        <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/service/UserService.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/fleamarket-user/pom.xml" />
+        <option value="$PROJECT_DIR$/fleamarket-core/pom.xml" />
+        <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/config/ShiroConfig.java" />
+        <option value="$PROJECT_DIR$/fleamarket-core/src/main/resources/mapper/UserMapper.xml" />
+        <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/login.html" />
+        <option value="$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/register.html" />
+        <option value="$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/index.html" />
+        <option value="$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/controller/IndexController.java" />
+        <option value="$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/common/header.html" />
+        <option value="$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/page_temp/my_account.html" />
       </list>
     </option>
   </component>
@@ -460,8 +263,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="y" value="1" />
     <option name="width" value="1386" />
-    <option name="height" value="788" />
+    <option name="height" value="787" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -500,9 +304,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -581,9 +384,7 @@
               <item name="fleamarket-core" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="fleamarket" type="b2602c69:ProjectViewProjectNode" />
@@ -591,63 +392,8 @@
               <item name="fleamarket-core" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fleamarket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FleaMarket" type="462c0819:PsiDirectoryNode" />
-              <item name="fleamarket-core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="shiro" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fleamarket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FleaMarket" type="462c0819:PsiDirectoryNode" />
-              <item name="fleamarket-core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="shiro" type="462c0819:PsiDirectoryNode" />
-              <item name="authenticator" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fleamarket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FleaMarket" type="462c0819:PsiDirectoryNode" />
-              <item name="fleamarket-core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="shiro" type="462c0819:PsiDirectoryNode" />
-              <item name="filter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fleamarket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FleaMarket" type="462c0819:PsiDirectoryNode" />
-              <item name="fleamarket-core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="shiro" type="462c0819:PsiDirectoryNode" />
-              <item name="realm" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fleamarket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FleaMarket" type="462c0819:PsiDirectoryNode" />
-              <item name="fleamarket-core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="shiro" type="462c0819:PsiDirectoryNode" />
-              <item name="token" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="fleamarket" type="b2602c69:ProjectViewProjectNode" />
@@ -691,25 +437,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fleamarket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FleaMarket" type="462c0819:PsiDirectoryNode" />
-              <item name="fleamarket-user" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fleamarket" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FleaMarket" type="462c0819:PsiDirectoryNode" />
-              <item name="fleamarket-user" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="fleamarket" type="b2602c69:ProjectViewProjectNode" />
@@ -725,6 +452,36 @@
               <item name="FleaMarket" type="462c0819:PsiDirectoryNode" />
               <item name="fleamarket-user" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fleamarket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FleaMarket" type="462c0819:PsiDirectoryNode" />
+              <item name="fleamarket-user" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="page_temp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fleamarket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FleaMarket" type="462c0819:PsiDirectoryNode" />
+              <item name="fleamarket-user" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fleamarket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FleaMarket" type="462c0819:PsiDirectoryNode" />
+              <item name="fleamarket-user" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -744,11 +501,16 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="user" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="fleamarket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -773,12 +535,12 @@
     <property name="RequestMappingsPanelOrder2" value="2" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/项目资源" />
-      <recent name="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/treasure_publish" />
-      <recent name="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/js/jquery" />
-      <recent name="$PROJECT_DIR$/fleamarket-user/src/main/resources/templates" />
-      <recent name="$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\asdf\FleaMarket\fleamarket-user\src\main\resources\templates" />
+      <recent name="D:\asdf\FleaMarket\fleamarket-user\src\main\resources\static\css" />
+      <recent name="D:\asdf\FleaMarket\fleamarket-user\src\main\resources\static\fonts" />
+      <recent name="D:\asdf\FleaMarket\fleamarket-user\src\main\resources\static\js" />
+      <recent name="$PROJECT_DIR$/项目资源/资源文件" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.fleamarket.core.service.impl" />
@@ -786,12 +548,12 @@
       <recent name="com.fleamarket.core.controller" />
       <recent name="com.fleamarket.core" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\asdf\FleaMarket\fleamarket-user\src\main\resources\templates" />
-      <recent name="D:\asdf\FleaMarket\fleamarket-user\src\main\resources\static\css" />
-      <recent name="D:\asdf\FleaMarket\fleamarket-user\src\main\resources\static\fonts" />
-      <recent name="D:\asdf\FleaMarket\fleamarket-user\src\main\resources\static\js" />
-      <recent name="$PROJECT_DIR$/项目资源/资源文件" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/项目资源" />
+      <recent name="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/treasure_publish" />
+      <recent name="$PROJECT_DIR$/fleamarket-user/src/main/resources/static/js/jquery" />
+      <recent name="$PROJECT_DIR$/fleamarket-user/src/main/resources/templates" />
+      <recent name="$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1399,6 +1161,14 @@
       <workItem from="1525252217608" duration="4143000" />
       <workItem from="1525439191305" duration="1845000" />
       <workItem from="1525441083371" duration="2992000" />
+      <workItem from="1525444350046" duration="348000" />
+      <workItem from="1525615459796" duration="8435000" />
+      <workItem from="1525672707623" duration="5395000" />
+      <workItem from="1525678698476" duration="2483000" />
+      <workItem from="1525681243329" duration="333000" />
+      <workItem from="1525683259578" duration="345000" />
+      <workItem from="1525756003552" duration="733000" />
+      <workItem from="1525756800907" duration="7274000" />
     </task>
     <task id="LOCAL-00001" summary="框架基本完成，界面模板文件已拷贝到user模块，准备写Login">
       <created>1522238592530</created>
@@ -1457,7 +1227,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="173499000" />
+    <option name="totallyTimeSpent" value="198845000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1469,7 +1239,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1386" height="788" extended-state="0" />
+    <frame x="0" y="1" width="1386" height="787" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1482,18 +1252,18 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19721767" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280507" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11708861" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23567921" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.556962" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23303168" sideWeight="0.8135169" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932693" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20889895" sideWeight="0.8135169" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1519,7 +1289,8 @@
     <MESSAGE value="框架基本完成，界面模板文件已拷贝到user模块，准备写Login" />
     <MESSAGE value="login功能及首页商品分类获取完成" />
     <MESSAGE value="【发布商品页面已完成50%】，添加FastDFS配置、项目资源目录" />
-    <option name="LAST_COMMIT_MESSAGE" value="【发布商品页面已完成50%】，添加FastDFS配置、项目资源目录" />
+    <MESSAGE value="注册页面已完成】，添加shiro标签配置、个人信息页面" />
+    <option name="LAST_COMMIT_MESSAGE" value="注册页面已完成】，添加shiro标签配置、个人信息页面" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1534,14 +1305,8 @@
           <line>30</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/controller/UserController.java</url>
-          <line>37</line>
-          <properties />
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="13" />
+      <option name="time" value="16" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1550,156 +1315,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/fleamarket-user/src/main/resources/static/js/jquery/jquery.validate.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fleamarket-user/src/main/resources/static/js/jquery/jquery.bootstrap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fleamarket-user/src/main/resources/static/js/jquery/jquery.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/PoppinsBold.woff">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fleamarket-user/src/main/resources/static/fonts/fontawesome-webfont.ttf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/material-font.css" />
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/resources/html5-schema/html5/web-forms2.rnc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="557" column="22" lean-forward="false" selection-start-line="557" selection-start-column="22" selection-end-line="557" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/HTML5.js" />
-    <entry file="file://$PROJECT_DIR$/fleamarket-user/src/main/resources/static/images/treasure_publish/add-picture.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/7965d3a/f56070b1-5698-47a4-9410-e9fa5764aa34/fleamarket.treasure" />
-    <entry file="file://$PROJECT_DIR$/fleamarket-core/src/main/resources/mapper/TreasureMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="78" lean-forward="true" selection-start-line="14" selection-start-column="78" selection-end-line="14" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/7965d3a/f56070b1-5698-47a4-9410-e9fa5764aa34/fleamarket.category" />
-    <entry file="file://$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/font-awesome.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/treasure-publish.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="22" lean-forward="true" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fleamarket-user/src/main/resources/static/js/jquery/jquery.toolbar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="301" column="25" lean-forward="true" selection-start-line="301" selection-start-column="25" selection-end-line="301" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/model/Treasure.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="43" column="34" lean-forward="false" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/fontawesome-all.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/config/ShiroConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-626">
-          <caret line="34" column="13" lean-forward="false" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="10" column="21506" lean-forward="false" selection-start-line="10" selection-start-column="21506" selection-end-line="10" selection-end-column="21506" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/common/header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2755">
-          <caret line="145" column="38" lean-forward="false" selection-start-line="145" selection-start-column="38" selection-end-line="145" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fleamarket-user/src/main/resources/static/js/vue.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/custom.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2200">
-          <caret line="100" column="26" lean-forward="false" selection-start-line="100" selection-start-column="26" selection-end-line="100" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/documentation.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/common/common_resource.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="29" column="48" lean-forward="false" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/common/footer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9020">
-          <caret line="410" column="12" lean-forward="false" selection-start-line="410" selection-start-column="12" selection-end-line="410" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/项目资源/分页/pagetool.js" />
     <entry file="file://$PROJECT_DIR$/项目资源/资源文件/nations.json" />
     <entry file="file://$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/material-bootstrap-wizard.css">
       <provider selected="true" editor-type-id="text-editor">
@@ -1750,21 +1365,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://F:/maven/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0.jar!/org/apache/shiro/authc/UsernamePasswordToken.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="24" column="11" lean-forward="false" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fleamarket-core/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1166">
-          <caret line="53" column="63" lean-forward="false" selection-start-line="53" selection-start-column="63" selection-end-line="53" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fleamarket-user/src/main/resources/static/css/login.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -1786,88 +1386,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="3366" column="36" lean-forward="false" selection-start-line="3366" selection-start-column="36" selection-end-line="3366" selection-end-column="36" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#5;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="23" column="93" lean-forward="false" selection-start-line="23" selection-start-column="93" selection-end-line="23" selection-end-column="93" />
-          <folding>
-            <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="115" column="20" lean-forward="false" selection-start-line="115" selection-start-column="20" selection-end-line="115" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/shiro/filter/IdentityFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/shiro/authenticator/CustomModularRealmAuthenticator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="26" column="13" lean-forward="true" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="374">
+          <caret line="26" column="9" lean-forward="false" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="jar://F:/maven/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0.jar!/org/apache/shiro/crypto/hash/Md5Hash.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fleamarket-user/src/main/java/com/fleamarket/user/UserApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="32" column="40" lean-forward="true" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/shiro/token/CustomToken.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/shiro/realm/UserRealm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="45" column="34" lean-forward="true" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
-          <folding />
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1875,22 +1404,284 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="13" column="7" lean-forward="true" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar://F:/maven/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0.jar!/org/apache/shiro/util/ByteSource.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="24" column="125" lean-forward="true" selection-start-line="24" selection-start-column="125" selection-end-line="24" selection-end-column="125" />
-          <folding />
+        <state relative-caret-position="770">
+          <caret line="35" column="59" lean-forward="false" selection-start-line="35" selection-start-column="59" selection-end-line="35" selection-end-column="59" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/controller/FastDFSController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="36" column="80" lean-forward="true" selection-start-line="36" selection-start-column="80" selection-end-line="36" selection-end-column="80" />
+        <state relative-caret-position="132">
+          <caret line="36" column="80" lean-forward="false" selection-start-line="36" selection-start-column="80" selection-end-line="36" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/mapper/RoleMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/resources/html5-schema/html5/common.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1540">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://F:/maven/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0.jar!/org/apache/shiro/authc/UsernamePasswordToken.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="21" column="11" lean-forward="false" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/shiro/token/CustomToken.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://F:/maven/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0.jar!/org/apache/shiro/subject/SimplePrincipalCollection.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="39" column="11" lean-forward="false" selection-start-line="39" selection-start-column="11" selection-end-line="39" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://F:/maven/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0.jar!/org/apache/shiro/authc/SimpleAuthenticationInfo.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="28" column="11" lean-forward="false" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-core/src/test/java/com/fleamarket/core/CoreApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-core/src/test/java/com/fleamarket/core/MD5Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/shiro/authenticator/CustomModularRealmAuthenticator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/shiro/realm/UserRealm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="26" column="14" lean-forward="true" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="770">
+          <caret line="36" column="27" lean-forward="false" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="27" column="1" lean-forward="false" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-user/src/main/java/com/fleamarket/user/UserApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#867#868#0" expanded="false" />
+            <element signature="e#924#925#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/page_temp/cart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="57" lean-forward="false" selection-start-line="8" selection-start-column="57" selection-end-line="8" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://F:/maven/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0.jar!/org/apache/shiro/subject/Subject.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="60" column="30" lean-forward="true" selection-start-line="60" selection-start-column="30" selection-end-line="60" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://F:/maven/com/github/theborakompanioni/thymeleaf-extras-shiro/1.2.1/thymeleaf-extras-shiro-1.2.1.jar!/at/pollux/thymeleaf/shiro/dialect/ShiroDialect.class" />
+    <entry file="jar://F:/JavaEEPro/jdk1.8.0_65/src.zip!/java/lang/ClassLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="356" column="0" lean-forward="false" selection-start-line="356" selection-start-column="0" selection-end-line="356" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://F:/maven/com/github/theborakompanioni/thymeleaf-extras-shiro/1.2.1/thymeleaf-extras-shiro-1.2.1-sources.jar!/at/pollux/thymeleaf/shiro/processor/attribute/PrincipalAttrProcessor.java" />
+    <entry file="jar://F:/maven/org/thymeleaf/thymeleaf/3.0.9.RELEASE/thymeleaf-3.0.9.RELEASE.jar!/org/thymeleaf/dialect/AbstractDialect.class" />
+    <entry file="jar://F:/maven/com/github/theborakompanioni/thymeleaf-extras-shiro/1.2.1/thymeleaf-extras-shiro-1.2.1-sources.jar!/at/pollux/thymeleaf/shiro/dialect/ShiroDialect.java" />
+    <entry file="jar://F:/JavaEEPro/jdk1.8.0_65/src.zip!/java/net/URLClassLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="380" column="0" lean-forward="false" selection-start-line="380" selection-start-column="0" selection-end-line="380" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-user/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="682">
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="78" column="17" lean-forward="false" selection-start-line="78" selection-start-column="17" selection-end-line="78" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-core/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="59" column="21" lean-forward="true" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/config/ShiroConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="233" column="6" lean-forward="true" selection-start-line="233" selection-start-column="6" selection-end-line="233" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#8329#8330#0" expanded="false" />
+            <element signature="e#8370#8371#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/mapper/UserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://F:/maven/com/github/theborakompanioni/thymeleaf-extras-shiro/2.0.0/thymeleaf-extras-shiro-2.0.0.jar!/at/pollux/thymeleaf/shiro/dialect/ShiroDialect.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="41">
+          <caret line="5" column="8" lean-forward="false" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="41" />
+          <folding>
+            <marker date="1525756256119" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1525756256119" expanded="false" signature="157:2376" ph="..." />
+            <marker date="1525756256119" expanded="false" signature="2563:2574" ph=" { " />
+            <marker date="1525756256119" expanded="false" signature="2604:2610" ph=" }" />
+            <marker date="1525756256119" expanded="false" signature="2674:2685" ph=" { " />
+            <marker date="1525756256119" expanded="false" signature="2735:2741" ph=" }" />
+            <marker date="1525756256119" expanded="true" signature="2828:4759" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-core/src/main/resources/mapper/UserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="29" column="9" lean-forward="true" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+          <folding>
+            <marker date="1525757546143" expanded="true" signature="1495:1549" ph="SELECT * FRO... user" />
+            <marker date="1525757546143" expanded="true" signature="1638:1750" ph="insert into user... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="37" column="13" lean-forward="true" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="277" column="18" lean-forward="true" selection-start-line="277" selection-start-column="18" selection-end-line="277" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="204" column="18" lean-forward="true" selection-start-line="204" selection-start-column="18" selection-end-line="204" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-core/src/main/java/com/fleamarket/core/controller/IndexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="64" column="30" lean-forward="true" selection-start-line="64" selection-start-column="30" selection-end-line="64" selection-end-column="30" />
+          <folding>
+            <element signature="e#2361#2362#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/common/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/page_temp/my_account.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="216" column="20" lean-forward="true" selection-start-line="216" selection-start-column="20" selection-end-line="217" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fleamarket-user/src/main/resources/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="3729" column="81" lean-forward="false" selection-start-line="3729" selection-start-column="81" selection-end-line="3729" selection-end-column="81" />
           <folding />
         </state>
       </provider>
