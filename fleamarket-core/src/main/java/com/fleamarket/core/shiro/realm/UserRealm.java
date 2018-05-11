@@ -41,7 +41,7 @@ public class UserRealm extends AuthorizingRealm {
         }
         // 加密交给AuthenticatingRealm使用CredentialsMatcher进行密码匹配，盐值为当前用户用户名
         return new SimpleAuthenticationInfo(
-                new SimplePrincipalCollection(Arrays.asList(user.getId(),principal,user.getNickname()),getName()),
+                principal,
                 user.getPassword(),
                 ByteSource.Util.bytes(user.getUsername()),
                 getName());

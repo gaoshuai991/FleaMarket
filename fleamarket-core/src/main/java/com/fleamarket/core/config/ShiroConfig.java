@@ -124,15 +124,7 @@ public class ShiroConfig {
         userRealm.setName("userRealm");
         return userRealm;
     }
-//
-//    @Bean
-//    public WriterRealm writerRealm() {
-//        WriterRealm writerRealm = new WriterRealm();
-//        writerRealm.setCredentialsMatcher(hashedCredentialsMatcher());
-//        writerRealm.setName("writerRealm");
-//        return writerRealm;
-//    }
-//
+
 //    @Bean
 //    public AdminRealm adminRealm() {
 //        AdminRealm adminRealm = new AdminRealm();
@@ -214,10 +206,10 @@ public class ShiroConfig {
      *
      * @return
      */
-//    @Bean
-//    public ShiroDialect shiroDialect() {
-//        return new ShiroDialect();
-//    }
+    @Bean
+    public ShiroDialect shiroDialect() {
+        return new ShiroDialect();
+    }
 
     /**
      * DefaultAdvisorAutoProxyCreator，Spring的一个bean，由Advisor决定对哪些类的方法进行AOP代理。
@@ -240,9 +232,5 @@ public class ShiroConfig {
         AuthorizationAttributeSourceAdvisor authorizationAttributeSourceAdvisor = new AuthorizationAttributeSourceAdvisor();
         authorizationAttributeSourceAdvisor.setSecurityManager(securityManager);
         return authorizationAttributeSourceAdvisor;
-    }
-    @Bean
-    public ShiroDialect shiroDialect() {
-        return new ShiroDialect();
     }
 }

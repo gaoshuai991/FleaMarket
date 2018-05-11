@@ -1,6 +1,6 @@
 package com.fleamarket.core.model;
 
-import java.util.Date;
+import java.sql.Date;
 import javax.persistence.*;
 
 public class User {
@@ -20,6 +20,8 @@ public class User {
     private String photo;
 
     private String tel;
+
+    private String email;
 
     private String sex;
 
@@ -138,6 +140,14 @@ public class User {
      */
     public void setTel(String tel) {
         this.tel = tel;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     /**
