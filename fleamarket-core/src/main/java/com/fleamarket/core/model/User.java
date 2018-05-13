@@ -15,7 +15,7 @@ public class User {
     private String nickname;
 
     @Column(name = "create_time")
-    private Date createTime;
+    private java.util.Date createTime;
 
     private String photo;
 
@@ -24,7 +24,7 @@ public class User {
     private String email;
 
     private String sex;
-
+    @Column(name = "birthday")
     private Date birthday;
 
     private String city;
@@ -103,14 +103,14 @@ public class User {
     /**
      * @return create_time
      */
-    public Date getCreateTime() {
+    public java.util.Date getCreateTime() {
         return createTime;
     }
 
     /**
      * @param createTime
      */
-    public void setCreateTime(Date createTime) {
+    public void setCreateTime(java.util.Date createTime) {
         this.createTime = createTime;
     }
 

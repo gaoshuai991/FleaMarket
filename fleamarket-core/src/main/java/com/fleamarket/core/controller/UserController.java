@@ -66,8 +66,11 @@ public class UserController {
         if(!StringUtils.isEmpty(school_province)){
             user.setSchool(StringUtils.isEmpty(school_name) ? school_province : school_province + "-" + school_name);
         }
-        request.getSession().setAttribute("user", userService.selectByPrimaryKey(user.getId()));
-        return userService.updateByPrimaryKeySelective(user);
+        if(userService.updateByPrimaryKeySelective(user)) {
+            request.getSession().setAttribute("user", userService.selectByPrimaryKey(user.getId()));
+            return true;
+        }
+        return false;
     }
 
     /**
@@ -218,13 +221,13 @@ public class UserController {
     }
 
     /**
-     * 个人中心跳转
+     * 获取单个商品信息
      * @param treasureId
      * @return
      */
     @GetMapping("treasure/{treasureId}")
     @ResponseBody
-    public Map<String, Object> userCenter(@PathVariable Integer treasureId) {
+    public Map<String, Object> getTreasure(@PathVariable Integer treasureId) {
         final Treasure treasure = treasureService.selectByPrimaryKey(treasureId);
         final char[] tradingMethods = treasure.getTradingMethod().toCharArray();
         return new HashMap<String, Object>(){{

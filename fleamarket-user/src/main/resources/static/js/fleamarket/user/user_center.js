@@ -99,22 +99,29 @@ function updateData(form, exturl) {
 }
 
 function initUserBasic() {
-    if (city !== '') {
+    if (city != null && city !== '') {
         var cityArr = city.split("-");
         if (cityArr.length == 1) {
             initWorkplace("work_province", "work_city", cityArr[0], "");
         } else if (cityArr.length == 2) {
             initWorkplace("work_province", "work_city", cityArr[0], cityArr[1]);
         }
+    }else{
+        initWorkplace("work_province", "work_city", "", "");
     }
-    if (school !== '') {
+
+    if (school != null && school !== '') {
         var schoolArr = school.split("-");
         if (schoolArr.length == 1) {
             initCampus("school_province", "school_name", schoolArr[0], "");
         } else if (schoolArr.length == 2) {
             initCampus("school_province", "school_name", schoolArr[0], schoolArr[1]);
         }
+    }else{
+        initCampus("school_province", "school_name", "", "");
     }
+
+
     $("#form-user-basic").validator({
         rules: {
             // 使用正则表达式定义规则
