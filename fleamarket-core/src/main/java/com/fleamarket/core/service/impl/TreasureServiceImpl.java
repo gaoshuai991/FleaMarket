@@ -30,13 +30,6 @@ public class TreasureServiceImpl extends BaseService<Treasure> implements Treasu
 		return treasureMapper.insertTreasure(treasure);
 	}
 
-	@Override
-	public List<TreasurePicture> selectAllTreasurePicture(Integer treasureId) {
-		TreasurePicture treasurePicture = new TreasurePicture();
-		treasurePicture.setTreasureId(treasureId);
-		return treasurePictureMapper.select(treasurePicture);
-	}
-
     @Override
     public List<Treasure> selectTreasureByUid(Integer uid) {
 		Treasure treasure = new Treasure();
@@ -44,7 +37,8 @@ public class TreasureServiceImpl extends BaseService<Treasure> implements Treasu
         return treasureMapper.select(treasure);
     }
 
-    @Override
+
+	@Override
 	protected IMapper<Treasure> getMapper() {
 		return treasureMapper;
 	}

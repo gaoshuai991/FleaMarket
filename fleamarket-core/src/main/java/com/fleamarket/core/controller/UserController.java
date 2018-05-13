@@ -1,81 +1,238 @@
 package com.fleamarket.core.controller;
 
 import com.fleamarket.core.model.Treasure;
-import com.fleamarket.core.service.TreasureService;
-import com.fleamarket.core.service.UserService;
-import com.fleamarket.core.shiro.Identity;
-import com.fleamarket.core.shiro.token.CustomToken;
+import com.fleamarket.core.model.TreasurePicture;
+import com.fleamarket.core.model.User;
+import com.fleamarket.core.service.*;
+import com.fleamarket.core.util.Constant;
 import com.fleamarket.core.util.Utils;
 import lombok.extern.log4j.Log4j2;
 import org.apache.shiro.SecurityUtils;
-import org.apache.shiro.authc.IncorrectCredentialsException;
-import org.apache.shiro.authc.LockedAccountException;
-import org.apache.shiro.authc.UnknownAccountException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.StringUtils;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
-import java.util.HashMap;
-import java.util.Map;
+import java.io.IOException;
+import java.util.*;
 
 @Controller
 @Log4j2
+@RequestMapping("user")
 public class UserController {
     private final TreasureService treasureService;
+    private final TreasurePictureService treasurePictureService;
     private final UserService userService;
+    private final CategoryService categoryService;
+    private final UploadService uploadService;
 
     @Autowired
-    public UserController(TreasureService treasureService, UserService userService) {
+    public UserController(TreasureService treasureService, TreasurePictureService treasurePictureService, UserService userService, CategoryService categoryService, UploadService uploadService) {
         this.treasureService = treasureService;
+        this.treasurePictureService = treasurePictureService;
         this.userService = userService;
-    }
-
-    @GetMapping("login")
-    public String login(){
-        return "login";
-    }
-
-
-    @PostMapping("login")
-    public String login(String principal, String password, HttpSession session, RedirectAttributes redirectAttributes) {
-        try {
-            CustomToken customToken = new CustomToken(principal, password,Identity.USER);
-            SecurityUtils.getSubject().login(customToken);
-            if(SecurityUtils.getSubject().isAuthenticated()) {
-                session.setAttribute("user", userService.selectByPrincipal(principal));
-                return "redirect:index";
-            }
-        } catch (UnknownAccountException uae){
-            log.debug("对用户[" + principal + "]登录验证未通过,未知账户");
-            redirectAttributes.addAttribute("message", "用户名不存在");
-        } catch (IncorrectCredentialsException ice) {
-            log.debug("对用户[" + principal + "]登录验证未通过,错误的凭证");
-            redirectAttributes.addAttribute("message", "密码不Ø正确");
-        } catch (LockedAccountException ule) {
-            log.debug("对用户[" + principal + "]登录验证未通过,用户被锁定");
-            redirectAttributes.addAttribute("message", "用户被锁定");
-        }
-        return "redirect:login";
+        this.categoryService = categoryService;
+        this.uploadService = uploadService;
     }
 
     @GetMapping("user_center")
     public String userCenter(HttpServletRequest request) {
         request.setAttribute("treasures", treasureService.selectTreasureByUid(Utils.getUserSession(request.getSession()).getId()));
+        request.setAttribute("newDegrees", Constant.NEW_DEGREE_LIST);
+        request.setAttribute("categories", categoryService.selectAllChildren());
         return "user/user_center";
     }
 
-    @GetMapping("treasure_picture/{treasureId}")
+    /**
+     * 用户基本信息修改
+     * @param user
+     * @param request
+     * @return
+     */
+    @PutMapping("user_center/basic")
+    @ResponseBody
+    public boolean updateUserBaisc(User user,HttpServletRequest request){
+        String work_province = request.getParameter("work_province");
+        String work_city = request.getParameter("work_city");
+        if(!StringUtils.isEmpty(work_province)){
+            user.setCity(StringUtils.isEmpty(work_city) ? work_province : work_province + "-" + work_city);
+        }
+        String school_province = request.getParameter("school_province");
+        String school_name = request.getParameter("school_name");
+        if(!StringUtils.isEmpty(school_province)){
+            user.setSchool(StringUtils.isEmpty(school_name) ? school_province : school_province + "-" + school_name);
+        }
+        request.getSession().setAttribute("user", userService.selectByPrimaryKey(user.getId()));
+        return userService.updateByPrimaryKeySelective(user);
+    }
+
+    /**
+     * 商品修改
+     * @param treasure
+     * @param request
+     * @return
+     */
+    @PutMapping("user_center/treasure")
+    @ResponseBody
+    public boolean updateTreasure(Treasure treasure, HttpServletRequest request){
+        List<String> methods = Arrays.asList(request.getParameterValues("tradingMethod"));
+        treasure.setTradingMethod((methods.contains("pickUp") ? "1" : "0") + (methods.contains("faceGay") ? "1" : "0") + (methods.contains("postMan") ? "1" : "0"));
+        treasure.setTotal(treasure.getPrice() + treasure.getFare());
+        return treasureService.updateByPrimaryKeySelective(treasure);
+    }
+    /**
+     * 宝贝图片上传
+     *
+     * @param request
+     * @return 严格返回JSON格式
+     */
+    @PostMapping(value = "user_center/treasure_pic")
+    @ResponseBody
+    public Object treasurePictureUpdate(HttpServletRequest request) throws Exception {
+        //先检查图片数量是否已经上传至最大，即8张
+        Integer tid = Integer.parseInt(request.getParameter("tid"));
+        int existsCount = treasurePictureService.selectAllTreasurePicture(tid).size();
+        if (existsCount >= 8) {
+            return "{\"result\":\"false\"}";
+        }
+        Map<String, Object> resultMap = new HashMap<>();
+        //如果符合以上条件就给予上传
+        if (request instanceof MultipartHttpServletRequest) {
+            MultipartHttpServletRequest mrequest = (MultipartHttpServletRequest) request;
+            List<MultipartFile> pictures = mrequest.getFiles("pictures");
+            if (existsCount + pictures.size() > 8) {
+                return "{\"result\":\"false\"}";
+            }
+            for (MultipartFile picture : pictures) {
+                if (picture != null) {
+                    log.debug("图片名称====>" + picture.getName());
+                    log.debug("图片类型====>" + picture.getContentType());
+                    log.debug("图片大小====>" + picture.getSize());
+                    String picturePath = uploadService.uploadFile(picture);
+                    if (picturePath == null) {
+                        log.debug("宝贝图片上传失败!");
+                        return "{\"result\":\"false\"}";
+                    }else{
+                        TreasurePicture treasurePicture = new TreasurePicture();
+                        treasurePicture.setTreasureId(tid);
+                        treasurePicture.setPicture(picturePath);
+                        if (!treasurePictureService.insertTreasurePicture(treasurePicture)){
+                            uploadService.deleteFile(picturePath);
+                            log.debug("宝贝图片上传失败!");
+                            return "{\"result\":\"false\"}";
+                        }
+                    }
+                    log.debug("宝贝图片上传完成!");
+                }
+            }
+            //查询出所有的照片
+            resultMap.put("pictures", treasurePictureService.selectAllTreasurePicture(tid));
+        }
+        resultMap.put("result", "true");
+        return resultMap;
+    }
+
+    /**
+     * 删除商品图片
+     * @param tpid
+     * @return
+     */
+    @DeleteMapping("user_center/treasure_pic/{tpid}")
+    @ResponseBody
+    public boolean treasurePictureDelete(@PathVariable Integer tpid){
+        String picture = treasurePictureService.selectByPrimaryKey(tpid).getPicture();
+        return treasurePictureService.deleteTreasurePicture(tpid) && uploadService.deleteFile(picture);
+    }
+
+    /**
+     * 把某个图片设为商品主图片
+     * @param tpid
+     * @param tid
+     * @return
+     */
+    @PutMapping("user_center/treasure_main_pic")
+    @ResponseBody
+    @Transactional
+    public boolean setTreasureMainPicture(Integer tpid, Integer tid){
+        String mainPic = treasureService.selectByPrimaryKey(tid).getPicture();
+        String pic = treasurePictureService.selectByPrimaryKey(tpid).getPicture();
+        Treasure treasure = new Treasure();
+        treasure.setId(tid);
+        treasure.setPicture(pic);
+        TreasurePicture treasurePicture = new TreasurePicture();
+        treasurePicture.setId(tpid);
+        treasurePicture.setPicture(mainPic);
+        return treasureService.updateByPrimaryKeySelective(treasure) && treasurePictureService.updateByPrimaryKeySelective(treasurePicture);
+    }
+
+    /**
+     * 发布新商品页面跳转
+     * @param request
+     * @return
+     */
+    @GetMapping("treasure")
+    public String publishTreasure(HttpServletRequest request){
+        request.setAttribute("newDegrees", Constant.NEW_DEGREE_LIST);
+        request.setAttribute("categories", categoryService.selectAllChildren());
+        return "user/treasure_publish";
+    }
+    @GetMapping("success")
+    public String publishSuccess(){
+        return "user/publish_success";
+    }
+
+    /**
+     * 发布新商品
+     * @param treasure
+     * @param photo
+     * @param request
+     * @return
+     */
+    @PostMapping("treasure")
+    public String publishTreasure(Treasure treasure, MultipartFile photo, HttpServletRequest request){
+        String pickUp = request.getParameter("pickUp");
+        String faceGay = request.getParameter("faceGay");
+        String postMan = request.getParameter("postMan");
+        String tradingMethod = (pickUp == null ? "0" : pickUp) + (faceGay == null ? "0" : faceGay) + (postMan == null ? "0" : postMan);
+        treasure.setTradingMethod(tradingMethod);
+        treasure.setTotal(treasure.getPrice() + treasure.getFare());
+        treasure.setUid((Integer) SecurityUtils.getSubject().getPrincipals().getPrimaryPrincipal());
+        try {
+            String fileName;
+            if ((fileName = uploadService.uploadFile(photo)) != null) {
+                treasure.setPicture(fileName);
+                if(treasureService.treasurePublish(treasure)){
+                    return "user/publish_success"; // TODO
+                }else{
+                    uploadService.deleteFile(fileName);
+                }
+            }
+        } catch (IOException e) {
+            log.error(e.getMessage());
+        }
+        return "user/treasure_publish";
+    }
+
+    /**
+     * 个人中心跳转
+     * @param treasureId
+     * @return
+     */
+    @GetMapping("treasure/{treasureId}")
     @ResponseBody
     public Map<String, Object> userCenter(@PathVariable Integer treasureId) {
+        final Treasure treasure = treasureService.selectByPrimaryKey(treasureId);
+        final char[] tradingMethods = treasure.getTradingMethod().toCharArray();
         return new HashMap<String, Object>(){{
-            put("mainPicture", treasureService.selectByPrimaryKey(treasureId).getPicture());
-            put("pictures", treasureService.selectAllTreasurePicture(treasureId));
+            put("treasure", treasure);
+            put("pictures", treasurePictureService.selectAllTreasurePicture(treasureId));
+            put("pickUp", tradingMethods[0] == '1');
+            put("faceGay", tradingMethods[1] == '1');
+            put("postMan", tradingMethods[2] == '1');
         }};
     }
 

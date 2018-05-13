@@ -10,10 +10,13 @@
     <!-- 相册js引入 -->
     <script src="../../static/js/ekko-lightbox.min.js" th:src="@{/js/ekko-lightbox.min.js}"></script>
     <script th:inline="javascript">
-        var type = /*[[${type}]]*/'';
+        var type = /*[[${#httpServletRequest.getParameter('type')}]]*/'';
+        var treaid = /*[[${#httpServletRequest.getParameter('tid')}]]*/'';
         var city = /*[[${session.user.city}]]*/'';
         var school = /*[[${session.user.school}]]*/'';
     </script>
+    <script th:src="@{/plugins/nice-validator/jquery.validator.js(local=zh-CN)}"></script>
+    <script th:src="@{/plugins/sweetalert/js/sweetalert.min.js}"></script>
     <!-- 引入bootstrap fileinput -->
     <link th:href="@{/plugins/fileinput/css/fileinput.css}" href="../../static/plugins/fileinput/css/fileinput.css"
           rel="stylesheet"/>
@@ -55,29 +58,30 @@
             <div class="menu">
                 <div class="photo-message">
                     <div class="img-div" data-toggle="modal" data-target="#myImg">
-                        <img id="head-sculpture" th:src="@{/images/1.jpg}" class="img-circle"  src="../../static/images/1.jpg">
+                        <img id="head-sculpture" th:src="@{/images/1.jpg}" class="img-circle"
+                             src="../../static/images/1.jpg">
                     </div>
                     <div class="short-message">
-                        <a>看云水漂流</a>
+                        <a><h3 th:text="${session.user.nickname}"></h3></a>
                     </div>
                     <div class="short-message">
                         <p>ID：10000001</p>
                     </div>
-                    <div class="short-message">
-                        <p>牵手币余额：<span style="color: #ff8e42">50</span></p>
-                    </div>
+                    <!--<div class="short-message">-->
+                        <!--<p>牵手币余额：<span style="color: #ff8e42">50</span></p>-->
+                    <!--</div>-->
                 </div>
                 <div class="list-group panel-message" id="left_list">
                     <a role="tab" class="list-group-item left-pane" href="#basicPanel" id="basic-tab" data-toggle="tab"
                        aria-controls="basicPanel">基本资料</a>
-                    <a role="tab" class="list-group-item left-pane" href="#morePanel" id="more-tab" data-toggle="tab"
-                       aria-controls="morePanel">详细资料</a>
-                    <a role="tab" class="list-group-item left-pane" href="#photoPanel" id="photo-tab" data-toggle="tab"
-                       aria-controls="photoPanel">我的相册</a>
-                    <a role="tab" class="list-group-item left-pane" href="#identityPanel" id="identity-tab" data-toggle="tab"
-                       aria-controls="identityPanel">身份认证</a>
-                    <a role="tab" class="list-group-item left-pane" href="#settingPanel" id="setting-tab" data-toggle="tab"
-                       aria-controls="otherPanel">系统设置</a>
+                    <a role="tab" class="list-group-item left-pane" href="#treasurePanel" id="treasure-tab"
+                       data-toggle="tab"
+                       aria-controls="treasurePanel">我的宝贝</a>
+                    <a role="tab" class="list-group-item left-pane" href="#orderPanel" id="order-tab" data-toggle="tab"
+                       aria-controls="orderPanel">订单管理</a>
+                    <a role="tab" class="list-group-item left-pane" href="#settingPanel" id="setting-tab"
+                       data-toggle="tab"
+                       aria-controls="settingPanel">系统设置</a>
                 </div>
             </div>
         </div>
@@ -92,24 +96,26 @@
                         <div class="form-group message_group">
                             <label class="col-md-3 control-label message-lable text-right">用户名：</label>
                             <input type="hidden" name="id" th:value="${session.user.id}">
-                            <input id="username" name="username" class="col-md-4 form-control message_main_input"
+                            <input type="text" id="username" name="username"
+                                   class="col-md-4 form-control message_main_input"
                                    th:value="${session.user.username}" disabled>
                         </div>
                         <div class="form-group message_group">
                             <label class="col-md-3 control-label message-lable text-right">昵称：</label>
-                            <input id="nickname" name="nickname" class="col-md-4 form-control message_main_input"
+                            <input type="text" id="nickname" name="nickname"
+                                   class="col-md-4 form-control message_main_input"
                                    th:value="${session.user.nickname}">
                         </div>
                         <div class="form-group message_group">
                             <label class="col-md-3 control-label message-lable text-right">手机号：</label>
-                            <input id="tel" name="tel" class="col-md-4 form-control message_main_input"
+                            <input type="text" id="tel" name="tel" class="col-md-4 form-control message_main_input"
                                    th:value="${session.user.tel}">
                         </div>
                         <div class="form-group message_group">
                             <label class="col-md-3 control-label message-lable text-right">性别：</label>
-                            <input type="radio" name="sex" class="message_main_input"
+                            <input type="radio" name="sex" class="message_main_input" value="男"
                                    th:checked="${session.user.sex == '男'}">男&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <input type="radio" name="sex" class="message_main_input"
+                            <input type="radio" name="sex" class="message_main_input" value="女"
                                    th:checked="${session.user.sex == '女'}">女
                         </div>
                         <div class="form-group message_group">
@@ -120,7 +126,8 @@
 
                         <div class="form-group message_group">
                             <label class="col-md-3 control-label message-lable text-right">生日：</label>
-                            <input type="date" id="birthday" name="birthday" class="col-md-4 form-control message_main_input"
+                            <input type="date" id="birthday" name="birthday"
+                                   class="col-md-4 form-control message_main_input"
                                    th:value="${session.user.birthday}">
                         </div>
                         <div class="form-group message_group">
@@ -128,11 +135,11 @@
                             <div class="col-md-4" style="padding: 0px">
                                 <select name="work_province" id="work_province"
                                         class="form-control select-control double-control">
-                                    <option value="-1">请选择</option>
+                                    <option value="">请选择</option>
                                 </select>
                                 <select name="work_city" id="work_city"
                                         class="form-control select-control double-control" style="float: right">
-                                    <option value="-1">请选择</option>
+                                    <option value="">请选择</option>
                                 </select>
                             </div>
                         </div>
@@ -140,19 +147,13 @@
                         <div class="form-group message_group">
                             <label class="col-md-3 control-label message-lable text-right">学校：</label>
                             <div class="col-md-4" style="padding: 0px">
-                                <select name="school-province" id="school-province"
+                                <select name="school_province" id="school_province"
                                         class="form-control select-control double-control">
-                                    <option value="-1">请选择</option>
-                                    <option value="北京">北京</option>
-                                    <option value="青岛">青岛</option>
-                                    <option value="上海">上海</option>
+                                    <option value="">请选择</option>
                                 </select>
-                                <select name="school-name" id="school-name"
+                                <select name="school_name" id="school_name"
                                         class="form-control select-control double-control" style="float: right">
-                                    <option value="-1">请选择</option>
-                                    <option value="北京大学">北京大学</option>
-                                    <option value="青岛大学">青岛大学</option>
-                                    <option value="上海海事">上海海事</option>
+                                    <option value="">请选择</option>
                                 </select>
                             </div>
                         </div>
@@ -164,11 +165,164 @@
                     </form>
                 </div>
             </div>
+            <div id="treasurePanel" class="tab-pane">
+                <br>
+                <div class="row">
+                    <h3 class="col-md-10">我的宝贝</h3>
+                    <!--<div id="max-upload" class="col-md-2 text-left">-->
+                    <!--<button class="btn btn-default" disabled-->
+                    <!--style="color: orangered">最多上传9张-->
+                    <!--</button>-->
+                    <!--</div>-->
+                </div>
+                <div class="row" style="margin: 10px 3px">
+                    <div class="input-group">
+                        <span class="input-group-addon">选择您的宝贝：</span>
+                        <select id="treasure-select" class="form-control">
+                            <option th:value="${treasure.id}" th:each="treasure,stat : ${treasures}"
+                                    th:text="${treasure.title}" th:selected="${stat.index == 0}"></option>
 
-            <div id="morePanel" class="tab-pane">
+                        </select>
+                    </div>
+                </div>
+                <div id="treasurediv" class="row">
+                    <br>
+                    <br>
+                    <div class="message_header">
+                        <h4>&nbsp;&nbsp;&nbsp;&nbsp;基本信息</h4>
+                    </div>
+                    <div class="message_main" style="height: auto;">
+                        <form id="form-treasure" class="basic_message_form">
+                            <div class="form-group message_group row">
+                                <label class="col-md-2 control-label message-lable text-right">标题：</label>
+                                <input type="hidden" name="id" id="tid">
+                                <input type="hidden" name="uid" th:value="${session.user.id}">
+                                <div class="col-md-6">
+                                    <input type="text" id="title" name="title" class="form-control treasure-msg">
+                                </div>
+                            </div>
+                            <div class="form-group message_group row">
+                                <label class="col-md-2 control-label message-lable text-right">分类：</label>
+                                <div class="col-md-6">
+                                    <select name="category" id="category"
+                                            class="form-control select-control double-control treasure-msg">
+                                        <option value="">请选择</option>
+                                        <option th:each="entry:${categories}" th:value="${entry.key}" th:text="${entry.value}"></option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group message_group row">
+                                <label class="col-md-2 control-label message-lable text-right">新旧程度：</label>
+                                <div class="col-md-6">
+                                    <select name="newDegree" id="newDegree"
+                                            class="form-control select-control double-control treasure-msg">
+                                        <option value="">请选择</option>
+                                        <option th:each="newDegree:${newDegrees}" th:value="${newDegree}" th:text="${newDegree}"></option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group message_group row">
+                                <label class="col-md-2 control-label message-lable text-right">发布时间：</label>
+                                <div class="col-md-6" style="font-size: 14px;line-height: 34px">
+                                    <span id="create-time"></span>
+                                </div>
+                            </div>
+                            <div class="form-group message_group row">
+                                <label class="col-md-2 control-label message-lable text-right">热度：</label>
+                                <div class="col-md-6" style="font-size: 14px;line-height: 34px">
+                                    <span><span id="views">0</span>次浏览</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <span><span id="stars">0</span>次收藏</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <span><span id="comments">0</span>个评论</span>
+                                </div>
+                            </div>
+                            <div class="form-group message_group row">
+                                <label class="col-md-2 control-label message-lable text-right">价格：</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="price" name="price"
+                                           class="form-control treasure-msg">
+                                </div>
+                            </div>
+                            <div class="form-group message_group row" id="trading-method-div">
+                                <label class="col-md-2 control-label message-lable text-right">运费：</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="fare" name="fare" class="form-control treasure-msg">
+                                </div>
+                            </div>
+                            <div class="form-group message_group row">
+                                <label class="col-md-2 control-label message-lable text-right">交易方式：</label>
+                                <div class="col-md-6">
+                                    <div class="checkbox-group">
+                                        <input type="checkbox" name="tradingMethod" id="pickUp" class="checkbox-material" value="pickUp">
+                                        <label class="treasure-content">自提&nbsp;&nbsp;&nbsp;</label>
+                                        <input type="checkbox" name="tradingMethod" id="faceGay" class="checkbox-material" value="faceGay">
+                                        <label class="treasure-content">同城面交&nbsp;&nbsp;&nbsp;</label>
+                                        <input type="checkbox" name="tradingMethod" id="postMan" class="checkbox-material" value="postMan">
+                                        <label class="treasure-content">邮寄</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group message_group row">
+                                <label class="col-md-2 control-label message-lable text-right">宝贝描述：</label>
+                                <div class="col-md-7">
+                                    <textarea id="description" name="description" rows="4"
+                                              class="form-control treasure-msg">
+                                    </textarea>
+                                </div>
+                            </div>
+                            <div class="row" style="display: block;">
+                                <div class="col-md-offset-2 col-md-2 text-right">
+                                    <input class="btn btn-primary" type="submit" value="修改基本信息" style="margin: 10px 0"/>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="message_header">
+                        <h4>&nbsp;&nbsp;&nbsp;&nbsp;图片信息</h4>
+                    </div>
+                    <div id="min-upload" class="col-md-2 text-left">
+                        <button class="btn btn-default" data-toggle="modal" data-target="#myModal"
+                                style="color: dodgerblue">图片上传
+                        </button>
+                    </div>
+                    <div id="picturediv" class="row">
+                        <section id="gallery">
+                            <div class="container-fluid">
+                                <div id="photoContent" style="padding: 60px">
+                                    <!--主图-->
+                                    <div class="photo-single col-md-4">
+                                        <a data-toggle="lightbox" data-gallery="sigma-gallery">
+                                            <img id="main-pic" class="img-fluid sigmapad">
+                                        </a>
+                                        <div class="submit inline-block">
+                                            <button disabled class="hvr-wobble-vertical set-photo-btn">主图片</button>
+                                        </div>
+                                    </div>
+                                    <!--其他图片-->
+                                    <!--<div class="photo-single pics">-->
+                                        <!--<a href=""-->
+                                           <!--data-toggle="lightbox" data-gallery="sigma-gallery"-->
+                                           <!--data-title="Image Title 01">-->
+                                            <!--<img src="" class="img-fluid sigmapad">-->
+                                            <!--<a id="picture-del-" class="photo-del"><i-->
+                                                    <!--class="fa fa-times"></i></a>-->
+                                        <!--</a>-->
+                                        <!--<div class="submit inline-block">-->
+                                            <!--<button id="" class="hvr-wobble-vertical set-photo-btn">设为主图-->
+                                            <!--</button>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <div id="orderPanel" class="tab-pane">
                 <br>
                 <div class="message_header">
-                    <h3>详细资料</h3>
+                    <h3>我的订单</h3>
                 </div>
                 <div class="message_main">
                     <form class="more_message" id="form-user-detail">
@@ -215,95 +369,6 @@
                         </div>
                     </form>
                 </div>
-            </div>
-            <div id="photoPanel" class="tab-pane">
-                <br>
-                <div class="row">
-                    <h3 class="col-md-8">我的相册</h3>
-                    <!--<div id="max-upload" class="col-md-2 text-left">-->
-                        <!--<button class="btn btn-default" disabled-->
-                                <!--style="color: orangered">最多上传9张-->
-                        <!--</button>-->
-                    <!--</div>-->
-                    <div id="min-upload" class="col-md-2 text-left">
-                        <button class="btn btn-default" data-toggle="modal" data-target="#myModal"
-                                style="color: orangered">图片上传
-                        </button>
-                    </div>
-                </div>
-                <div class="row" style="margin: 10px 10px">
-                    <div class="input-group">
-                        <span class="input-group-addon">选择您的宝贝：</span>
-                        <select id="treasure-select" class="form-control">
-                            <option value="0"></option>
-                            <option th:value="${treasure.id}" th:each="treasure : ${treasures}" th:text="${treasure.title}"></option>
-                        </select>
-                    </div>
-                </div>
-                <div id="photodiv" class="row">
-                    <section id="gallery">
-                        <div class="container-fluid">
-                            <div id="photoContent" style="padding: 60px">
-                                 <!--主图-->
-                                <div class="photo-single" id="main-pic">
-                                    <a data-toggle="lightbox" data-gallery="sigma-gallery"
-                                       data-title="Image Title 01">
-                                        <img class="img-fluid sigmapad">
-                                    </a>
-                                    <div class="submit inline-block">0
-                                        <button disabled class="hvr-wobble-vertical set-photo-btn">主图片</button>
-                                    </div>
-                                </div>
-                                <!--其他图片-->
-                                <div th:each="picture,pStat:${pictures}" class="photo-single" th:id="${'picture-single-'+picture.id}">
-                                    <a th:href="@{/file(path=${picture.picture})}"
-                                       data-toggle="lightbox" data-gallery="sigma-gallery"
-                                       data-title="Image Title 01">
-                                        <img th:src="@{/file(path=${picture.picture})}" class="img-fluid sigmapad">
-                                        <a th:id="${'picture-del-'+picture.id}" class="photo-del"><i
-                                                class="fa fa-times"></i></a>
-                                    </a>
-                                    <div class="submit inline-block">
-                                        <button th:id="${'picture-btn-'+picture.id}" class="hvr-wobble-vertical set-photo-btn">设为主图</button>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </section>
-                </div>
-            </div>
-            <div id="identityPanel" class="tab-pane">
-                <!--<br>-->
-                <!--<div class="message_header">-->
-                    <!--<h3>身份认证</h3>-->
-                <!--</div>-->
-                <!--<div th:if="${session.user.authenticated}" class="ident_auth">-->
-                    <!--<span  style="font-size: 25px"-->
-                        <!--class="col-md-12 text-center">您已经认证过！</span>-->
-                <!--</div>-->
-
-                <!--<div th:if="${!session.user.authenticated}">-->
-                    <!--<form class="more_message" id="form-user-comfirm">-->
-                        <!--<div class="form-group message_group">-->
-                            <!--<label class="col-md-3 control-label message-lable text-right">真实姓名：</label>-->
-                            <!--<input type="hidden" name="id" th:value="${session.user.id}">-->
-                            <!--<input th:disabled="${session.user.authenticated}" id="comfirm_realname" name="realname"-->
-                                   <!--class="col-md-4 form-control message_main_input">-->
-                        <!--</div>-->
-                        <!--<div class="form-group message_group">-->
-                            <!--<label class="col-md-3 control-label message-lable text-right">身份证号：</label>-->
-                            <!--<input th:disabled="${session.user.authenticated}" id="comfirm_cardnumber" name="cardnumber"-->
-                                   <!--class="col-md-4 form-control message_main_input">-->
-                        <!--</div>-->
-                        <!--<div class="form-group message_group ">-->
-                            <!--<div class="col-md-7 text-center">-->
-                                <!--<input class="btn btn-primary" th:disabled="${session.user.authenticated}" type="submit"-->
-                                       <!--value="提交" style="margin: 10px"/>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</form>-->
-                <!--</div>-->
             </div>
             <div id="settingPanel" class="tab-pane">
                 <br>
@@ -374,7 +439,7 @@
                 <form enctype="multipart/form-data">
                     <div class="form-group">
                         <div class="file-loading">
-                            <input id="file-1" type="file" name="photos" multiple class="file"
+                            <input id="treasure-pics" type="file" name="pictures" multiple class="file"
                                    data-overwrite-initial="false">
                         </div>
                     </div>
@@ -400,7 +465,7 @@
                 <form enctype="multipart/form-data">
                     <div class="form-group">
                         <div class="file-loading">
-                            <input id="img" type="file" name="photo"  class="file"
+                            <input id="img" type="file" name="photo" class="file"
                                    data-overwrite-initial="false">
                         </div>
                     </div>

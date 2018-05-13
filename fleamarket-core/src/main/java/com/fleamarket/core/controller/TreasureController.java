@@ -1,21 +1,13 @@
 package com.fleamarket.core.controller;
 
 import com.fleamarket.core.model.Treasure;
+import com.fleamarket.core.service.TreasurePictureService;
 import com.fleamarket.core.service.TreasureService;
-import com.fleamarket.core.shiro.Identity;
-import com.fleamarket.core.shiro.token.CustomToken;
 import lombok.extern.log4j.Log4j2;
-import org.apache.shiro.SecurityUtils;
-import org.apache.shiro.authc.IncorrectCredentialsException;
-import org.apache.shiro.authc.LockedAccountException;
-import org.apache.shiro.authc.UnknownAccountException;
-import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -23,21 +15,23 @@ import javax.servlet.http.HttpServletRequest;
 @Log4j2
 public class TreasureController {
     private final TreasureService treasureService;
+    private final TreasurePictureService treasurePictureService;
 
     @Autowired
-    public TreasureController(TreasureService treasureService) {
+    public TreasureController(TreasureService treasureService, TreasurePictureService treasurePictureService) {
         this.treasureService = treasureService;
+        this.treasurePictureService = treasurePictureService;
     }
 
     @GetMapping("treasure/{treasureId}")
     public String treasure(@PathVariable Integer treasureId, HttpServletRequest request) {
         Treasure treasure = treasureService.selectByPrimaryKey(treasureId);
-        String[] tradingMethods = treasure.getTradingMethod().split("");
+        char[] tradingMethods = treasure.getTradingMethod().toCharArray();
         request.setAttribute("treasure", treasure);
-        request.setAttribute("pickUp", "1".equals(tradingMethods[0]));
-        request.setAttribute("faceGay", "1".equals(tradingMethods[1]));
-        request.setAttribute("postMan", "1".equals(tradingMethods[2]));
-        request.setAttribute("pictures", treasureService.selectAllTreasurePicture(treasureId));
+        request.setAttribute("pickUp", tradingMethods[0] == '1');
+        request.setAttribute("faceGay", tradingMethods[1] == '1');
+        request.setAttribute("postMan", tradingMethods[2] == '1');
+        request.setAttribute("pictures", treasurePictureService.selectAllTreasurePicture(treasureId));
         return "treasure";
     }
 }

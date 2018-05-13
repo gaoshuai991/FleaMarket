@@ -20,6 +20,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.fleamarket.core.model.User;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.sql.Date;
 import java.util.Map;
 import java.util.HashMap;
@@ -51,6 +52,33 @@ public class IndexController {
         user.setUsername(principal);
         user.setCreateTime(new Date(System.currentTimeMillis()));
         userService.addUser(user);
+        return "redirect:login";
+    }
+    @GetMapping("login")
+    public String login(){
+        return "login";
+    }
+
+
+    @PostMapping("login")
+    public String login(String principal, String password, HttpSession session, RedirectAttributes redirectAttributes) {
+        try {
+            CustomToken customToken = new CustomToken(principal, password,Identity.USER);
+            SecurityUtils.getSubject().login(customToken);
+            if(SecurityUtils.getSubject().isAuthenticated()) {
+                session.setAttribute("user", userService.selectByPrincipal(principal));
+                return "redirect:index";
+            }
+        } catch (UnknownAccountException uae){
+            log.debug("对用户[" + principal + "]登录验证未通过,未知账户");
+            redirectAttributes.addAttribute("message", "用户名不存在");
+        } catch (IncorrectCredentialsException ice) {
+            log.debug("对用户[" + principal + "]登录验证未通过,错误的凭证");
+            redirectAttributes.addAttribute("message", "密码不Ø正确");
+        } catch (LockedAccountException ule) {
+            log.debug("对用户[" + principal + "]登录验证未通过,用户被锁定");
+            redirectAttributes.addAttribute("message", "用户被锁定");
+        }
         return "redirect:login";
     }
 

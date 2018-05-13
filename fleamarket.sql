@@ -447,7 +447,7 @@ USE `fleamarket`$$
 CREATE DEFINER = CURRENT_USER TRIGGER `fleamarket`.`like_AFTER_INSERT` AFTER INSERT ON `like` FOR EACH ROW
 BEGIN
 	UPDATE user SET like_count=like_count+1 WHERE id=NEW.target_user_id;
-    UPDATE treasure SET like_count=like_count+1 WHERE id=NEW.treasure_id;
+    UPDATE treasure SET star_count=star_count+1 WHERE id=NEW.treasure_id;
 END$$
 
 

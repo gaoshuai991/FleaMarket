@@ -49,11 +49,14 @@ public class Treasure {
     @Column(name = "create_time")
     private Date createTime;
 
-    @Column(name = "like_count")
-    private Integer likeCount;
+    @Column(name = "star_count")
+    private Integer starCount;
 
     @Column(name = "comment_count")
     private Integer commentCount;
+
+    @Column(name = "view_count")
+    private Integer viewCount;
 
     @Column(name = "new_degree")
     private String newDegree;
@@ -243,15 +246,15 @@ public class Treasure {
     /**
      * @return like_count
      */
-    public Integer getLikeCount() {
-        return likeCount;
+    public Integer getStarCount() {
+        return starCount;
     }
 
     /**
-     * @param likeCount
+     * @param starCount
      */
-    public void setLikeCount(Integer likeCount) {
-        this.likeCount = likeCount;
+    public void setStarCount(Integer starCount) {
+        this.starCount = starCount;
     }
 
     /**
@@ -266,6 +269,14 @@ public class Treasure {
      */
     public void setCommentCount(Integer commentCount) {
         this.commentCount = commentCount;
+    }
+
+    public Integer getViewCount() {
+        return viewCount;
+    }
+
+    public void setViewCount(Integer viewCount) {
+        this.viewCount = viewCount;
     }
 
     /**
@@ -297,7 +308,7 @@ public class Treasure {
                 ", status=" + status +
                 ", tradingMethod=" + tradingMethod +
                 ", createTime=" + createTime +
-                ", likeCount=" + likeCount +
+                ", starCount=" + starCount +
                 ", commentCount=" + commentCount +
                 ", newDegree='" + newDegree + '\'' +
                 '}';

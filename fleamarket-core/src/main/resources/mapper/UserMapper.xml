@@ -15,7 +15,7 @@
     <result column="signature" property="signature" jdbcType="VARCHAR" />
     <result column="status" property="status" jdbcType="INTEGER" />
     <result column="star_count" property="starCount" jdbcType="INTEGER" />
-    <result column="like_count" property="likeCount" jdbcType="INTEGER" />
+    <result column="like_count" property="starCount" jdbcType="INTEGER" />
   </resultMap>
   <sql id="Base_Column_List" >
     id, username, password, nickname, create_time, photo, sex, birthday, city, school, 

@@ -49,6 +49,7 @@ public class UploadServiceImpl implements UploadService {
 	public boolean deleteFile(String filePath) {
 		StorePath storePath = StorePath.praseFromUrl(filePath);
 		try {
+			log.debug("删除文件：" + storePath);
 			storageClient.deleteFile(storePath.getGroup(), storePath.getPath());
 		} catch (Exception e) {
 			log.error(e.getMessage(), e);

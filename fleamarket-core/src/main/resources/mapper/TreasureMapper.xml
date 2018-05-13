@@ -14,7 +14,7 @@
     <result column="sell_type" property="sellType" jdbcType="INTEGER" />
     <result column="status" property="status" jdbcType="INTEGER" />
     <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
-    <result column="like_count" property="likeCount" jdbcType="INTEGER" />
+    <result column="like_count" property="starCount" jdbcType="INTEGER" />
     <result column="comment_count" property="commentCount" jdbcType="INTEGER" />
     <result column="new_degree" property="newDegree" jdbcType="VARCHAR" />
   </resultMap>
