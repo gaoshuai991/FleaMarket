@@ -11,77 +11,37 @@
                         <div class="widget text-2 widget_text pull-left">
                             <div class="widget-inner">
                                 <div class="textwidget">
-                                    <div class="call-us"><span>Call Us Now: </span>0123-444-666654123</div>
+                                    <div class="call-us"><span>联系我们：</span>010-952523618</div>
                                 </div>
-                            </div>
-                        </div>
-
-                        <div class="widget text-3 widget_text pull-left">
-                            <div class="widget-inner">
-                                <div class="textwidget">
-                                    <div id="lang_sel">
-                                        <ul class="nav">
-                                            <li>
-                                                <a class="lang_sel_sel icl-en">
-                                                    <img class="iclflag" title="English" alt="en" src="images/icons/en.png" width="18" height="12" /> English
-                                                </a>
-                                                <ul>
-                                                    <li class="icl-en">
-                                                        <a href="#">
-                                                            <img class="iclflag" title="English" alt="en" src="images/icons/en.png" width="18" height="12" /> English
-                                                        </a>
-                                                    </li>
-
-                                                    <li class="icl-ar">
-                                                        <a href="#">
-                                                            <img class="iclflag" title="Arabic" alt="ar" src="images/icons/ar.png" width="18" height="12" /> Arabic
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="widget woocommerce_currency_converter-2 widget_currency_converter pull-left">
-                            <div class="widget-inner">
-                                <form method="post" class="currency_converter" action="">
-                                    <ul class="currency_w">
-                                        <li>
-                                            <a href="#" class="">USD</a>
-                                            <ul class="currency_switcher">
-                                                <li><a href="#" class="reset default active" data-currencycode="USD">USD</a></li>
-                                                <li><a href="#" class="" data-currencycode="EUR">EUR</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </form>
                             </div>
                         </div>
                     </div>
 
                     <div class="wrap-myacc pull-right">
                         <div class="sidebar-account pull-left">
-                            <div class="account-title"><a class="account-title" href="/myAccount">My account</a></div>
+                            <div class="account-title">
+                                <shiro:authenticated>
+                                    <a class="account-title" th:href="@{/user/user_center}">欢迎：[[${session.user.nickname}]]</a>
+                                </shiro:authenticated>
+                                <shiro:guest>
+                                    <a class="account-title" th:href="@{/login}">登录</a>
+                                </shiro:guest>
+                            </div>
 
                             <div id="my-account" class="my-account">
                                 <div class="widget-1 widget-first widget nav_menu-4 widget_nav_menu">
                                     <div class="widget-inner">
                                         <ul id="menu-my-account" class="menu">
                                             <li class="menu-my-account">
-                                                <a class="item-link" href="my_account.html">
+                                                <a class="item-link" th:href="@{/user/user_center}">
+                                                    <span class="menu-title">个人中心</span>
+                                                </a>
+                                            </li>
+                                            <li class="menu-my-account">
+                                                <a class="item-link" href="#">
                                                     <span class="menu-title">我的收藏</span>
                                                 </a>
                                             </li>
-
-                                            <li class="menu-checkout">
-                                                <a class="item-link" href="checkout.html">
-                                                    <span class="menu-title">Checkout</span>
-                                                </a>
-                                            </li>
-
                                             <!--<li class="menu-wishlist">-->
                                                 <!--<a class="item-link" href="#">-->
                                                     <!--<span class="menu-title">个人设置</span>-->
@@ -90,24 +50,24 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <shiro:guest>
-                                <div class="widget-2 widget-last widget sw_top-4 sw_top">
-                                    <div class="widget-inner">
-                                        <div class="top-login">
-                                            <div class="div-logined">
-                                                <ul>
-                                                    <li>
-                                                        <a href="/login" data-toggle="modal" >
-                                                            <span>Login</span>
-                                                        </a>
-                                                        <span class="wg">Welcome Guest</span>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                </shiro:guest>
+                                <!--<shiro:guest>-->
+                                    <!--<div class="widget-2 widget-last widget sw_top-4 sw_top">-->
+                                        <!--<div class="widget-inner">-->
+                                            <!--<div class="top-login">-->
+                                                <!--<div class="div-logined">-->
+                                                    <!--<ul>-->
+                                                        <!--<li>-->
+                                                            <!--<a href="/login" data-toggle="modal" >-->
+                                                                <!--<span>Login</span>-->
+                                                            <!--</a>-->
+                                                            <!--<span class="wg">Welcome Guest</span>-->
+                                                        <!--</li>-->
+                                                    <!--</ul>-->
+                                                <!--</div>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</shiro:guest>-->
                             </div>
                         </div>
 
@@ -116,7 +76,7 @@
                                 <div class="widget-inner">
                                     <ul id="menu-checkout" class="menu">
                                         <li class="menu-checkout">
-                                            <a class="item-link" href="checkout.html">
+                                            <a class="item-link" href="#">
                                                 <span class="menu-title">注销</span>
                                             </a>
                                         </li>
@@ -152,17 +112,6 @@
                                                         <!--<select name="search_category" class="s1_option">-->
                                                             <!--<option value="">All Categories</option>-->
                                                             <!--<option value="8">Computers & Laptops</option>-->
-                                                            <!--<option value="13">Computers & Networking</option>-->
-                                                            <!--<option value="14">Smartphones & Tablet</option>-->
-                                                            <!--<option value="15">Home Furniture</option>-->
-                                                            <!--<option value="16">Home Appliances</option>-->
-                                                            <!--<option value="17">Electronic Component</option>-->
-                                                            <!--<option value="18">Household Goods</option>-->
-                                                            <!--<option value="32">Appliances</option>-->
-                                                            <!--<option value="49">Accessories</option>-->
-                                                            <!--<option value="51">Electronics</option>-->
-                                                            <!--<option value="78">Televisions</option>-->
-                                                            <!--<option value="80">Cameras & Accessories</option>-->
                                                         <!--</select>-->
                                                     <!--</label>-->
                                                 <!--</div>-->
@@ -175,141 +124,12 @@
                             </div>
                         </div>
 
-                        <div class="widget sw_top-3 sw_top pull-left">
-                            <div class="widget-inner">
-                                <div class="top-form top-form-minicart etrostore-minicart pull-right">
-                                    <div class="top-minicart-icon pull-right">
-                                        <i class="fa fa-shopping-cart"></i>
-                                        <a class="cart-contents" href="cart.html" title="View your shopping cart">
-                                            <span class="minicart-number">2</span>
-                                        </a>
-                                    </div>
-
-                                    <div class="wrapp-minicart">
-                                        <div class="minicart-padding">
-                                            <div class="number-item">
-                                                There are <span>items</span> in your cart
-                                            </div>
-
-                                            <ul class="minicart-content">
-                                                <li>
-                                                    <a href="simple_product.html" class="product-image">
-                                                        <img 	width="100" height="100" src="images/1903/45-150x150.jpg" class="attachment-100x100 size-100x100 wp-post-image" alt=""
-                                                                srcset="images/1903/45-150x150.jpg 150w, images/1903/45-300x300.jpg 300w, images/1903/45-180x180.jpg 180w, images/1903/45.jpg 600w"
-                                                                sizes="(max-width: 100px) 100vw, 100px" />
-                                                    </a>
-
-                                                    <div class="detail-item">
-                                                        <div class="product-details">
-                                                            <h4>
-                                                                <a class="title-item" href="simple_product.html">Veniam Dolore</a>
-                                                            </h4>
-
-                                                            <div class="product-price">
-																	<span class="price">
-																		<span class="woocommerce-Price-amount amount">
-																			<span class="woocommerce-Price-currencySymbol">$</span>190.00
-																		</span>
-																	</span>
-
-                                                                <div class="qty">
-                                                                    <span class="qty-number">1</span>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="product-action clearfix">
-                                                                <a href="#" class="btn-remove" title="Remove this item">
-                                                                    <span class="fa fa-trash-o"></span>
-                                                                </a>
-
-                                                                <a class="btn-edit" href="cart.html" title="View your shopping cart">
-                                                                    <span class="fa fa-pencil"></span>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-
-                                                <li>
-                                                    <a href="simple_product.html" class="product-image">
-                                                        <img 	width="100" height="100" src="images/1903/22-150x150.jpg" class="attachment-100x100 size-100x100 wp-post-image" alt=""
-                                                                srcset="images/1903/22-150x150.jpg 150w, images/1903/22-300x300.jpg 300w, images/1903/22-180x180.jpg 180w, images/1903/22.jpg 600w"
-                                                                sizes="(max-width: 100px) 100vw, 100px" />
-                                                    </a>
-
-                                                    <div class="detail-item">
-                                                        <div class="product-details">
-                                                            <h4>
-                                                                <a class="title-item" href="simple_product.html">Cleaner with bag</a>
-                                                            </h4>
-
-                                                            <div class="product-price">
-																	<span class="price">
-																		<span class="woocommerce-Price-amount amount">
-																			<span class="woocommerce-Price-currencySymbol">$</span>350.00
-																		</span>
-																	</span>
-
-                                                                <div class="qty">
-                                                                    <span class="qty-number">1</span>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="product-action clearfix">
-                                                                <a href="#" class="btn-remove" title="Remove this item">
-                                                                    <span class="fa fa-trash-o"></span>
-                                                                </a>
-
-                                                                <a class="btn-edit" href="cart.html" title="View your shopping cart">
-                                                                    <span class="fa fa-pencil"></span>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                            </ul>
-
-                                            <div class="cart-checkout">
-                                                <div class="price-total">
-                                                    <span class="label-price-total">Total</span>
-
-                                                    <span class="price-total-w">
-															<span class="price">
-																<span class="woocommerce-Price-amount amount">
-																	<span class="woocommerce-Price-currencySymbol">$</span>540.00
-																</span>
-															</span>
-														</span>
-                                                </div>
-
-                                                <div class="cart-links clearfix">
-                                                    <div class="cart-link">
-                                                        <a href="cart.html" title="Cart">View Cart</a>
-                                                    </div>
-
-                                                    <div class="checkout-link">
-                                                        <a href="checkout.html" title="Check Out">Check Out</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
                         <div class="widget nav_menu-3 widget_nav_menu pull-left">
                             <div class="widget-inner">
                                 <ul id="menu-wishlist" class="menu">
                                     <li class="menu-wishlist">
                                         <a class="item-link" href="#">
-                                            <span class="menu-title">Wishlist</span>
-                                        </a>
-                                    </li>
-
-                                    <li class="yith-woocompare-open menu-compare">
-                                        <a class="item-link compare" href="#">
-                                            <span class="menu-title">Compare</span>
+                                            <span class="menu-title">我的收藏</span>
                                         </a>
                                     </li>
                                 </ul>
@@ -337,7 +157,7 @@
 
                                     <div id="ResMenuprimary_menu" class="collapse menu-responsive-wrapper">
                                         <ul id="menu-primary-menu" class="etrostore_resmenu">
-                                            <li><a href="index.html">主页</a></li>
+                                            <li><a th:href="@{/}">主页</a></li>
                                             <li><a href="cart.html">商品</a></li>
                                             <li><a href="about_us.html">关于我们</a></li>
                                             <li><a href="contact_us.html">联系我们</a></li>
@@ -346,7 +166,7 @@
                                 </div>
 
                                 <ul id="menu-primary-menu-1" class="nav nav-pills nav-mega etrostore-mega etrostore-menures">
-                                    <li><a href="index.html">主页</a></li>
+                                    <li><a th:href="@{/}">主页</a></li>
                                     <li><a href="cart.html">商品</a></li>
                                     <li><a href="about_us.html">关于我们</a></li>
                                     <li><a href="contact_us.html">联系我们</a></li>

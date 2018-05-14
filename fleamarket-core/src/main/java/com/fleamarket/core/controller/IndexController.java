@@ -12,10 +12,7 @@ import org.apache.shiro.authc.UnknownAccountException;
 import org.apache.shiro.crypto.hash.Md5Hash;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.fleamarket.core.model.User;
 
@@ -61,13 +58,18 @@ public class IndexController {
 
 
     @PostMapping("login")
-    public String login(String principal, String password, HttpSession session, RedirectAttributes redirectAttributes) {
+    public String login(String to, String principal, String password, HttpSession session, RedirectAttributes redirectAttributes) {
+        log.debug("登录后重定向地址：" + to);
         try {
             CustomToken customToken = new CustomToken(principal, password,Identity.USER);
             SecurityUtils.getSubject().login(customToken);
             if(SecurityUtils.getSubject().isAuthenticated()) {
                 session.setAttribute("user", userService.selectByPrincipal(principal));
-                return "redirect:index";
+                if(to == null || "null".equals(to)) {
+                    return "redirect:index";
+                }else{
+                    return "redirect:" + to;
+                }
             }
         } catch (UnknownAccountException uae){
             log.debug("对用户[" + principal + "]登录验证未通过,未知账户");

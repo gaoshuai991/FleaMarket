@@ -31,6 +31,17 @@
     <!--<th:block th:include="common/common_resource :: resources"/>-->
 
     <!--<script th:src="@{/plugins/nice-validator/jquery.validator.js(local=zh-CN)}"></script>-->
+    <script type="text/javascript" th:src="@{/js/jquery/jquery.min.js}"></script>
+    <script th:inline="javascript">
+        var to = /*[[${#httpServletRequest.getParameter("to")}]]*/'';
+    </script>
+    <script>
+        $(function () {
+            if(to != null) {
+                $('#login-form').attr('action', $('#login-form').attr('action') + '?to=' + to);
+            }
+        })
+    </script>
     <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
     <link rel="stylesheet" th:href="@{/css/slick-1.6.0/slick.css}"/>
 
@@ -206,31 +217,27 @@
         </div>
     </header>
     <div class="main">
-        <h1>二手市场登录</h1>
+        <h1>神猫二手登录</h1>
         <div class="wthree_top_forms">
             <div class="agile-info_w3ls agile-info_w3ls_sub hvr-buzz-out">
-                <h3 style="margin-bottom: 0">Login</h3>
+                <h3 style="margin-bottom: 0">登录</h3>
                 <div class="agile-info_w3ls_grid second">
-                    <form action="/login" method="post" >
+                    <form id="login-form" th:action="@{/login}" method="post" >
                         <input type="text" name="principal" placeholder="User Name" required>
                         <input type="password" name="password" placeholder="Password" required>
                         <div class="agile_remember">
                             <div class="agile_remember_left">
                                 <div class="check">
-                                    <label class="checkbox" style="margin-top: 0;"><input type="checkbox"
-                                                                                          name="rememberMe"><i> </i>remember
-                                        me</label>
+                                    <label class="checkbox" style="margin-top: 0;"><input type="checkbox" name="rememberMe"><i> </i>remember me</label>
                                 </div>
                             </div>
                             <div class="agile_remember_right">
-                                <a href="#">Forgot Password?</a>
-                            </div>
+                                <a href="#">忘记密码?</a>
                             </div>
                             <div class="clear"></div>
                         </div>
-                        <input type="submit" value="Sign In">
-                        <a class="acount-btn" href="/register">Create New Account</a>
-
+                        <input type="submit" value="登 录">
+                        <a class="acount-btn" href="/register">新用户注册</a>
                     </form>
                     <h4>Continue With</h4>
                     <div class="social_icons agileinfo">

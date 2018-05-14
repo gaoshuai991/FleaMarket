@@ -754,31 +754,31 @@ p.footer-class a:hover{
 	display: block;
 }
 /*--//contact--*/
-.breadcrumb1 li span {
-    left: 0em;
-    padding-right: 1em;
-    color: #fa03bb;
-}
-.breadcrumbs {
-    padding: 1.5em 0 !important; 
-    background: #f5f5f5 !important;
-   
-}
-.breadcrumb {
-    padding: 0px 15px;
-     margin-bottom: 0 !important;
-}
-.breadcrumb1 li a {
-    color: #fa03bb;
-    text-decoration: none;
-}
-.breadcrumb > .active {
-    color: #777;
-}
-.breadcrumb1 li {
-    font-size: 1em;
-    color: #999;
-}
+/*.breadcrumb1 li span {*/
+    /*left: 0em;*/
+    /*padding-right: 1em;*/
+    /*color: #fa03bb;*/
+/*}*/
+/*.breadcrumbs {*/
+    /*padding: 1.5em 0 !important; */
+    /*background: #f5f5f5 !important;*/
+   /**/
+/*}*/
+/*.breadcrumb {*/
+    /*padding: 0px 15px;*/
+     /*margin-bottom: 0 !important;*/
+/*}*/
+/*.breadcrumb1 li a {*/
+    /*color: #fa03bb;*/
+    /*text-decoration: none;*/
+/*}*/
+/*.breadcrumb > .active {*/
+    /*color: #777;*/
+/*}*/
+/*.breadcrumb1 li {*/
+    /*font-size: 1em;*/
+    /*color: #999;*/
+/*}*/
 /*--login--*/
 .account h2 {
     color: #fa03bb;

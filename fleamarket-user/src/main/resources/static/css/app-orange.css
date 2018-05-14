@@ -1,6 +1,3 @@
-.row {
-  margin-left:  * -1;
-}
 .row:before,
 .row:after {
   content: " ";
@@ -17,42 +14,42 @@
 @font-face {
   font-family: 'PoppinsBold';
   src: url('../fonts/PoppinsBold.eot');
-  src: url('../fonts/PoppinsBold.eot') format('embedded-opentype'), url('../fonts/PoppinsBold.woff2') format('woff2'), url('../fonts/PoppinsBold.woff') format('woff'), url('../fonts/PoppinsBold.ttf') format('truetype'), url('../fonts/PoppinsBold.svg#PoppinsBold') format('svg');
+  src: url('../fonts/PoppinsBold.eot') format('embedded-opentype'), url('../fonts/PoppinsBold.woff2') format('woff2'), url('../fonts/PoppinsBold.woff') format('woff'), url('../fonts/PoppinsBold.ttf') format('truetype');
 }
 @font-face {
   font-family: 'PoppinsMedium';
   src: url('../fonts/PoppinsMedium.eot');
-  src: url('../fonts/PoppinsMedium.eot') format('embedded-opentype'), url('../fonts/PoppinsMedium.woff2') format('woff2'), url('../fonts/PoppinsMedium.woff') format('woff'), url('../fonts/PoppinsMedium.ttf') format('truetype'), url('../fonts/PoppinsMedium.svg#PoppinsMedium') format('svg');
+  src: url('../fonts/PoppinsMedium.eot') format('embedded-opentype'), url('../fonts/PoppinsMedium.woff2') format('woff2'), url('../fonts/PoppinsMedium.woff') format('woff'), url('../fonts/PoppinsMedium.ttf') format('truetype');
 }
 @font-face {
   font-family: 'PoppinsRegular';
   src: url('../fonts/PoppinsRegular.eot');
-  src: url('../fonts/PoppinsRegular.eot') format('embedded-opentype'), url('../fonts/PoppinsRegular.woff2') format('woff2'), url('../fonts/PoppinsRegular.woff') format('woff'), url('../fonts/PoppinsRegular.ttf') format('truetype'), url('../fonts/PoppinsRegular.svg#PoppinsRegular') format('svg');
+  src: url('../fonts/PoppinsRegular.eot') format('embedded-opentype'), url('../fonts/PoppinsRegular.woff2') format('woff2'), url('../fonts/PoppinsRegular.woff') format('woff'), url('../fonts/PoppinsRegular.ttf') format('truetype');
 }
 @font-face {
   font-family: 'PoppinsSemiBold';
   src: url('../fonts/PoppinsSemiBold.eot');
-  src: url('../fonts/PoppinsSemiBold.eot') format('embedded-opentype'), url('../fonts/PoppinsSemiBold.woff2') format('woff2'), url('../fonts/PoppinsSemiBold.woff') format('woff'), url('../fonts/PoppinsSemiBold.ttf') format('truetype'), url('../fonts/PoppinsSemiBold.svg#PoppinsSemiBold') format('svg');
+  src: url('../fonts/PoppinsSemiBold.eot') format('embedded-opentype'), url('../fonts/PoppinsSemiBold.woff2') format('woff2'), url('../fonts/PoppinsSemiBold.woff') format('woff'), url('../fonts/PoppinsSemiBold.ttf') format('truetype');
 }
 @font-face {
   font-family: 'PoppinsLight';
   src: url('../fonts/PoppinsLight.eot');
-  src: url('../fonts/PoppinsLight.eot') format('embedded-opentype'), url('../fonts/PoppinsLight.woff2') format('woff2'), url('../fonts/PoppinsLight.woff') format('woff'), url('../fonts/PoppinsLight.ttf') format('truetype'), url('../fonts/PoppinsLight.svg#PoppinsLight') format('svg');
+  src: url('../fonts/PoppinsLight.eot') format('embedded-opentype'), url('../fonts/PoppinsLight.woff2') format('woff2'), url('../fonts/PoppinsLight.woff') format('woff'), url('../fonts/PoppinsLight.ttf') format('truetype');
 }
 @font-face {
   font-family: 'RobotoMedium';
   src: url('../fonts/RobotoMedium.eot');
-  src: url('../fonts/RobotoMedium.eot') format('embedded-opentype'), url('../fonts/RobotoMedium.woff2') format('woff2'), url('../fonts/RobotoMedium.woff') format('woff'), url('../fonts/RobotoMedium.ttf') format('truetype'), url('../fonts/RobotoMedium.svg#RobotoMedium') format('svg');
+  src: url('../fonts/RobotoMedium.eot') format('embedded-opentype'), url('../fonts/RobotoMedium.woff2') format('woff2'), url('../fonts/RobotoMedium.woff') format('woff'), url('../fonts/RobotoMedium.ttf') format('truetype');
 }
 @font-face {
   font-family: 'RobotoBold';
   src: url('../fonts/RobotoBold.eot');
-  src: url('../fonts/RobotoBold.eot') format('embedded-opentype'), url('../fonts/RobotoBold.woff2') format('woff2'), url('../fonts/RobotoBold.woff') format('woff'), url('../fonts/RobotoBold.ttf') format('truetype'), url('../fonts/RobotoBold.svg#RobotoBold') format('svg');
+  src: url('../fonts/RobotoBold.eot') format('embedded-opentype'), url('../fonts/RobotoBold.woff2') format('woff2'), url('../fonts/RobotoBold.woff') format('woff'), url('../fonts/RobotoBold.ttf') format('truetype');
 }
 @font-face {
   font-family: 'RobotoRegular';
   src: url('../fonts/RobotoRegular.eot');
-  src: url('../fonts/RobotoRegular.eot') format('embedded-opentype'), url('../fonts/RobotoRegular.woff2') format('woff2'), url('../fonts/RobotoRegular.woff') format('woff'), url('../fonts/RobotoRegular.ttf') format('truetype'), url('../fonts/RobotoRegular.svg#RobotoRegular') format('svg');
+  src: url('../fonts/RobotoRegular.eot') format('embedded-opentype'), url('../fonts/RobotoRegular.woff2') format('woff2'), url('../fonts/RobotoRegular.woff') format('woff'), url('../fonts/RobotoRegular.ttf') format('truetype');
 }
 *,
 html {
@@ -4843,7 +4840,7 @@ ul.thumbnails {
   color: #fff;
   text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
   background-image: -webkit-gradient(linear,left 0%,left 100%,from(#a1a1a1),to(#969696));
-  background-image: -webkit-linear-gradient(top,#a1a1a1,0%,#969696,100%);
+  background-image: -webkit-linear-gradient(top,#a1a1a1 0%,#969696 100%);
   background-image: -moz-linear-gradient(top,#a1a1a1 0%,#969696 100%);
   background-image: linear-gradient(to bottom,#a1a1a1 0%,#969696 100%);
   background-repeat: repeat-x;
@@ -4855,7 +4852,7 @@ ul.thumbnails {
   color: #fff;
   text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
   background-image: -webkit-gradient(linear,left 0%,left 100%,from(#969696),to(#a1a1a1));
-  background-image: -webkit-linear-gradient(top,#969696,0%,#a1a1a1,100%);
+  background-image: -webkit-linear-gradient(top,#969696 0%,#a1a1a1 100%);
   background-image: -moz-linear-gradient(top,#969696 0%,#a1a1a1 100%);
   background-image: linear-gradient(to bottom,#969696 0%,#a1a1a1 100%);
   background-repeat: repeat-x;
@@ -4881,7 +4878,7 @@ ul.thumbnails {
   color: #fff;
   text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
   background-image: -webkit-gradient(linear,left 0%,left 100%,from(#fff),to(#f6f6f6));
-  background-image: -webkit-linear-gradient(top,#fff,0%,#f6f6f6,100%);
+  background-image: -webkit-linear-gradient(top,#fff,0%,#f6f6f6 100%);
   background-image: -moz-linear-gradient(top,#fff 0%,#f6f6f6 100%);
   background-image: linear-gradient(to bottom,#fff 0%,#f6f6f6 100%);
   background-repeat: repeat-x;
@@ -8128,7 +8125,7 @@ iframe {
   margin-bottom: 35px;
 }
 .sw-category-slider .slider .slick-list {
-  margin: 00 -15px;
+  margin: 0 -15px;
 }
 .sw-category-slider .slider .slick-list .item-product-cat {
   padding: 0 15px;
@@ -8184,20 +8181,20 @@ iframe {
 .sw-best-seller-product-slider .customNavigation .btn-bs.prev-bs,
 .sw-featured-product-slider .customNavigation .btn-bs.prev-bs {
   right: 48px;
-  background: url(../../static/images/icons/bg_general.png) no-repeat -20px -1111px;
+  /*background: url(../../static/images/icons/bg_general.png) no-repeat -20px -1111px;*/
 }
 .sw-best-seller-product-slider .customNavigation .btn-bs.prev-bs:hover,
 .sw-featured-product-slider .customNavigation .btn-bs.prev-bs:hover {
-  background: url(../../static/images/icons/bg_general.png) no-repeat -20px -1063px;
+  /*background: url(../../static/images/icons/bg_general.png) no-repeat -20px -1063px;*/
 }
 .sw-best-seller-product-slider .customNavigation .btn-bs.next-bs,
 .sw-featured-product-slider .customNavigation .btn-bs.next-bs {
   right: 15px;
-  background: url(../../static/images/icons/bg_general.png) no-repeat -20px -1015px;
+  /*background: url(../../static/images/icons/bg_general.png) no-repeat -20px -1015px;*/
 }
 .sw-best-seller-product-slider .customNavigation .btn-bs.next-bs:hover,
 .sw-featured-product-slider .customNavigation .btn-bs.next-bs:hover {
-  background: url(../../static/images/icons/bg_general.png) no-repeat -20px -967px;
+  /*background: url(../../static/images/icons/bg_general.png) no-repeat -20px -967px;*/
 }
 .sw-best-seller-product-slider .carousel-inner,
 .sw-featured-product-slider .carousel-inner {
@@ -8548,7 +8545,7 @@ iframe {
 .box-title a:after {
   content: '\f0da';
   font-family: FontAwesome;
-  font-size: 11, 73px;
+  font-size: 73px;
   color: #ffaa00;
   margin: 0 0 0 8px;
   display: inline-block;
@@ -9387,7 +9384,7 @@ iframe {
   bottom: -20px;
 }
 .sw-wootab-slider .resp-tab .category-slider-content .tab-content .wootab-best-seller .wootab-countdown-images .product-images-container .product-responsive-img .slick-list .slick-track .item-content .reviews-content {
-  margin: 7px 0 13x;
+  margin: 7px 0 13px;
 }
 .sw-wootab-slider .resp-tab .category-slider-content .tab-content .wootab-best-seller .wootab-countdown-images .product-images-container .product-responsive-img .slick-list .slick-track .item-content h4 {
   margin: 0 0 18px;
@@ -12093,7 +12090,6 @@ iframe {
 }
 .woocommerce form table.wishlist_table tr td.product-price ins,
 .woocommerce-page form table.wishlist_table tr td.product-price ins {
-  color: ;
   text-decoration: none;
   font-weight: 600;
 }
@@ -12103,7 +12099,6 @@ iframe {
 }
 .woocommerce form table.wishlist_table tr td.product-price >span.amount,
 .woocommerce-page form table.wishlist_table tr td.product-price >span.amount {
-  color: ;
   font-size: 18px;
   font-weight: 600;
 }
@@ -12205,7 +12200,7 @@ iframe {
 }
 .woocommerce .return-to-shop .button.wc-backward:hover,
 .woocommerce-page .return-to-shop .button.wc-backward:hover {
-  background-color: ;
+  /*background-color: ;*/
 }
 .woocommerce a.remove {
   width: 30px;
@@ -12256,7 +12251,7 @@ iframe {
   color: #b3b3b3;
   display: inline-block;
   vertical-align: top;
-  margin: 0 0 0 3px;
+  margin: 6px 0 0 3px;
 }
 .rtl .reviews-content .item-number-rating {
   direction: ltr;
@@ -13057,7 +13052,7 @@ div.stars .rating-hidden {
   border: 1px solid #ccc;
   position: absolute;
   z-index: 9868;
-  background: ;
+  /*background: ;*/
   display: none;
 }
 .products-nav .catalog-ordering .orderby-order-container ul li ul li {
@@ -13464,7 +13459,7 @@ div.stars .rating-hidden {
 }
 .single-product .product_detail .content_product_detail h1 {
   font-family: PoppinsSemiBold;
-  font-size: 15px;
+  font-size: 17px;
   text-transform: capitalize;
   color: #464646;
   line-height: 20px;

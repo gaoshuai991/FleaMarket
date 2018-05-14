@@ -2,12 +2,12 @@ package com.fleamarket.core.controller;
 
 import com.fleamarket.core.model.Treasure;
 import com.fleamarket.core.model.TreasurePicture;
+import com.fleamarket.core.model.TreasureStar;
 import com.fleamarket.core.model.User;
 import com.fleamarket.core.service.*;
 import com.fleamarket.core.util.Constant;
 import com.fleamarket.core.util.Utils;
 import lombok.extern.log4j.Log4j2;
-import org.apache.shiro.SecurityUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
@@ -17,6 +17,7 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.*;
 
@@ -29,14 +30,16 @@ public class UserController {
     private final UserService userService;
     private final CategoryService categoryService;
     private final UploadService uploadService;
+    private final TreasureStarService treasureStarService;
 
     @Autowired
-    public UserController(TreasureService treasureService, TreasurePictureService treasurePictureService, UserService userService, CategoryService categoryService, UploadService uploadService) {
+    public UserController(TreasureService treasureService, TreasurePictureService treasurePictureService, UserService userService, CategoryService categoryService, UploadService uploadService, TreasureStarService treasureStarService) {
         this.treasureService = treasureService;
         this.treasurePictureService = treasurePictureService;
         this.userService = userService;
         this.categoryService = categoryService;
         this.uploadService = uploadService;
+        this.treasureStarService = treasureStarService;
     }
 
     @GetMapping("user_center")
@@ -197,13 +200,15 @@ public class UserController {
      */
     @PostMapping("treasure")
     public String publishTreasure(Treasure treasure, MultipartFile photo, HttpServletRequest request){
+        User userSession = Utils.getUserSession(request.getSession());
         String pickUp = request.getParameter("pickUp");
         String faceGay = request.getParameter("faceGay");
         String postMan = request.getParameter("postMan");
         String tradingMethod = (pickUp == null ? "0" : pickUp) + (faceGay == null ? "0" : faceGay) + (postMan == null ? "0" : postMan);
         treasure.setTradingMethod(tradingMethod);
         treasure.setTotal(treasure.getPrice() + treasure.getFare());
-        treasure.setUid((Integer) SecurityUtils.getSubject().getPrincipals().getPrimaryPrincipal());
+        treasure.setUid(userSession.getId());
+        treasure.setLocation(userSession.getCity());
         try {
             String fileName;
             if ((fileName = uploadService.uploadFile(photo)) != null) {
@@ -237,6 +242,23 @@ public class UserController {
             put("faceGay", tradingMethods[1] == '1');
             put("postMan", tradingMethods[2] == '1');
         }};
+    }
+
+    @PostMapping("treasure/star")
+    @ResponseBody
+    public boolean treasureStar(Integer tid, HttpSession session){
+        TreasureStar treasureStar = new TreasureStar();
+        treasureStar.setUserId(Utils.getUserSession(session).getId());
+        treasureStar.setTreasureId(tid);
+        return treasureStarService.insertSelective(treasureStar);
+    }
+    @PostMapping("treasure/unstar")
+    @ResponseBody
+    public boolean treasureUnstar(Integer tid, HttpSession session){
+        TreasureStar treasureStar = new TreasureStar();
+        treasureStar.setUserId(Utils.getUserSession(session).getId());
+        treasureStar.setTreasureId(tid);
+        return treasureStarService.delete(treasureStar) == 1;
     }
 
 }

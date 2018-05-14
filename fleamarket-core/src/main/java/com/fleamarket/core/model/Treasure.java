@@ -24,6 +24,8 @@ public class Treasure {
 
     private Integer category;
 
+    private String location;
+
     private Double price;
 
     private Double fare;
@@ -141,6 +143,14 @@ public class Treasure {
      */
     public void setCategory(Integer category) {
         this.category = category;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
     }
 
     /**

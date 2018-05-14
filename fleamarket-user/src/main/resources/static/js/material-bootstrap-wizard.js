@@ -35,7 +35,7 @@ $(document).ready(function () {
             },
             description: {
                 required: true,
-                maxlength: 120
+                maxlength: 240
             },
             category: {
                 required: true

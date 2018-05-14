@@ -70,7 +70,7 @@ function initTreasure() {
             'price': 'required;digits',
             'fare': 'required(#isCompany:checked);digits',
             'tradingMethod': 'checked(1~)',
-            'description': 'required;length(~120)'
+            'description': 'required;length(~240)'
         },
         theme: 'bootstrap',
         timely: 2,

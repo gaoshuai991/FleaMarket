@@ -3,13 +3,17 @@ package com.fleamarket.core.service.impl;
 import com.fleamarket.core.IMapper;
 import com.fleamarket.core.mapper.TreasureMapper;
 import com.fleamarket.core.mapper.TreasurePictureMapper;
+import com.fleamarket.core.mapper.TreasureViewMapper;
 import com.fleamarket.core.model.Treasure;
-import com.fleamarket.core.model.TreasurePicture;
+import com.fleamarket.core.model.TreasureView;
 import com.fleamarket.core.service.TreasureService;
+import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * Created by Gss in 2018/5/4.
@@ -17,12 +21,12 @@ import java.util.List;
 @Service
 public class TreasureServiceImpl extends BaseService<Treasure> implements TreasureService {
 	private final TreasureMapper treasureMapper;
-	private final TreasurePictureMapper treasurePictureMapper;
+	private final TreasureViewMapper treasureViewMapper;
 
 	@Autowired
-	public TreasureServiceImpl(TreasureMapper treasureMapper, TreasurePictureMapper treasurePictureMapper) {
+	public TreasureServiceImpl(TreasureMapper treasureMapper, TreasureViewMapper treasureViewMapper) {
 		this.treasureMapper = treasureMapper;
-		this.treasurePictureMapper = treasurePictureMapper;
+		this.treasureViewMapper = treasureViewMapper;
 	}
 
 	@Override
@@ -37,8 +41,19 @@ public class TreasureServiceImpl extends BaseService<Treasure> implements Treasu
         return treasureMapper.select(treasure);
     }
 
+    @Override
+    public List<Treasure> selectViewList(Integer uid) {
+		List<Treasure> res = new ArrayList<>();
+		TreasureView treasureView = new TreasureView();
+		treasureView.setUserId(uid);
+		PageHelper.orderBy("view_time desc");
+		List<TreasureView> treasureViews = treasureViewMapper.select(treasureView);
+		treasureViews.forEach(view -> res.add(selectByPrimaryKey(view.getTreasureId())));
+		return res;
+    }
 
-	@Override
+
+    @Override
 	protected IMapper<Treasure> getMapper() {
 		return treasureMapper;
 	}
