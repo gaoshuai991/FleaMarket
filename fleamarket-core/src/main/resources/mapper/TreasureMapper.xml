@@ -26,4 +26,7 @@
     INSERT INTO treasure(title,description,picture,category,price,fare,total,trading_method,new_degree)
     VALUES (#{title},#{description},#{picture},#{category},#{price},#{fare},#{total},#{tradingMethod},#{newDegree})
   </insert>
+  <select id="selectByCategory" resultType="Treasure" >
+    SELECT * FROM treasure WHERE category=#{category};
+  </select>
 </mapper>

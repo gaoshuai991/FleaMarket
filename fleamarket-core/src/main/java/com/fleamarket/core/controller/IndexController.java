@@ -10,6 +10,7 @@ import org.apache.shiro.authc.IncorrectCredentialsException;
 import org.apache.shiro.authc.LockedAccountException;
 import org.apache.shiro.authc.UnknownAccountException;
 import org.apache.shiro.crypto.hash.Md5Hash;
+import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -56,7 +57,18 @@ public class IndexController {
         return "login";
     }
 
-
+    @GetMapping("logout")
+    public String logout() {
+        Subject subject = SecurityUtils.getSubject();
+        if (subject.isAuthenticated()) {
+            subject.logout(); // session 会销毁，在SessionListener监听session销毁，清理权限缓存
+            String username=(String) subject.getSession().getAttribute("username");
+            if (log.isDebugEnabled()) {
+                log.debug("用户"  +username+ "退出登录");
+            }
+        }
+        return "login";
+    }
     @PostMapping("login")
     public String login(String to, String principal, String password, HttpSession session, RedirectAttributes redirectAttributes) {
         log.debug("登录后重定向地址：" + to);

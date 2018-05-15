@@ -265,4 +265,9 @@ public class User {
     public void setLikeCount(Integer likeCount) {
         this.likeCount = likeCount;
     }
+
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 }

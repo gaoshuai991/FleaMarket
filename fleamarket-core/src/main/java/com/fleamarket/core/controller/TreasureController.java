@@ -12,6 +12,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -32,7 +33,11 @@ public class TreasureController {
         this.treasureStarService = treasureStarService;
         this.treasureViewService = treasureViewService;
     }
-
+    @GetMapping("shop/{sub_category.id}")
+    public String shop(@PathVariable("sub_category.id") Integer subCategoryId, HttpServletRequest request){
+        request.setAttribute("treasures",treasureService.selectByCategory(subCategoryId));
+        return "shop";
+    }
     @GetMapping("treasure/{treasureId}")
     @Transactional(rollbackFor = RuntimeException.class)
     public String treasure(@PathVariable Integer treasureId, HttpServletRequest request) {

@@ -52,6 +52,11 @@ public class TreasureServiceImpl extends BaseService<Treasure> implements Treasu
 		return res;
     }
 
+	@Override
+	public List<Treasure> selectByCategory(Integer category) {
+		return treasureMapper.selectByCategory(category);
+
+	}
 
     @Override
 	protected IMapper<Treasure> getMapper() {

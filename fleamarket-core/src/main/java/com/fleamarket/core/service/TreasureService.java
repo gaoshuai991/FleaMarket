@@ -11,6 +11,8 @@ import java.util.List;
 public interface TreasureService extends IService<Treasure> {
 	boolean treasurePublish(Treasure treasure);
 
+	List<Treasure> selectByCategory(Integer category);
+
 	List<Treasure> selectTreasureByUid(Integer uid);
 
 	List<Treasure> selectViewList(Integer uid);
