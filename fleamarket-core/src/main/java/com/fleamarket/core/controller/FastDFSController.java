@@ -31,6 +31,7 @@ public class FastDFSController {
 		if (fileInfo != null && fileInfo.getFileSize() != 0) {
 			byte[] buffer = uploadService.downloadFile(filePath);
 			// 清空responsee
+			// 清空responsee
 			response.reset();
 			// 设置response的Header
 			response.addHeader("Content-Disposition", "attachment");

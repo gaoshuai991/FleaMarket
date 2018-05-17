@@ -4,6 +4,7 @@ import com.fleamarket.core.model.Treasure;
 import com.fleamarket.core.model.TreasurePicture;
 import com.fleamarket.core.model.TreasureStar;
 import com.fleamarket.core.model.User;
+import com.fleamarket.core.model.Order;
 import com.fleamarket.core.service.*;
 import com.fleamarket.core.util.Constant;
 import com.fleamarket.core.util.Utils;
@@ -31,6 +32,7 @@ import java.util.*;
 @Log4j2
 @RequestMapping("user")
 public class UserController {
+    private final OrderService orderService;
     private final TreasureService treasureService;
     private final TreasurePictureService treasurePictureService;
     private final UserService userService;
@@ -39,17 +41,20 @@ public class UserController {
     private final TreasureStarService treasureStarService;
 
     @Autowired
-    public UserController(TreasureService treasureService, TreasurePictureService treasurePictureService, UserService userService, CategoryService categoryService, UploadService uploadService, TreasureStarService treasureStarService) {
+    public UserController(OrderService orderService,TreasureService treasureService, TreasurePictureService treasurePictureService, UserService userService, CategoryService categoryService, UploadService uploadService, TreasureStarService treasureStarService) {
         this.treasureService = treasureService;
         this.treasurePictureService = treasurePictureService;
         this.userService = userService;
         this.categoryService = categoryService;
         this.uploadService = uploadService;
         this.treasureStarService = treasureStarService;
+        this.orderService=orderService;
     }
 
     @GetMapping("user_center")
     public String userCenter(HttpServletRequest request) {
+        User user = Utils.getUserSession(request.getSession());
+        request.setAttribute("orders",orderService.selectByUserId(user.getId()));
         request.setAttribute("treasures", treasureService.selectTreasureByUid(Utils.getUserSession(request.getSession()).getId()));
         request.setAttribute("newDegrees", Constant.NEW_DEGREE_LIST);
         request.setAttribute("categories", categoryService.selectAllChildren());
@@ -180,6 +185,7 @@ public class UserController {
         treasurePicture.setPicture(mainPic);
         return treasureService.updateByPrimaryKeySelective(treasure) && treasurePictureService.updateByPrimaryKeySelective(treasurePicture);
     }
+
 
     /**
      * 发布新商品页面跳转

@@ -12,4 +12,10 @@
   <sql id="Base_Column_List" >
     id, treasure_id, create_time, note, status, logistics
   </sql>
+  <insert id="addOrder"  parameterType="com.fleamarket.core.model.Order">
+   INSERT INTO fleamarket.order ( name,address,user_id,phone,treasure_id,note,status ) VALUES( #{name},#{address}, #{userId},#{phone},#{treasureId},#{note},#{status} );
+  </insert>
+  <select id="selectByUserId"  parameterType="Integer" resultType="Order">
+    SELECT id,name,address,user_id,phone,treasure_id,create_time,note,status,logistics FROM fleamarket.order WHERE user_id = #{userId}
+  </select>
 </mapper>

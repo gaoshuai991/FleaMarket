@@ -8,6 +8,13 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    private String name;
+
+
+    private String address;
+    @Column(name = "user_id")
+    private Integer userId;
+    private String phone;
     @Column(name = "treasure_id")
     private Integer treasureId;
 
@@ -54,6 +61,30 @@ public class Order {
         this.treasureId = treasureId;
     }
 
+    public String getName(){
+        return name;
+    }
+    public void setName(String name){
+        this.name=name;
+    }
+    public String getPhone(){
+        return phone;
+    }
+    public void setPhone(String phone){
+        this.phone=phone;
+    }
+    public String getAddress(){
+        return address;
+    }
+    public void setAddress(String address){
+        this.address=address;
+    }
+    public void setUserId(Integer userId){
+        this.userId=userId;
+    }
+    public Integer getUserId(){
+        return userId;
+    }
     /**
      * @return create_time
      */
@@ -117,4 +148,6 @@ public class Order {
     public void setLogistics(String logistics) {
         this.logistics = logistics;
     }
+
+
 }

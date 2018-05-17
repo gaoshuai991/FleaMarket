@@ -324,50 +324,35 @@
                 <div class="message_header">
                     <h3>我的订单</h3>
                 </div>
-                <div class="message_main">
-                    <form class="more_message" id="form-user-detail">
+                <div class="message_main"  th:each="ele : ${orders}">
                         <div class="form-group message_group">
-                            <label class="col-md-3 control-label message-lable text-right">体重：</label>
-                            <input type="hidden" name="id">
-                            <input id="weight" name="weight" class="col-md-4 form-control message_main_input">
-                        </div>
-                        <div class="form-group message_group">
-                            <label class="col-md-3 control-label message-lable text-right">生肖：</label>
+                            <label class="col-md-3 control-label message-lable text-right">订单地址：</label>
                             <div class="col-md-4" style="padding: 0px">
-                                <select name="animal" id="animal" class="form-control select-control">
-                                    <option value="-1">请选择</option>
-                                    <option value="鼠">鼠</option>
-                                    <option value="牛">牛</option>
-                                    <option value="虎">虎</option>
-                                    <option value="兔">兔</option>
-                                    <option value="龙">龙</option>
-                                    <option value="蛇">蛇</option>
-                                    <option value="马">马</option>
-                                    <option value="羊">羊</option>
-                                    <option value="猴">猴</option>
-                                    <option value="鸡">鸡</option>
-                                    <option value="狗">狗</option>
-                                    <option value="猪">猪</option>
-                                </select>
+                                <input id="address" name="address" class="col-md-4 form-control message_main_input" th:value="${ele.value.address}">
                             </div>
                         </div>
                         <div class="form-group message_group">
-                            <label class="col-md-3 control-label message-lable text-right">信仰：</label>
+                            <label class="col-md-3 control-label message-lable text-right">联系电话：</label>
                             <div class="col-md-4" style="padding: 0px">
-                                <select name="religion" id="religion" class="form-control select-control">
-                                    <option value="-1">请选择</option>
-                                    <option value="不信教">不信教</option>
-                                    <option value="佛教">佛教</option>
-                                    <option value="道教">道教</option>
-                                </select>
+                                <input id="phone" name="phone" class="col-md-4 form-control message_main_input" th:value="${ele.value.phone}">
                             </div>
                         </div>
-                        <div class="form-group message_group ">
-                            <div class="col-md-12 text-center">
-                                <input class="btn btn-primary " type="submit" value="提交" style="margin: 10px"/>
+                        <div class="row">
+                            <div id="picture" class="row">
+                                <section id="gg">
+                                    <div class="container-fluid">
+                                        <div id="photodiv" style="padding: 40px">
+                                            <!--主图-->
+                                            <div class="photo-single col-md-3">
+                                                <a data-toggle="lightbox" data-gallery="sigma-gallery">
+                                                    <img id="main-phone" class="img-fluid sigmapad" th:src="@{/file(path=${ele.key})}">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
                             </div>
                         </div>
-                    </form>
                 </div>
             </div>
             <div id="settingPanel" class="tab-pane">
@@ -382,21 +367,20 @@
                                                                       role="tab" data-toggle="tab"
                                                                       aria-controls="modify_password"
                                                                       aria-expanded="true">修改密码</a></li>
-                            <li role="presentation"><a href="#profile1" role="tab" id="profile-tab1" data-toggle="tab"
-                                                       aria-controls="profile1">权限设置</a></li>
+
                         </ul>
                         <div id="myTabContent" class="tab-content">
                             <div role="tabpanel" class="tab-pane fade in active" id="modify_password"
                                  aria-labelledby="modify_password">
                                 <div class="tab_box">
-                                    <form id="form-reset-pwd" class="form-horizontal">
+                                    <form id="form-reset-pwd" class="form-horizontal" action="/changepassword" method="post" >
                                         <div class="form-group">
                                             <label for="newpwd" class="col-md-4 control-label message-lable text-right">密码：</label>
                                             <div class="col-md-4">
                                                 <input type="hidden" name="id" th:value="${session.user.id}">
                                                 <input type="password" name="newpwd" id="newpwd" class="form-control">
                                             </div>
-                                        </div>
+                                        </div><div id="adiv"></div>
                                         <div class="form-group">
                                             <label for="password"
                                                    class="col-md-4 control-label message-lable text-right">确认密码：</label>
@@ -407,7 +391,7 @@
                                         </div>
                                         <div class="form-group">
                                             <div class="col-md-12 text-center">
-                                                <input class="btn btn-primary" type="submit" value="提交"
+                                                <input class="btn btn-primary" type="button" id="bu" value="提交"
                                                        style="margin: 10px"/>
                                             </div>
                                         </div>

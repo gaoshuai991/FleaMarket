@@ -4,6 +4,15 @@ $(function () {
     initTreasure();
     initPictureUpload();
     initPhotoWall();
+    $("#bu").click(function () {
+        var i1=$("#newpwd").val();
+        var i2=$("#password").val();
+        if(i1!=i2){
+            $("#adiv").html("密码不一致");
+        }else {
+            $("#form-reset-pwd").submit();
+        }
+    });
 });
 function setPanel() {
     var $panels = $("div[id$='Panel']");

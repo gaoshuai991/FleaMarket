@@ -119,7 +119,7 @@
 																						
 																						<ul class="dropdown-sub nav-level2">
 																							<li class="menu-laptop-desktop-accessories" th:each="sub_category : ${ele.value}">
-																								<a th:href="@{'/shop/'+${sub_category.id}}">
+																								<a th:href="@{'/shop/'+${sub_category.id}+'/create_time'}">
 																									<span class="have-title">
 																										<span class="menu-title" th:text="${sub_category.name}"></span>
 																									</span>

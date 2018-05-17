@@ -103,7 +103,15 @@ public class IndexController {
             put("status", userService.selectByPrincipal(principal) != null ? 1 : 2);
         }};
     }
-
+    @PostMapping("changepassword")
+    public String changePassword(Integer id,String newpwd){
+        User user = userService.selectByPrimaryKey(id);
+        user.setPassword(new Md5Hash(newpwd, user.getUsername(), 2).toString());
+        userService.updateByPrimaryKey(user);
+        Subject subject = SecurityUtils.getSubject();
+        subject.logout();
+        return "login";
+    }
     @GetMapping({"", "index"})
     public String index(HttpServletRequest request) {
         request.setAttribute("categories", categoryService.getAllCategoryGraded());

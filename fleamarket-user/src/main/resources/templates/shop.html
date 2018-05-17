@@ -354,7 +354,7 @@
 										
 										<div id="ResMenuprimary_menu" class="collapse menu-responsive-wrapper">
 											<ul id="menu-primary-menu" class="etrostore_resmenu">
-												<li><a href="index.html">Home</a></li>
+												<li><a href="index.html">主页</a></li>
 												<li><a href="cart.html">Cart</a></li>
 												<li><a href="checkout.html">Checkout</a></li>
 												<li><a href="my_account.html">My Account</a></li>
@@ -607,10 +607,8 @@
 													<span class="current-li"><span class="current-li-content"><a>Sort by Default</a></span></span>
 													<ul>
 														<li class="current"><a href="#">Sort by Default</a></li>
-														<li class=""><a href="#">Sort by Popularity</a></li>
-														<li class=""><a href="#">Sort by Rating</a></li>
-														<li class=""><a href="#">Sort by Date</a></li>
-														<li class=""><a href="#">Sort by Price</a></li>
+														<li class=""><a th:href="@{'/shop/'+${category}+'/view_count'}">Sort by viewCount</a></li>
+														<li class=""><a th:href="@{'/shop/'+${category}+'/create_time'}">Sort by Date</a></li>
 													</ul>
 												</li>
 											</ul>
@@ -654,9 +652,9 @@
 											<div class="item-detail">
 												<div class="item-img products-thumb">
 													<span class="onsale">Sale!</span>
-													<a href="simple_product.html">
+													<a th:href="@{'/treasure/'+${ele.id}}">
 														<div class="product-thumb-hover">
-															<img width="300" height="300" th:src="@{/file(path=${ele.picture})}" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" >
+															<img width="300" height="300" th:src="@{/file(path=${ele.picture})}"  class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" >
 														</div>
 													</a>
 																				
@@ -669,7 +667,7 @@
 														<div class="yith-wcwl-add-to-wishlist add-to-wishlist-248">
 															<div class="yith-wcwl-add-button show" style="display:block">
 																<a href="#" rel="nofollow" class="add_to_wishlist">Add to Wishlist</a>
-																<img th:src="@{/images/wpspin_light.gif}" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden" />
+																<img th:src="@{/images/wpspin_light.gif}" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden"  />
 															</div>
 														   
 															<div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;">
@@ -696,7 +694,7 @@
 														<div class="star"><span style="width: 63px"></span></div>
 													</div>
 													
-													<h4><a href="simple_product.html" title="Cleaner with bag" th:text="${ele.title}"></a></h4>
+													<h4><a th:href="@{'/treasure/'+${ele.id}}" title="Cleaner with bag" th:text="${ele.title}"></a></h4>
 													
 													<span class="item-price"><del><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol" th:text="${ele.price}"></span ></span></del> <ins><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>350.00</span></ins></span>
 													
