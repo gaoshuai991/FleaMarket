@@ -1,6 +1,7 @@
 package com.fleamarket.core.model;
 
 import java.sql.Date;
+import java.util.Objects;
 import javax.persistence.*;
 
 public class User {
@@ -265,6 +266,34 @@ public class User {
      */
     public void setLikeCount(Integer likeCount) {
         this.likeCount = likeCount;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return Objects.equals(id, user.id) &&
+                Objects.equals(username, user.username) &&
+                Objects.equals(password, user.password) &&
+                Objects.equals(nickname, user.nickname) &&
+                Objects.equals(createTime, user.createTime) &&
+                Objects.equals(photo, user.photo) &&
+                Objects.equals(tel, user.tel) &&
+                Objects.equals(email, user.email) &&
+                Objects.equals(sex, user.sex) &&
+                Objects.equals(birthday, user.birthday) &&
+                Objects.equals(city, user.city) &&
+                Objects.equals(school, user.school) &&
+                Objects.equals(signature, user.signature) &&
+                Objects.equals(status, user.status) &&
+                Objects.equals(starCount, user.starCount) &&
+                Objects.equals(likeCount, user.likeCount);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, username, password, nickname, createTime, photo, tel, email, sex, birthday, city, school, signature, status, starCount, likeCount);
     }
 
     @Override

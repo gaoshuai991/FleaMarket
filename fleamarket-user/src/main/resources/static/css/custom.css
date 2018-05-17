@@ -101,3 +101,10 @@ a[data-theme], a[data-advanced] {
     display: inline-block;
     padding-right: 15px;
 }
+.short-message a {
+    color: #09b9da !important;
+}
+
+.short-message a:hover {
+    color: #ff8e42;
+}

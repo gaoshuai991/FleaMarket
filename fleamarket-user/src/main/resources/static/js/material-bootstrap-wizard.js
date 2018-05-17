@@ -22,7 +22,6 @@ var mobile_device = false;
 $(document).ready(function () {
 
     $.material.init();
-
     /*  Activate the tooltips      */
     $('[rel="tooltip"]').tooltip();
 
@@ -31,7 +30,7 @@ $(document).ready(function () {
         rules: {
             title: {
                 required: true,
-                maxlength: 25
+                maxlength: 50
             },
             description: {
                 required: true,

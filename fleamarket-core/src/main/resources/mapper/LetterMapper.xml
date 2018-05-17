@@ -11,4 +11,10 @@
   <sql id="Base_Column_List" >
     id, source_user_id, target_user_id, content, create_time
   </sql>
+  <select id="selectSessionList" resultType="Letter">
+    select *
+    from letter
+    where #{uid} in (source_user_id, target_user_id)
+    order by create_time desc
+  </select>
 </mapper>

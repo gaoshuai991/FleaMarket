@@ -4,6 +4,7 @@ $(function () {
     initTreasure();
     initPictureUpload();
     initPhotoWall();
+    initUserPhotoUpload();
     $("#bu").click(function () {
         var i1=$("#newpwd").val();
         var i2=$("#password").val();
@@ -35,6 +36,8 @@ function initTreasure() {
             return;
         }
         $('#tid').val(tid);
+        $('#main-pic').removeAttr('src');
+        $('.pics').remove();
         $.get(contextPath + "user/treasure/" + tid, function (data) {
             var treasure = data['treasure'];
             $('#title').val(treasure.title);
@@ -376,7 +379,7 @@ function userPhotoUpload() {
     $("#img").fileinput({
         language: 'zh',
         theme: 'fa',
-        uploadUrl: contextPath + "usercenter/photo", // you must set a valid URL here else you will get an error
+        uploadUrl: contextPath + "user/user_center/photo", // you must set a valid URL here else you will get an error
         allowedFileExtensions: ['jpg', 'png', 'gif'],
         overwriteInitial: false,
         maxFileSize: 1024 * 5,
@@ -395,23 +398,9 @@ function userPhotoUpload() {
         $("#myImg").modal("hide");
         if (data.response.result) {
             var photo = data.response.photo;
-            $("#head-sculpture").attr("src", contextPath + "file?path=" + photo.photo);
-            swal("温馨提示", "上传成功！", "success");
-            var photoDiv = "<div class='photo-single' id='photo-single-" + photo.id + "'>" +
-                "             <a href='" + contextPath + "file?path=" + photo.photo + "'" +
-                "                data-toggle='lightbox' data-gallery='sigma-gallery'" +
-                "                data-title='Image Title 01'>" +
-                "                 <img src='" + contextPath + "file?path=" + photo.photo + "'" +
-                "                      alt='第1张'" +
-                "                      class='img-fluid sigmapad'>" +
-                "             </a>" +
-                "             <div class='submit inline-block'>" +
-                "                 <button id='photo-btn-" + photo.id + "' class='hvr-wobble-vertical set-photo-btn'>当前头像</button>" +
-                "             </div>" +
-                "         </div>";
-            $("div[class='photo-single']:first").remove();
-            $("#photoContent").prepend($(photoDiv));
-            initSetPhotoBtn();
+            $("#head-sculpture").attr("src", contextPath + "file?path=" + photo);
+            swal("温馨提示", "头像上传成功！", "success");
+            location.refresh();
         } else {
             swal("温馨提示", "上传失败！", "error");
         }

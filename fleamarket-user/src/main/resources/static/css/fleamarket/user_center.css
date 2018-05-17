@@ -42,7 +42,7 @@
 }
 
 .short-message a {
-    color: #09b9da;
+    color: #09b9da !important;
 }
 
 .short-message a:hover {

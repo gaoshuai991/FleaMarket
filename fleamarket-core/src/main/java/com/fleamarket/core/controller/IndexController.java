@@ -1,9 +1,14 @@
 package com.fleamarket.core.controller;
 
+import com.fleamarket.core.model.Treasure;
 import com.fleamarket.core.service.CategoryService;
+import com.fleamarket.core.service.TreasureService;
 import com.fleamarket.core.service.UserService;
 import com.fleamarket.core.shiro.Identity;
 import com.fleamarket.core.shiro.token.CustomToken;
+import com.fleamarket.core.util.Constant;
+import com.fleamarket.core.util.Utils;
+import com.github.pagehelper.PageHelper;
 import lombok.extern.log4j.Log4j2;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.IncorrectCredentialsException;
@@ -19,9 +24,8 @@ import com.fleamarket.core.model.User;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import java.sql.Date;
-import java.util.Map;
 import java.util.HashMap;
+import java.util.List;
 
 /**
  * Created by jackiegao on 2018/4/10.
@@ -30,12 +34,14 @@ import java.util.HashMap;
 @Log4j2
 public class IndexController {
     private final CategoryService categoryService;
-    @Autowired
-    private UserService userService;
+    private final TreasureService treasureService;
+    private final UserService userService;
 
     @Autowired
-    public IndexController(CategoryService categoryService) {
+    public IndexController(CategoryService categoryService, TreasureService treasureService, UserService userService) {
         this.categoryService = categoryService;
+        this.treasureService = treasureService;
+        this.userService = userService;
     }
 
     @GetMapping("register")
@@ -48,42 +54,43 @@ public class IndexController {
         User user = new User();
         user.setPassword(new Md5Hash(password0, principal, 2).toString());
         user.setUsername(principal);
-        user.setCreateTime(new Date(System.currentTimeMillis()));
-        userService.addUser(user);
+        user.setPhoto(Constant.MALE_PHOTO_DEFAULT);
+        userService.insertSelective(user);
         return "redirect:login";
     }
+
     @GetMapping("login")
-    public String login(){
+    public String login() {
         return "login";
     }
 
     @GetMapping("logout")
-    public String logout() {
+    public String logout(HttpSession session) {
         Subject subject = SecurityUtils.getSubject();
         if (subject.isAuthenticated()) {
             subject.logout(); // session 会销毁，在SessionListener监听session销毁，清理权限缓存
-            String username=(String) subject.getSession().getAttribute("username");
-            if (log.isDebugEnabled()) {
-                log.debug("用户"  +username+ "退出登录");
-            }
+            String username = Utils.getUserSession(session).getUsername();
+            log.debug("用户" + username + "退出登录");
+            session.invalidate();
         }
         return "login";
     }
+
     @PostMapping("login")
     public String login(String to, String principal, String password, HttpSession session, RedirectAttributes redirectAttributes) {
         log.debug("登录后重定向地址：" + to);
         try {
-            CustomToken customToken = new CustomToken(principal, password,Identity.USER);
+            CustomToken customToken = new CustomToken(principal, password, Identity.USER);
             SecurityUtils.getSubject().login(customToken);
-            if(SecurityUtils.getSubject().isAuthenticated()) {
+            if (SecurityUtils.getSubject().isAuthenticated()) {
                 session.setAttribute("user", userService.selectByPrincipal(principal));
-                if(to == null || "null".equals(to)) {
+                if (to == null || "null".equals(to)) {
                     return "redirect:index";
-                }else{
+                } else {
                     return "redirect:" + to;
                 }
             }
-        } catch (UnknownAccountException uae){
+        } catch (UnknownAccountException uae) {
             log.debug("对用户[" + principal + "]登录验证未通过,未知账户");
             redirectAttributes.addAttribute("message", "用户名不存在");
         } catch (IncorrectCredentialsException ice) {
@@ -99,7 +106,7 @@ public class IndexController {
     @ResponseBody
     @PostMapping("exist")
     public Object exist(String principal) {
-        return new HashMap<String, Object>(){{
+        return new HashMap<String, Object>() {{
             put("status", userService.selectByPrincipal(principal) != null ? 1 : 2);
         }};
     }
@@ -114,6 +121,15 @@ public class IndexController {
     }
     @GetMapping({"", "index"})
     public String index(HttpServletRequest request) {
+        PageHelper.startPage(0, 6, "create_time desc");
+        List<Treasure> treasures = treasureService.selectAll();
+
+        request.setAttribute("lista", treasures.subList(0, 2));
+        request.setAttribute("listb", treasures.subList(2, 4));
+        request.setAttribute("listc", treasures.subList(4, 6));
+
+        PageHelper.startPage(0, 6, "view_count desc");
+        request.setAttribute("hotList", treasureService.selectAll());
         request.setAttribute("categories", categoryService.getAllCategoryGraded());
         return "index";
     }

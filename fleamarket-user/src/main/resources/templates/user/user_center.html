@@ -58,7 +58,7 @@
             <div class="menu">
                 <div class="photo-message">
                     <div class="img-div" data-toggle="modal" data-target="#myImg">
-                        <img id="head-sculpture" th:src="@{/images/1.jpg}" class="img-circle"
+                        <img id="head-sculpture" th:src="@{/file(path=${session.user.photo})}" class="img-circle"
                              src="../../static/images/1.jpg">
                     </div>
                     <div class="short-message">

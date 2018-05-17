@@ -1,7 +1,10 @@
 package com.fleamarket.core.model;
 
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.util.Date;
-import javax.persistence.*;
 
 public class Letter {
     @Id
@@ -18,6 +21,15 @@ public class Letter {
 
     @Column(name = "create_time")
     private Date createTime;
+
+    public Letter() {
+    }
+
+    public Letter(Integer sourceUserId, Integer targetUserId, String content) {
+        this.sourceUserId = sourceUserId;
+        this.targetUserId = targetUserId;
+        this.content = content;
+    }
 
     /**
      * @return id
