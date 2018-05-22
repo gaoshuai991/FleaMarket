@@ -29,4 +29,16 @@
   <select id="selectByCategory" resultType="Treasure" >
     SELECT * FROM treasure WHERE category=#{category};
   </select>
+  <select id="selectByCategoryId" resultType="Treasure" >
+    SELECT * FROM treasure WHERE category=#{category} or category in (
+      select id from category where pid=#{category}
+    );
+  </select>
+  <select id="selectByStatusAndKeyword" resultType="Treasure" >
+    SELECT * FROM treasure WHERE status=#{status}
+    <if test="categoryId != null">
+      and category=#{categoryId}
+    </if>
+    and ${column} like #{keyword}
+  </select>
 </mapper>

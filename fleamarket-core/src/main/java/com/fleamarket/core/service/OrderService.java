@@ -11,4 +11,6 @@ import java.util.Map;
 public interface OrderService extends IService<Order> {
     Boolean addOrder(Order order);
     Map<String,Order> selectByUserId(Integer userId);
+
+    List<Order> selectByKeyword(String column, String keyword);
 }

@@ -5,6 +5,8 @@ import com.fleamarket.core.model.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.List;
+
 @Mapper
 public interface UserMapper extends IMapper<User> {
     /**
@@ -14,4 +16,5 @@ public interface UserMapper extends IMapper<User> {
      */
     User selectByPrincipal(@Param("principal") String principal);
     Boolean addUser(User user);
+    List<User> selectByKeyword(@Param("column") String column, @Param("keyword") String keyword);
 }

@@ -11,55 +11,11 @@
                         <div class="widget text-2 widget_text pull-left">
                             <div class="widget-inner">
                                 <div class="textwidget">
-                                    <div class="call-us"><span>Call Us Now: </span>0123-444-666654123</div>
+                                    <div class="call-us"><span>联系我们: </span>010-0000000</div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="widget text-3 widget_text pull-left">
-                            <div class="widget-inner">
-                                <div class="textwidget">
-                                    <div id="lang_sel">
-                                        <ul class="nav">
-                                            <li>
-                                                <a class="lang_sel_sel icl-en">
-                                                    <img class="iclflag" title="English" alt="en" src="images/icons/en.png" width="18" height="12" /> English
-                                                </a>
-                                                <ul>
-                                                    <li class="icl-en">
-                                                        <a href="#">
-                                                            <img class="iclflag" title="English" alt="en" src="images/icons/en.png" width="18" height="12" /> English
-                                                        </a>
-                                                    </li>
-
-                                                    <li class="icl-ar">
-                                                        <a href="#">
-                                                            <img class="iclflag" title="Arabic" alt="ar" src="images/icons/ar.png" width="18" height="12" /> Arabic
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="widget woocommerce_currency_converter-2 widget_currency_converter pull-left">
-                            <div class="widget-inner">
-                                <form method="post" class="currency_converter" action="">
-                                    <ul class="currency_w">
-                                        <li>
-                                            <a href="#" class="">USD</a>
-                                            <ul class="currency_switcher">
-                                                <li><a href="#" class="reset default active" data-currencycode="USD">USD</a></li>
-                                                <li><a href="#" class="" data-currencycode="EUR">EUR</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </form>
-                            </div>
-                        </div>
                     </div>
 
                     <div class="wrap-myacc pull-right">
@@ -122,7 +78,7 @@
                                 <div class="widget-inner">
                                     <ul id="menu-checkout" class="menu">
                                         <li class="menu-checkout">
-                                            <a class="item-link" href="/logout">
+                                            <a class="item-link" th:href="@{/logout}">
                                                 <span class="menu-title">注销</span>
                                             </a>
                                         </li>
@@ -141,7 +97,7 @@
                     <!-- LOGO -->
                     <div class="etrostore-logo pull-left">
                         <a href="#">
-                            <img th:src="@{/images/icons/logo-orange.png}" alt="Shoopy">
+                            <img th:src="@{/images/icons/logo-orange.png}">
                         </a>
                     </div>
 
@@ -150,9 +106,9 @@
                             <div class="widget-inner">
                                 <div class="top-form top-search">
                                     <div class="topsearch-entry">
-                                        <form method="get" action="">
+                                        <form method="get" th:action="@{/search}">
                                             <div>
-                                                <input type="text" value="" name="keyword" placeholder="输入商品名进行搜索">
+                                                <input type="text" th:value="${searchKeyword}" name="keyword" placeholder="输入商品名进行搜索">
                                                 <!--<div class="cat-wrapper">-->
                                                     <!--<label class="label-search">-->
                                                         <!--<select name="search_category" class="s1_option">-->
@@ -174,9 +130,7 @@
                             <div class="widget-inner">
                                 <ul id="menu-wishlist" class="menu">
                                     <li class="menu-wishlist">
-                                        <a class="item-link" href="#">
-                                            <span class="menu-title">我的收藏</span>
-                                        </a>
+                                        <button class="btn btn-warning">发布商品</button>
                                     </li>
                                 </ul>
                             </div>
@@ -204,9 +158,9 @@
                                     <div id="ResMenuprimary_menu" class="collapse menu-responsive-wrapper">
                                         <ul id="menu-primary-menu" class="etrostore_resmenu">
                                             <li><a th:href="@{/}">主页</a></li>
-                                            <li><a href="cart.html">商品</a></li>
-                                            <li><a href="about_us.html">关于我们</a></li>
-                                            <li><a href="contact_us.html">联系我们</a></li>
+                                            <li><a th:href="@{/shop/1}">商品</a></li>
+                                            <li><a href="#">关于我们</a></li>
+                                            <li><a href="#">联系我们</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -362,6 +316,12 @@
             </div>
         </div>
     </header>
+    <script th:src="@{/plugins/sweetalert/js/sweetalert.min.js}"></script>
+
+    <script th:inline="javascript">
+        var contextPath = /*[[@{/}]]*/'';
+        var userSession = /*[[${session.user}]]*/'';
+    </script>
     <script>
         var sticky_navigation_offset_top = $("#header .header-bottom").offset().top;
         var sticky_navigation = function(){
@@ -377,7 +337,6 @@
         $(window).scroll(function() {
             sticky_navigation();
         });
-
         $(document).ready (function () {
             $( ".show-dropdown" ).each(function(){
                 $(this).on("click", function(){
@@ -385,6 +344,22 @@
                     var $element = $(this).parent().find( "> ul" );
                     $element.toggle( 300 );
                 });
+            });
+            $('#menu-wishlist button').click(function () {
+                if (userSession == null) {
+                    swal({
+                        title: "提示",
+                        text: "您尚未登录，请先登录！",
+                        icon: "warning",
+                        buttons: ["关闭", "确定"]
+                    }).then(result => {
+                        if (result) {
+                            location.replace(contextPath + 'login?to=user/treasure');
+                        }
+                    });
+                } else {
+                    location.replace(contextPath + 'user/treasure');
+                }
             });
         });
     </script>

@@ -27,4 +27,7 @@
   <insert id="addUser"  parameterType="com.fleamarket.core.model.User">
     insert into user(username, password,create_time,sex,status) values(#{username}, #{password},#{createTime},'男',1)
   </insert>
+  <select id="selectByKeyword" resultType="User">
+    select * from user where ${column} like #{keyword}
+  </select>
 </mapper>

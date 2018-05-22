@@ -18,4 +18,7 @@
   <select id="selectByUserId"  parameterType="Integer" resultType="Order">
     SELECT id,name,address,user_id,phone,treasure_id,create_time,note,status,logistics FROM fleamarket.order WHERE user_id = #{userId}
   </select>
+  <select id="selectByKeyword" resultType="Order">
+    select * from fleamarket.order where ${column} like #{keyword}
+  </select>
 </mapper>

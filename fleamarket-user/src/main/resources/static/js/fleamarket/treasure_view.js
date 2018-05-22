@@ -1,15 +1,15 @@
 $(function () {
     reloadStarBtn();
     $('#star-btn').click(function () {
-        if(userSession == null){
+        if (userSession == null) {
             swal({
                 title: "提示",
                 text: "您尚未登录，请先登录！",
                 icon: "warning",
-                buttons: ["关闭","确定"]
+                buttons: ["关闭", "确定"]
             }).then(result => {
-                if(result){
-                    location.replace(contextPath + 'login?to=treasure/'+tid);
+                if (result) {
+                    location.replace(contextPath + 'login?to=treasure/' + tid);
                 }
             });
         }
@@ -24,19 +24,19 @@ $(function () {
         }, "text");
     });
     $('#buy-btn').click(function () {
-        if(userSession == null){
+        if (userSession == null) {
             swal({
                 title: "提示",
                 text: "您尚未登录，请先登录！",
                 icon: "warning",
-                buttons: ["关闭","确定"]
+                buttons: ["关闭", "确定"]
             }).then(result => {
-                if(result){
-                    location.replace(contextPath + 'login?to=treasure/'+tid);
+                if (result) {
+                    location.replace(contextPath + 'login?to=treasure/' + tid);
                 }
             });
-        }else {
-            window.location.href =contextPath+ 'shop/' + tid;
+        } else {
+            location.replace(contextPath + 'user/order/' + tid);
         }
     });
 

@@ -4,26 +4,23 @@ import at.pollux.thymeleaf.shiro.dialect.ShiroDialect;
 import com.fleamarket.core.shiro.Identity;
 import com.fleamarket.core.shiro.authenticator.CustomModularRealmAuthenticator;
 import com.fleamarket.core.shiro.filter.IdentityFilter;
+import com.fleamarket.core.shiro.realm.AdminRealm;
 import com.fleamarket.core.shiro.realm.UserRealm;
 import org.apache.shiro.authc.Authenticator;
 import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
 import org.apache.shiro.cache.CacheManager;
 import org.apache.shiro.cache.MemoryConstrainedCacheManager;
 import org.apache.shiro.codec.Base64;
+import org.apache.shiro.mgt.SecurityManager;
 import org.apache.shiro.spring.LifecycleBeanPostProcessor;
 import org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor;
 import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
 import org.apache.shiro.web.mgt.CookieRememberMeManager;
 import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
-import org.apache.shiro.mgt.SecurityManager;
 import org.apache.shiro.web.servlet.SimpleCookie;
 import org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator;
-import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.filter.DelegatingFilterProxy;
-
-
 
 import javax.servlet.Filter;
 import java.util.Arrays;
@@ -65,7 +62,7 @@ public class ShiroConfig {
         Map<String, Filter> filterMap = new LinkedHashMap<>(3);
 
         filterMap.put("userAuth", new IdentityFilter(Identity.USER));
-//        filterMap.put("adminAuth", new IdentityFilter(Identity.ADMIN));
+        filterMap.put("adminAuth", new IdentityFilter(Identity.ADMIN));
 //        filterMap.put("writerAuth", new IdentityFilter(Identity.WRITER));
 
         shiroFilterFactoryBean.setFilters(filterMap);
@@ -85,12 +82,12 @@ public class ShiroConfig {
         filterChainMap.put("/file/**", "anon");
 
         //管理员配置
-//        filterChainMap.put("/admin/**", "adminAuth");
+        filterChainMap.put("/admin/**", "adminAuth");
 
         //用户配置
-        filterChainMap.put("/logout", "anon");
-        filterChainMap.put("/register/**", "anon");
-//        filterChainMap.put("/**", "userAuth");
+        filterChainMap.put("/user/**", "userAuth");
+        filterChainMap.put("/letter/**", "userAuth");
+        filterChainMap.put("/**", "anon");
 
         shiroFilterFactoryBean.setFilterChainDefinitionMap(filterChainMap);
 
@@ -125,20 +122,20 @@ public class ShiroConfig {
         return userRealm;
     }
 
-//    @Bean
-//    public AdminRealm adminRealm() {
-//        AdminRealm adminRealm = new AdminRealm();
-//        adminRealm.setCredentialsMatcher(hashedCredentialsMatcher());
-//        adminRealm.setName("adminRealm");
-//        return adminRealm;
-//    }
+    @Bean
+    public AdminRealm adminRealm() {
+        AdminRealm adminRealm = new AdminRealm();
+        adminRealm.setCredentialsMatcher(hashedCredentialsMatcher());
+        adminRealm.setName("adminRealm");
+        return adminRealm;
+    }
 
     @Bean
     public SecurityManager securityManager() {
         DefaultWebSecurityManager securityManager = new DefaultWebSecurityManager();
         // 设置realm.
 //        securityManager.setRealms(Arrays.asList(userRealm(), writerRealm(), adminRealm()));
-        securityManager.setRealms(Arrays.asList(userRealm()));
+        securityManager.setRealms(Arrays.asList(userRealm(),adminRealm()));
         //验证器
         securityManager.setAuthenticator(realmAuthenticator());
         // 注入记住我管理器;
@@ -155,8 +152,7 @@ public class ShiroConfig {
     @Bean
     public Authenticator realmAuthenticator() {
         CustomModularRealmAuthenticator realmAuthenticator = new CustomModularRealmAuthenticator();
-        realmAuthenticator.setRealms(Arrays.asList(userRealm()));
-//        realmAuthenticator.setRealms(Arrays.asList(userRealm(), writerRealm(), adminRealm()));
+        realmAuthenticator.setRealms(Arrays.asList(userRealm(),adminRealm()));
         return realmAuthenticator;
     }
 

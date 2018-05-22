@@ -2,7 +2,6 @@ package com.fleamarket.core.service.impl;
 
 import com.fleamarket.core.IMapper;
 import com.fleamarket.core.mapper.TreasureMapper;
-import com.fleamarket.core.mapper.TreasurePictureMapper;
 import com.fleamarket.core.mapper.TreasureViewMapper;
 import com.fleamarket.core.model.Treasure;
 import com.fleamarket.core.model.TreasureView;
@@ -13,7 +12,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * Created by Gss in 2018/5/4.
@@ -51,6 +49,16 @@ public class TreasureServiceImpl extends BaseService<Treasure> implements Treasu
 		treasureViews.forEach(view -> res.add(selectByPrimaryKey(view.getTreasureId())));
 		return res;
     }
+
+    @Override
+    public List<Treasure> selectByCategoryId(Integer cid) {
+        return treasureMapper.selectByCategoryId(cid);
+    }
+
+	@Override
+	public List<Treasure> selectByStatusAndKeyword(Integer status,Integer categoryId, String column, String keyword) {
+		return treasureMapper.selectByStatusAndKeyword(status,categoryId,column,keyword);
+	}
 
 	@Override
 	public List<Treasure> selectByCategory(Integer category) {

@@ -42,7 +42,7 @@ public class IdentityFilter extends UserFilter {
             }
             return true;
         }else {
-            return SecurityUtils.getSubject().isRemembered();
+            return SecurityUtils.getSubject().isAuthenticated();
         }
     }
 }

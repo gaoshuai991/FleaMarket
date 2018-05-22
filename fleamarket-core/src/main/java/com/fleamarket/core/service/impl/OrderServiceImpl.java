@@ -8,7 +8,6 @@ import com.fleamarket.core.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -45,4 +44,9 @@ public class OrderServiceImpl extends BaseService<Order> implements OrderService
 		}
 		return map;
 	}
+
+    @Override
+    public List<Order> selectByKeyword(String column, String keyword) {
+        return mapper.selectByKeyword(column, keyword);
+    }
 }
