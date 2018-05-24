@@ -113,45 +113,28 @@
         <h1>神猫二手注册</h1>
         <div class="wthree_top_forms">
             <div class="agile-info_w3ls agile-info_w3ls_sub hvr-buzz-out">
-                <h3 style="margin-bottom: 0">Register</h3>
+                <h3 style="margin-bottom: 0">注册</h3>
                 <div class="agile-info_w3ls_grid second">
-                    <form action="/register" method="post" id="formsubmit" name="formsubmit">
-                        <label  class="youpasswd" data-icon="p"> 用户名 </label><br>
+                    <form th:action="@{/register}" method="post" id="formsubmit" name="formsubmit">
+                        <!--<label  class="youpasswd" data-icon="p"> 用户名 </label><br>-->
                         <input type="text" name="principal" id="principal" placeholder="用户名" required><div id="adiv"></div><br>
-                        <label  class="youpasswd" data-icon="p"> 密码</label><br>
-                        <input type="password" name="password0" id="password0" placeholder="Password" required><div id="adiv1"></div><br>
-                        <label  class="youpasswd" data-icon="p"> 确认密码 </label><br>
-                        <input type="password" name="password1" id="password1" placeholder="Password" required><br>
-                        <!--<label  class="youpasswd" data-icon="p">  昵称 </label><br>-->
-                        <!--<input type="Text" name="nickname" placeholder="昵称" required><br>-->
-                        <!--<label  class="youpasswd" data-icon="p"> 性别 </label><br>-->
-                        <!--<input class="myforms-3-2" type="radio" checked ="checked" name="2" value="sex1">男-->
-                        <!--<input class="myforms-3-3" type="radio"  name="2" value="sex2">女<br>-->
-                        <!--<label  class="youpasswd" data-icon="p">  电话号码 </label><br>-->
-                        <!--<input type="Text" name="tel" placeholder="111 1111 1111" required><br>-->
-
-                        <!--<label  class="youpasswd" data-icon="p">  生日 </label><br>-->
-                        <!--<input id="birthday" name="birthday" type="date" /><br>-->
-
-                        <input type="button" name="bu" id="bu"   value="Create New Account">
-
+                        <!--<label  class="youpasswd" data-icon="p"> 密码</label><br>-->
+                        <input type="password" name="password0" id="password0" placeholder="密码" required><div id="adiv1"></div><br>
+                        <!--<label  class="youpasswd" data-icon="p"> 确认密码 </label><br>-->
+                        <input type="password" name="password1" id="password1" placeholder="确认密码" required><br>
+                        <input type="button" name="bu" id="bu" value="注  册">
                     </form>
-                    <h4>Continue With</h4>
-                    <div class="social_icons agileinfo">
-                        <section class="social">
-                            <a href="" class="icon fb"><img th:src="@{/images/f.png}" alt=""/></a>
-                            <a href="" class="icon tw"><img th:src="@{/images/t.png}" alt=""/></a>
-                            <a href="" class="icon gp"><img th:src="@{/images/g.png}" alt=""/></a>
-                        </section>
-                    </div>
-                    <h5>Don't have an account? <a href="#">Sign Up</a></h5>
+                    <!--<h4>Continue With</h4>-->
+                    <!--<div class="social_icons agileinfo">-->
+                        <!--<section class="social">-->
+                            <!--<a href="" class="icon fb"><img th:src="@{/images/f.png}" alt=""/></a>-->
+                            <!--<a href="" class="icon tw"><img th:src="@{/images/t.png}" alt=""/></a>-->
+                            <!--<a href="" class="icon gp"><img th:src="@{/images/g.png}" alt=""/></a>-->
+                        <!--</section>-->
+                    <!--</div>-->
                 </div>
             </div>
             <div class="clear"></div>
-        </div>
-        <div class="agileits_copyright">
-            <p>© 2016 Collective Forms Widget. All rights reserved | Design by <a
-                    href="http://www.xmoban.cn">xmoban.cn</a></p>
         </div>
     </div>
 </div>

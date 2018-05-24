@@ -72,20 +72,21 @@
                                 <!--</shiro:guest>-->
                             </div>
                         </div>
-
-                        <div class="pull-left top2">
-                            <div class="widget-1 widget-first widget nav_menu-2 widget_nav_menu">
-                                <div class="widget-inner">
-                                    <ul id="menu-checkout" class="menu">
-                                        <li class="menu-checkout">
-                                            <a class="item-link" th:href="@{/logout}">
-                                                <span class="menu-title">注销</span>
-                                            </a>
-                                        </li>
-                                    </ul>
+                        <shiro:authenticated>
+                            <div class="pull-left top2">
+                                <div class="widget-1 widget-first widget nav_menu-2 widget_nav_menu">
+                                    <div class="widget-inner">
+                                        <ul id="menu-checkout" class="menu">
+                                            <li class="menu-checkout">
+                                                <a class="item-link" th:href="@{/logout}">
+                                                    <span class="menu-title">注销</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </shiro:authenticated>
                     </div>
                 </div>
             </div>
@@ -167,9 +168,9 @@
 
                                 <ul id="menu-primary-menu-1" class="nav nav-pills nav-mega etrostore-mega etrostore-menures">
                                     <li><a th:href="@{/}">主页</a></li>
-                                    <li><a href="cart.html">商品</a></li>
-                                    <li><a href="about_us.html">关于我们</a></li>
-                                    <li><a href="contact_us.html">联系我们</a></li>
+                                    <li><a th:href="@{/shop/1}">商品</a></li>
+                                    <li><a href="#">关于我们</a></li>
+                                    <li><a href="#">联系我们</a></li>
                                 </ul>
                             </div>
                         </nav>
