@@ -4,7 +4,8 @@ $(function () {
     initTreasure();
     initPictureUpload();
     initPhotoWall();
-    initUserPhotoUpload();
+    userPhotoUpload();
+    initDeliveryBtn();
     $("#bu").click(function () {
         var i1=$("#newpwd").val();
         var i2=$("#password").val();
@@ -411,6 +412,30 @@ function initPhotoWall() {
         event.preventDefault();
         return $(this).ekkoLightbox({
             always_show_close: true
+        });
+    });
+}
+function initDeliveryBtn() {
+    $("#logistics-btn").click(function () {
+        let $btn = $(this);
+        swal("请输入物流单号：", {
+            content: "input"
+        }).then(logistics => {
+            if (logistics==null || logistics == "") {
+                swal("错误", "物流单号不能为空！", "error");
+            } else {
+                $.post(contextPath + "user/order/logistics", {"id":$btn.val(),"logistics": logistics}, function (result) {
+                    if (result=="true") {
+                        swal({
+                            title: "提示",
+                            text: "物流单号回填成功！",
+                            icon: "success",
+                            buttons: ["关闭","确定"]
+                        }).then(result => location.replace(contextPath+"user/user_center?type=order"));
+                    }
+                }, "text");
+
+            }
         });
     });
 }

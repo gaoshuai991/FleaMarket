@@ -68,10 +68,9 @@ public class IndexController {
     public String logout(HttpSession session) {
         Subject subject = SecurityUtils.getSubject();
         if (subject.isAuthenticated()) {
-            subject.logout(); // session 会销毁，在SessionListener监听session销毁，清理权限缓存
             String username = Utils.getUserSession(session).getUsername();
             log.debug("用户" + username + "退出登录");
-            session.invalidate();
+            subject.logout(); // session 会销毁，在SessionListener监听session销毁，清理权限缓存
         }
         return "login";
     }

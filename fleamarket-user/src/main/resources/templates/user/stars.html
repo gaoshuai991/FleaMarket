@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
 <head>
-    <title>神猫二手市场-搜索</title>
+    <title>神猫二手市场-收藏</title>
     <meta charset="utf-8"/>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
@@ -40,7 +40,7 @@
     <div class="listings-title">
         <div class="container">
             <div class="wrap-title">
-                <h1>商品搜索</h1>
+                <h1>我的收藏</h1>
 
                 <div class="bread">
                     <div class="breadcrumbs theme-clearfix">
@@ -52,7 +52,7 @@
                                 </li>
 
                                 <li class="active">
-                                    <span>商品搜索</span>
+                                    <span>我的收藏</span>
                                 </li>
                             </ul>
                         </div>
@@ -65,6 +65,8 @@
     <div class="container">
         <div class="row">
             <div id="contents" class="content col-lg-9 col-md-8 col-sm-8" role="main">
+                <div class="listing-top">
+
 
                 <div id="container">
                     <div id="content" role="main">
@@ -76,38 +78,6 @@
                                         <a href="javascript:void(0)" class="grid-view active"
                                            title="Grid view"><span>网格</span></a>
                                         <a href="javascript:void(0)" class="list-view" title="List view"><span>列表</span></a>
-                                    </div>
-                                </div>
-
-                                <div class="catalog-ordering">
-                                    <div class="orderby-order-container clearfix">
-                                        <ul class="orderby order-dropdown pull-left">
-                                            <li>
-                                                <span class="current-li"><span class="current-li-content"><a>当前：按[[${orderBy}]]排序</a></span></span>
-                                                <ul>
-                                                    <li class=""><a
-                                                            th:href="@{/search/(keyword=${searchKeyword},orderBy=view_count)}">按热度排序</a>
-                                                    </li>
-                                                    <li class=""><a
-                                                            th:href="@{/search/(keyword=${searchKeyword},orderBy=create_time)}">按时间排序</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-
-                                        <!--<div class="product-number pull-left clearfix">-->
-                                        <!--<span class="show-product pull-left">Show </span>-->
-                                        <!--<ul class="sort-count order-dropdown pull-left">-->
-                                        <!--<li>-->
-                                        <!--<span class="current-li"><a>12</a></span>-->
-                                        <!--<ul>-->
-                                        <!--<li class="current"><a href="#">12</a></li>-->
-                                        <!--<li class=""><a href="#">24</a></li>-->
-                                        <!--<li class=""><a href="#">36</a></li>-->
-                                        <!--</ul>-->
-                                        <!--</li>-->
-                                        <!--</ul>-->
-                                        <!--</div>-->
                                     </div>
                                 </div>
 
@@ -125,36 +95,33 @@
                             <div class="clear"></div>
 
                             <ul class="products-loop row grid clearfix">
-                                <div th:if="${treasures == null or #lists.isEmpty(treasures)}" style="margin: 15px;font-size: 18px">
-                                    <p>暂无搜索结果！</p>
-                                </div>
                                 <li class="item col-lg-4 col-md-4 col-sm-6 col-xs-6 post-255 product type-product status-publish has-post-thumbnail product_cat-electronics product_cat-home-appliances product_cat-vacuum-cleaner product_brand-apoteket first instock sale featured shipping-taxable purchasable product-type-simple"
-                                    th:each="ele : ${treasures}">
+                                    th:each="star : ${stars}">
                                     <div class="products-entry item-wrap clearfix">
                                         <div class="item-detail">
                                             <div class="item-img products-thumb">
-                                                <a th:href="@{'/treasure/'+${ele.id}}">
+                                                <a th:href="@{'/treasure/'+${star.treasure.id}}">
                                                     <div class="product-thumb-hover">
                                                         <img style="height: 270px !important;width: 270px !important;"
-                                                             th:src="@{/file(path=${ele.picture})}"
+                                                             th:src="@{/file(path=${star.treasure.picture})}"
                                                              class="attachment-shop_catalog size-shop_catalog wp-post-image">
                                                     </div>
                                                 </a>
                                             </div>
 
                                             <div class="item-content products-content">
-                                                <div class="reviews-content">
-                                                    <div class="star"><span style="width: 63px"></span></div>
-                                                </div>
-
-                                                <h4 style="height: 40px"><a th:href="@{'/treasure/'+${ele.id}}" th:text="${ele.title}"></a>
+                                                <h4 style="height: 40px"><a th:href="@{'/treasure/'+${star.treasure.id}}" th:text="${star.treasure.title}"></a>
                                                 </h4>
 
                                                 <span class="item-price"> <ins><span
                                                         class="woocommerce-Price-amount amount"><span
-                                                        class="woocommerce-Price-currencySymbol">￥</span>[[${ele.price}]]</span></ins></span>
+                                                        class="woocommerce-Price-currencySymbol">￥</span>[[${star.treasure.price}]]</span></ins></span>
 
-                                                <div class="item-description" th:text="${ele.description}"></div>
+                                                <div class="item-description" th:text="${star.treasure.description}"></div>
+                                                <div class="reviews-content">
+                                                    <span>收藏时间：[[${#dates.format(star.createTime,'yyyy-MM-dd HH:mm:SS')}]]</span>
+                                                </div>
+
                                             </div>
                                         </div>
                                     </div>

@@ -1,8 +1,9 @@
 package com.fleamarket.core.model;
 
-import java.util.Date;
 import javax.persistence.*;
+import java.util.Date;
 
+@Table(name="`order`")
 public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,6 +18,9 @@ public class Order {
     private String phone;
     @Column(name = "treasure_id")
     private Integer treasureId;
+
+    @Transient
+    private Treasure treasure;
 
     @Column(name = "create_time")
     private Date createTime;
@@ -59,6 +63,14 @@ public class Order {
      */
     public void setTreasureId(Integer treasureId) {
         this.treasureId = treasureId;
+    }
+
+    public Treasure getTreasure() {
+        return treasure;
+    }
+
+    public void setTreasure(Treasure treasure) {
+        this.treasure = treasure;
     }
 
     public String getName(){

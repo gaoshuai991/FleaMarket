@@ -1,6 +1,7 @@
 package com.fleamarket.core.service;
 
 import com.fleamarket.core.model.Treasure;
+import com.fleamarket.core.model.TreasureStar;
 
 import java.util.List;
 
@@ -24,4 +25,6 @@ public interface TreasureService extends IService<Treasure> {
 	List<Treasure> selectByCategoryId(Integer cid);
 
     List<Treasure> selectByStatusAndKeyword(Integer status,Integer categoryId, String column, String keyword);
+
+	List<TreasureStar> selectStars(Integer userId);
 }

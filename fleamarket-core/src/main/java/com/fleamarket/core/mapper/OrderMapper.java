@@ -15,4 +15,6 @@ public interface OrderMapper extends IMapper<Order> {
     List<Order> selectByUserId(Integer userId);
 
     List<Order> selectByKeyword(@Param("column") String column,@Param("keyword") String keyword);
+
+    List<Order> selectSales(Integer userId);
 }

@@ -65,7 +65,7 @@
                         <a><h3 th:text="${session.user.nickname}"></h3></a>
                     </div>
                     <div class="short-message">
-                        <p>ID：10000001</p>
+                        <p>用户名：[[${session.user.username}]]</p>
                     </div>
                     <!--<div class="short-message">-->
                         <!--<p>牵手币余额：<span style="color: #ff8e42">50</span></p>-->
@@ -232,7 +232,7 @@
                                 <div class="col-md-6" style="font-size: 14px;line-height: 34px">
                                     <span><span id="views">0</span>次浏览</span>&nbsp;&nbsp;&nbsp;&nbsp;
                                     <span><span id="stars">0</span>次收藏</span>&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <span><span id="comments">0</span>个评论</span>
+                                    <!--<span><span id="comments">0</span>个评论</span>-->
                                 </div>
                             </div>
                             <div class="form-group message_group row">
@@ -324,35 +324,79 @@
                 <div class="message_header">
                     <h3>我的订单</h3>
                 </div>
+                <div class="message_header">
+                    <h4>&nbsp;&nbsp;&nbsp;&nbsp;我卖出的</h4>
+                </div>
+                <div class="message_main">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-hover">
+                            <thead>
+                            <tr>
+                                <th>订单号</th>
+                                <th>商品名称</th>
+                                <th>价格</th>
+                                <th>运费</th>
+                                <th>物流单号</th>
+                                <th>下单时间</th>
+                                <th>收货人姓名</th>
+                                <th>收货人电话</th>
+                                <th>收货人地址</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr th:each="order:${sales}">
+                                <td th:text="${order.id}"></td>
+                                <td><a th:href="@{'/treasure/'+${order.treasure.id}}" style="color: #d18b00;" th:text="${order.treasure.title}"></a></td>
+                                <td th:text="${order.treasure.price}"></td>
+                                <td th:text="${order.treasure.fare}"></td>
+                                <td th:if="${order.logistics==null}">
+                                    <button id="logistics-btn" th:value="${order.id}" class="btn btn-warning btn-sm">已发货，回填单号</button>
+                                </td>
+                                <td th:unless="${order.logistics==null}" th:text="${order.logistics}"></td>
+                                <td th:text="${#dates.format(order.createTime,'yyyy-MM-dd HH:mm:ss')}"></td>
+                                <td th:text="${order.name}"></td>
+                                <td th:text="${order.phone}"></td>
+                                <td th:text="${order.address}"></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="message_header">
+                    <h4>&nbsp;&nbsp;&nbsp;&nbsp;我购买的</h4>
+                </div>
                 <div class="message_main"  th:each="ele : ${orders}">
-                        <div class="form-group message_group">
-                            <label class="col-md-3 control-label message-lable text-right">订单地址：</label>
-                            <div class="col-md-4" style="padding: 0px">
-                                <input id="address" name="address" class="col-md-4 form-control message_main_input" th:value="${ele.value.address}">
-                            </div>
-                        </div>
-                        <div class="form-group message_group">
-                            <label class="col-md-3 control-label message-lable text-right">联系电话：</label>
-                            <div class="col-md-4" style="padding: 0px">
-                                <input id="phone" name="phone" class="col-md-4 form-control message_main_input" th:value="${ele.value.phone}">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div id="picture" class="row">
-                                <section id="gg">
-                                    <div class="container-fluid">
-                                        <div id="photodiv" style="padding: 40px">
-                                            <!--主图-->
-                                            <div class="photo-single col-md-3">
-                                                <a data-toggle="lightbox" data-gallery="sigma-gallery">
-                                                    <img id="main-phone" class="img-fluid sigmapad" th:src="@{/file(path=${ele.key})}">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>
-                            </div>
-                        </div>
+                    <div class="table-responsive">
+                        <table id="user-basic-table" class="table table-bordered table-hover">
+                            <thead>
+                            <tr>
+                                <th>订单号</th>
+                                <th>商品名称</th>
+                                <th>价格</th>
+                                <th>运费</th>
+                                <th>物流单号</th>
+                                <th>下单时间</th>
+                                <th>收货人姓名</th>
+                                <th>收货人电话</th>
+                                <th>收货人地址</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <tr th:each="order:${orders}">
+                                    <td th:text="${order.id}"></td>
+                                    <td><a th:href="@{'/treasure/'+${order.treasure.id}}" th:text="${order.treasure.title}"></a></td>
+                                    <td th:text="${order.treasure.price}"></td>
+                                    <td th:text="${order.treasure.fare}"></td>
+                                    <td th:style="${order.logistics==null?'color:#fa7455;':''}" th:text="${order.logistics==null?'卖家暂未发货':order.logistics}"></td>
+                                    <td th:text="${#dates.format(order.createTime,'yyyy-MM-dd HH:mm:ss')}"></td>
+                                    <td th:text="${order.name}"></td>
+                                    <td th:text="${order.phone}"></td>
+                                    <td th:text="${order.address}"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
             <div id="settingPanel" class="tab-pane">

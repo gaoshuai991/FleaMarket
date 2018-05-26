@@ -47,11 +47,18 @@ public class UserController {
         this.orderService=orderService;
     }
 
+    @GetMapping("stars")
+    public String stars(HttpServletRequest request){
+        request.setAttribute("stars", treasureService.selectStars(Utils.getUserSession().getId()));
+        return "user/stars";
+    }
+
     @GetMapping("user_center")
     public String userCenter(HttpServletRequest request) {
         User user = Utils.getUserSession(request.getSession());
+        request.setAttribute("sales", orderService.selectSales(user.getId()));
         request.setAttribute("orders",orderService.selectByUserId(user.getId()));
-        request.setAttribute("treasures", treasureService.selectTreasureByUid(Utils.getUserSession(request.getSession()).getId()));
+        request.setAttribute("treasures", treasureService.selectTreasureByUid(user.getId()));
         request.setAttribute("newDegrees", Constant.NEW_DEGREE_LIST);
         request.setAttribute("categories", categoryService.selectAllChildren());
         return "user/user_center";

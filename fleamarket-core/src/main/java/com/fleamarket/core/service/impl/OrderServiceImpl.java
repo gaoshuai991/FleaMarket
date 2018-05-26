@@ -8,9 +8,7 @@ import com.fleamarket.core.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Created by jackiegao on 2018/4/10.
@@ -34,19 +32,17 @@ public class OrderServiceImpl extends BaseService<Order> implements OrderService
 
 	//通过用户ID获取订单信息和订单图片
 	@Override
-	public Map<String,Order> selectByUserId(Integer userId) {
-		List<Order> list=mapper.selectByUserId(userId);
-		Map<String,Order> map= new LinkedHashMap<String,Order>();
-		for(Order order : list){
-			Integer treasureId =order.getTreasureId();
-			String photo=tMapper.selectByPrimaryKey(treasureId).getPicture();
-			map.put(photo,order);
-		}
-		return map;
+	public List<Order> selectByUserId(Integer userId) {
+		return mapper.selectByUserId(userId);
 	}
 
     @Override
     public List<Order> selectByKeyword(String column, String keyword) {
         return mapper.selectByKeyword(column, keyword);
+    }
+
+    @Override
+    public List<Order> selectSales(Integer userId) {
+        return mapper.selectSales(userId);
     }
 }

@@ -16,9 +16,16 @@
    INSERT INTO fleamarket.order ( name,address,user_id,phone,treasure_id,note,status ) VALUES( #{name},#{address}, #{userId},#{phone},#{treasureId},#{note},#{status} );
   </insert>
   <select id="selectByUserId"  parameterType="Integer" resultType="Order">
-    SELECT id,name,address,user_id,phone,treasure_id,create_time,note,status,logistics FROM fleamarket.order WHERE user_id = #{userId}
+    SELECT o.*,o.treasure_id as `treasure.id`,t.title as `treasure.title`,t.description as `treasure.description`,t.price as `treasure.price`,t.fare as `treasure.fare`
+    FROM fleamarket.order o,treasure t
+    WHERE user_id = #{userId} and o.treasure_id=t.id
   </select>
   <select id="selectByKeyword" resultType="Order">
     select * from fleamarket.order where ${column} like #{keyword}
+  </select>
+  <select id="selectSales" resultType="Order">
+    select o.*,o.treasure_id as `treasure.id`,t.title as `treasure.title`,t.description as `treasure.description`,t.price as `treasure.price`,t.fare as `treasure.fare`
+    from fleamarket.order o, treasure t
+    where t.uid=#{userId} and o.treasure_id=t.id
   </select>
 </mapper>

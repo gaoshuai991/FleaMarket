@@ -4,8 +4,10 @@ import com.fleamarket.core.IMapper;
 import com.fleamarket.core.mapper.TreasureMapper;
 import com.fleamarket.core.mapper.TreasureViewMapper;
 import com.fleamarket.core.model.Treasure;
+import com.fleamarket.core.model.TreasureStar;
 import com.fleamarket.core.model.TreasureView;
 import com.fleamarket.core.service.TreasureService;
+import com.fleamarket.core.service.TreasureStarService;
 import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,11 +22,13 @@ import java.util.List;
 public class TreasureServiceImpl extends BaseService<Treasure> implements TreasureService {
 	private final TreasureMapper treasureMapper;
 	private final TreasureViewMapper treasureViewMapper;
+	private final TreasureStarService  treasureStarService;
 
 	@Autowired
-	public TreasureServiceImpl(TreasureMapper treasureMapper, TreasureViewMapper treasureViewMapper) {
+	public TreasureServiceImpl(TreasureMapper treasureMapper, TreasureViewMapper treasureViewMapper, TreasureStarService treasureStarService) {
 		this.treasureMapper = treasureMapper;
 		this.treasureViewMapper = treasureViewMapper;
+		this.treasureStarService = treasureStarService;
 	}
 
 	@Override
@@ -60,7 +64,16 @@ public class TreasureServiceImpl extends BaseService<Treasure> implements Treasu
 		return treasureMapper.selectByStatusAndKeyword(status,categoryId,column,keyword);
 	}
 
-	@Override
+    @Override
+    public List<TreasureStar> selectStars(Integer userId) {
+		TreasureStar treasureStar = new TreasureStar();
+		treasureStar.setUserId(userId);
+		List<TreasureStar> treasureStars = treasureStarService.selectList(treasureStar);
+		treasureStars.forEach(star -> star.setTreasure(selectByPrimaryKey(star.getTreasureId())));
+        return treasureStars;
+    }
+
+    @Override
 	public List<Treasure> selectByCategory(Integer category) {
 		return treasureMapper.selectByCategory(category);
 

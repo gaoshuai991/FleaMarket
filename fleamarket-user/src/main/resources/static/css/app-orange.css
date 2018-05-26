@@ -3404,6 +3404,7 @@ ul.thumbnails {
   background-color: #ffaa00;
 }
 .header .header-mid .widget.widget_nav_menu .widget-inner ul li.menu-wishlist a:before {
+  cursor: pointer;
   content: '\f08a';
   font-family: FontAwesome;
   font-size: 16px;
@@ -8560,6 +8561,9 @@ iframe {
 }
 .item-content .reviews-content {
   margin: 0 0 5px;
+}
+.reviews-content {
+  margin: 7px 0 !important;
 }
 .item-content h4 {
   font-size: 13px;

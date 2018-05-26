@@ -13,6 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
@@ -55,6 +56,12 @@ public class TreasureController {
     public String order(@PathVariable("tid") Integer tid, HttpServletRequest request) {
         request.setAttribute("treasure", treasureService.selectByPrimaryKey(tid));
         return "user/checkout";
+    }
+
+    @PostMapping("user/order/logistics")
+    @ResponseBody
+    public boolean logistics(Order order) {
+        return orderService.updateByPrimaryKeySelective(order);
     }
 
     @PostMapping("placeorder")
