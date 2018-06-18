@@ -61,6 +61,13 @@ public class TreasureController {
     @PostMapping("user/order/logistics")
     @ResponseBody
     public boolean logistics(Order order) {
+        order.setStatus(2); // 2代表已发货
+        return orderService.updateByPrimaryKeySelective(order);
+    }
+    @PostMapping("user/order/confirm")
+    @ResponseBody
+    public boolean confirm(Order order) {
+        order.setStatus(3); // 2代表交易成功
         return orderService.updateByPrimaryKeySelective(order);
     }
 
@@ -85,9 +92,9 @@ public class TreasureController {
         if (orderBy == null) {
             orderBy = "create_time";
         }
-        PageHelper.startPage(0, 15, orderBy + " desc");
+        PageHelper.startPage(0, 30, orderBy + " desc");
         request.setAttribute("orderBy", "create_time".equals(orderBy) ? "时间" : "热度");
-        request.setAttribute("treasures", treasureService.selectByCategoryId(subCategoryId));
+        request.setAttribute("treasures", subCategoryId == 0 ? treasureService.selectAll() : treasureService.selectByCategoryId(subCategoryId));
         //在商品页面排序时使用
         request.setAttribute("category", categoryService.selectByPrimaryKey(subCategoryId));
         return "shop";

@@ -6,6 +6,7 @@ $(function () {
     initPhotoWall();
     userPhotoUpload();
     initDeliveryBtn();
+    initConfirmBtn();
     $("#bu").click(function () {
         var i1=$("#newpwd").val();
         var i2=$("#password").val();
@@ -434,8 +435,22 @@ function initDeliveryBtn() {
                         }).then(result => location.replace(contextPath+"user/user_center?type=order"));
                     }
                 }, "text");
-
             }
         });
     });
+}
+function initConfirmBtn() {
+    $('.confirm-btn').click(function () {
+        let $btn = $(this);
+        $.post(contextPath + "user/order/confirm", {"id":$btn.val()}, function (result) {
+            if (result=="true") {
+                swal({
+                    title: "提示",
+                    text: "确认收货成功！",
+                    icon: "success",
+                    buttons: ["关闭","确定"]
+                }).then(result => location.replace(contextPath+"user/user_center?type=order"));
+            }
+        }, "text");
+    })
 }

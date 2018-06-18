@@ -37,9 +37,9 @@ function loadData() {
                 } else if (order.status === 1) {
                     tr.append($('<td><button id="edit-user-status-' + order.id + '-1" class="btn btn-sm btn-warning"></i>待发货</button></td>'));
                 } else if (order.status === 2) {
-                    tr.append($('<td><button id="edit-user-status-' + order.id + '-1" class="btn btn-sm btn-default">已发货</button></td>'));
+                    tr.append($('<td><button id="edit-user-status-' + order.id + '-1" class="btn btn-sm btn-success">已发货</button></td>'));
                 } else if (order.status === 3) {
-                    tr.append($('<td><button id="edit-user-status-' + order.id + '-1" class="btn btn-sm btn-success">已收货</button></td>'));
+                    tr.append($('<td><button id="edit-user-status-' + order.id + '-1" class="btn btn-sm btn-success">交易成功</button></td>'));
                 }
                 // tr.append($('<td><a class="btn btn-sm btn-info" href="' + contextPath + 'admin/user/details/' + user.id + '"><i class="fa fa-edit"></i>&nbsp;查看详情</a></td>'));
                 $userBasicTBody.append(tr);

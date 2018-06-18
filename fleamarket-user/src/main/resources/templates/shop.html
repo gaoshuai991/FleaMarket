@@ -40,7 +40,8 @@
     <div class="listings-title">
         <div class="container">
             <div class="wrap-title">
-                <h1>商品分类——[[${category.name}]]</h1>
+                <h1 th:if="${category == null}">商品分类——全部商品</h1>
+                <h1 th:if="${category != null}">商品分类——[[${category.name}]]</h1>
 
                 <div class="bread">
                     <div class="breadcrumbs theme-clearfix">
@@ -52,7 +53,7 @@
                                 </li>
 
                                 <li class="active">
-                                    <span th:text="${category.name}"></span>
+                                    <span th:text="${category==null?'全部分类':category.name}"></span>
                                 </li>
                             </ul>
                         </div>
@@ -130,10 +131,10 @@
                                                 <span class="current-li"><span class="current-li-content"><a>当前：按[[${orderBy}]]排序</a></span></span>
                                                 <ul>
                                                     <li class=""><a
-                                                            th:href="@{'/shop/'+${category}(orderBy=view_count)}">按热度排序</a>
+                                                            th:href="@{'/shop/'+${category==null?'0':category.id}(orderBy=view_count)}">按热度排序</a>
                                                     </li>
                                                     <li class=""><a
-                                                            th:href="@{'/shop/'+${category}(orderBy=create_time)}">按时间排序</a>
+                                                            th:href="@{'/shop/'+${category==null?'0':category.id}(orderBy=create_time)}">按时间排序</a>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -177,7 +178,7 @@
                                                 <span class="onsale">Sale!</span>
                                                 <a th:href="@{'/treasure/'+${ele.id}}">
                                                     <div class="product-thumb-hover">
-                                                        <img style="height: 270px !important;width: 270px !important;"
+                                                        <img style="height: 240px !important;width: 270px !important;"
                                                              th:src="@{/file(path=${ele.picture})}"
                                                              class="attachment-shop_catalog size-shop_catalog wp-post-image">
                                                     </div>

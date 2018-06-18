@@ -366,7 +366,7 @@
                 <div class="message_header">
                     <h4>&nbsp;&nbsp;&nbsp;&nbsp;我购买的</h4>
                 </div>
-                <div class="message_main"  th:each="ele : ${orders}">
+                <div class="message_main">
                     <div class="table-responsive">
                         <table id="user-basic-table" class="table table-bordered table-hover">
                             <thead>
@@ -380,12 +380,13 @@
                                 <th>收货人姓名</th>
                                 <th>收货人电话</th>
                                 <th>收货人地址</th>
+                                <th>操作</th>
                             </tr>
                             </thead>
                             <tbody>
                                 <tr th:each="order:${orders}">
                                     <td th:text="${order.id}"></td>
-                                    <td><a th:href="@{'/treasure/'+${order.treasure.id}}" th:text="${order.treasure.title}"></a></td>
+                                    <td><a th:href="@{'/treasure/'+${order.treasure.id}}" style="color: #d18b00;" th:text="${order.treasure.title}"></a></td>
                                     <td th:text="${order.treasure.price}"></td>
                                     <td th:text="${order.treasure.fare}"></td>
                                     <td th:style="${order.logistics==null?'color:#fa7455;':''}" th:text="${order.logistics==null?'卖家暂未发货':order.logistics}"></td>
@@ -393,6 +394,11 @@
                                     <td th:text="${order.name}"></td>
                                     <td th:text="${order.phone}"></td>
                                     <td th:text="${order.address}"></td>
+                                    <td>
+                                        <button th:if="${order.status==1}" class="btn btn-warning btn-sm disabled">待发货</button>
+                                        <button th:if="${order.status==2}" th:value="${order.id}" class="confirm-btn btn btn-warning btn-sm">确认收货</button>
+                                        <button th:if="${order.status==3}" class="btn btn-success btn-sm disabled">交易成功</button>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>

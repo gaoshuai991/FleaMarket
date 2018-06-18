@@ -49,6 +49,12 @@ public class IndexController {
         return "register";
     }
 
+    /**
+     * 用户注册功能的实现
+     * @param principal 用户名
+     * @param password0 密码
+     * @return 登录页面跳转
+     */
     @PostMapping("register")
     public String register(String principal, String password0) {
         User user = new User();
@@ -75,6 +81,15 @@ public class IndexController {
         return "login";
     }
 
+    /**
+     * 用户登录实现
+     * @param to 登录后重定向地址
+     * @param principal 用户名
+     * @param password 密码
+     * @param session 当前会话
+     * @param redirectAttributes 重定向属性，由Spring提供
+     * @return 经过验证后的跳转页面
+     */
     @PostMapping("login")
     public String login(String to, String principal, String password, HttpSession session, RedirectAttributes redirectAttributes) {
         log.debug("登录后重定向地址：" + to);
@@ -91,13 +106,13 @@ public class IndexController {
             }
         } catch (UnknownAccountException uae) {
             log.debug("对用户[" + principal + "]登录验证未通过,未知账户");
-            redirectAttributes.addAttribute("message", "用户名不存在");
+            redirectAttributes.addAttribute("message", "用户名不存在，请重新输入！");
         } catch (IncorrectCredentialsException ice) {
             log.debug("对用户[" + principal + "]登录验证未通过,错误的凭证");
-            redirectAttributes.addAttribute("message", "密码不Ø正确");
+            redirectAttributes.addAttribute("message", "密码不正确，请重新输入！");
         } catch (LockedAccountException ule) {
             log.debug("对用户[" + principal + "]登录验证未通过,用户被锁定");
-            redirectAttributes.addAttribute("message", "用户被锁定");
+            redirectAttributes.addAttribute("message", "用户被锁定，请联系管理员！");
         }
         return "redirect:login";
     }
